@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Let's Take SBA Farr-ther Together — The Complete Deck</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#04060A;--b2:#0B1018;--b3:#111A2E;--b4:#1A2540;--gd:#EFA420;--gd2:#FFD06A;--gn:#00E676;--gn2:#69F0AE;--rd:#FF5252;--rd2:#FF8A80;--pp:#B388FF;--cy:#18FFFF;--wt:#ECF0F6;--gy:#5C6E8E;--gy2:#354668;--sl:#0E1322;--slB:#1C2B48;--slH:#141C32}
+html{scroll-behavior:smooth}body{background:var(--bg);color:var(--wt);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.02'/%3E%3C/svg%3E");pointer-events:none;z-index:9999}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-thumb{background:rgba(239,164,32,.12);border-radius:2px}
+nav{position:fixed;top:0;left:0;right:0;z-index:10000;background:rgba(4,6,10,.94);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.03);height:44px;display:flex;align-items:center;padding:0 12px;gap:6px}
+.nl{font-family:'Archivo Black';font-size:12px;color:var(--gd);white-space:nowrap}.nl small{font-family:'DM Sans';font-weight:300;font-size:7px;color:var(--gy);margin-left:4px}
+.nt{display:flex;gap:0;margin-left:auto;overflow-x:auto;scrollbar-width:none}.nt::-webkit-scrollbar{display:none}
+.tb{padding:3px 7px;font-family:'JetBrains Mono';font-size:6.5px;letter-spacing:.8px;text-transform:uppercase;color:var(--gy);background:0;border:0;cursor:pointer;border-radius:3px;transition:.2s;white-space:nowrap}.tb:hover{color:var(--wt)}.tb.on{color:var(--gd);background:rgba(239,164,32,.05)}
+.V{display:none;padding:52px 16px 32px;animation:fu .35s ease}.V.on{display:block}
+@keyframes fu{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes bk{0%,100%{opacity:1}50%{opacity:.2}}
+@keyframes slideR{from{transform:translateX(-20px);opacity:0}to{transform:translateX(0);opacity:1}}
+@keyframes glow{0%,100%{box-shadow:0 0 6px var(--gd)}50%{box-shadow:0 0 20px var(--gd)}}
+@keyframes pulseGn{0%,100%{box-shadow:0 0 4px var(--gn)}50%{box-shadow:0 0 14px var(--gn)}}
+@media(max-width:768px){.V{padding:50px 10px 20px}.nt{display:none}}
+.tg{font-family:'JetBrains Mono';font-size:7px;letter-spacing:3px;text-transform:uppercase;color:var(--gd);opacity:.55;margin-bottom:4px}
+.H1{font-family:'Archivo Black';font-size:clamp(22px,3.5vw,38px);line-height:1.05;margin-bottom:8px}
+.H2{font-family:'Archivo Black';font-size:clamp(16px,2.2vw,24px);line-height:1.08;margin-bottom:6px}
+.sub{font-size:10px;color:var(--gy);max-width:500px;line-height:1.6}
+.gd{color:var(--gd)}.gn{color:var(--gn)}.pp{color:var(--pp)}.rd{color:var(--rd)}
+.S{display:flex;flex-direction:column;align-items:center;padding:14px 0;text-align:center}
+.S .label{font-family:'JetBrains Mono';font-size:6px;letter-spacing:3px;color:var(--gd);text-transform:uppercase;margin-bottom:2px}
+.S .title{font-family:'Archivo Black';font-size:clamp(15px,2.5vw,24px);line-height:1.05;margin-bottom:3px}
+.S .explain{max-width:420px;font-size:9px;color:var(--gy);line-height:1.55;margin-bottom:10px}
+.slip{width:min(680px,95vw);background:var(--sl);border:1px solid var(--slB);border-radius:14px;overflow:hidden;box-shadow:0 14px 40px rgba(0,0,0,.5);margin:8px auto;transition:all .8s}
+.slip.w{width:min(720px,95vw)}
+.slip-top{background:var(--slH);padding:6px 10px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--slB);font-size:7px}
+.slip-top .sp{font-family:'JetBrains Mono';color:var(--gd);letter-spacing:2px}
+.slip-top .lv{color:var(--gn);display:flex;align-items:center;gap:3px}.slip-top .lv::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--gn);animation:bk 1.5s infinite}
+.sim{padding:8px 10px;min-height:60px}
+.orow{display:flex;gap:5px;padding:6px 10px}
+.odd{flex:1;text-align:center;padding:8px 4px;border-radius:8px;border:1px solid var(--slB);transition:all .6s;position:relative}
+.odd.act{border-color:var(--gn);background:rgba(0,230,118,.03)}.odd.gact{border-color:var(--gd);background:rgba(239,164,32,.03)}
+.odd.scan{border-style:dashed;opacity:.4}.odd.scan::after{content:'';position:absolute;bottom:0;left:0;height:2px;background:var(--gd);animation:sc 1.8s infinite;border-radius:0 0 8px 8px;display:block}
+@keyframes sc{0%{width:0;left:0}50%{width:100%;left:0}100%{width:0;left:100%}}
+.odd .ov{font-family:'JetBrains Mono';font-size:18px;font-weight:700}.odd .ov.pl{color:var(--gn2)}.odd .ov.mn{color:var(--rd2)}
+.odd .ol{font-size:7px;color:var(--gy);margin-top:1px}.odd .ob{font-size:6px;color:var(--gy2);margin-top:1px;font-family:'JetBrains Mono';letter-spacing:1px}
+.odd .xtra{margin-top:4px;font-size:7px;color:var(--gy);line-height:1.4}.odd .xtra .sv{font-family:'JetBrains Mono';font-weight:600}.odd .xtra .pv{font-family:'JetBrains Mono';font-weight:700;color:var(--gn2)}
+.tot{padding:6px 10px;text-align:center;border-top:1px solid var(--slB)}.tot .big{font-family:'JetBrains Mono';font-size:18px;font-weight:700}.tot .ts{font-size:7px;color:var(--gy);margin-top:1px;font-family:'JetBrains Mono';letter-spacing:1px}
+.sbtn{display:block;width:calc(100% - 20px);margin:0 10px 8px;padding:9px;border-radius:8px;border:none;font-family:'DM Sans';font-weight:700;font-size:10px;letter-spacing:1px;cursor:pointer;transition:.3s;text-transform:uppercase;text-align:center}
+.sbtn.gl{background:linear-gradient(135deg,var(--gd),var(--gd2));color:var(--bg)}.sbtn.gn{background:linear-gradient(135deg,var(--gn),var(--gn2));color:var(--bg)}.sbtn.pp{background:linear-gradient(135deg,var(--pp),#D1A8FF);color:var(--bg)}.sbtn.dk{background:var(--b3);color:var(--gy);border:1px solid var(--slB)}
+.sbtn:hover{transform:translateY(-1px)}
+.rvl{max-height:0;overflow:hidden;transition:max-height 1s cubic-bezier(.22,1,.36,1)}.rvl.open{border-top:1px solid var(--slB)}.rvl-in{padding:8px 10px}
+.bdg{display:inline-flex;align-items:center;gap:3px;padding:3px 8px;border-radius:10px;font-family:'JetBrains Mono';font-size:7px;letter-spacing:1px}
+.bdg.g{background:rgba(0,230,118,.04);border:1px solid rgba(0,230,118,.08);color:var(--gn)}.bdg.o{background:rgba(239,164,32,.04);border:1px solid rgba(239,164,32,.08);color:var(--gd)}.bdg.p{background:rgba(179,136,255,.04);border:1px solid rgba(179,136,255,.08);color:var(--pp)}
+.bdg .dt{width:3px;height:3px;border-radius:50%;background:currentColor;animation:bk 1s infinite}
+.bd{background:var(--b3);border-radius:6px;padding:6px;border:1px solid rgba(255,255,255,.02);margin-top:4px}
+.bd-r{display:flex;justify-content:space-between;padding:3px 0;border-bottom:1px solid rgba(255,255,255,.02);font-size:8px}.bd-r:last-child{border:none}.bd-r .l{color:var(--gy)}.bd-r .v{font-family:'JetBrains Mono';font-weight:600}
+.formula{background:#080C14;border:1px solid rgba(255,255,255,.03);border-radius:6px;padding:8px 10px;margin:4px 0;font-family:'JetBrains Mono';font-size:9px;line-height:1.7;color:#6B7894;overflow-x:auto}
+.formula .hl{color:var(--gn2);font-weight:600}.formula .gl{color:var(--gd2);font-weight:600}.formula .rl{color:var(--rd2)}.formula .pl{color:var(--pp);font-weight:600}
+.formula .label{color:var(--gy);font-size:7px;letter-spacing:1px;display:block;margin-bottom:1px}
+.plain{background:rgba(239,164,32,.02);border-left:2px solid var(--gd);padding:6px 10px;margin:4px 0;font-size:9px;color:var(--gy);line-height:1.6;border-radius:0 4px 4px 0}.plain strong{color:var(--gd2)}.plain .mint{color:var(--gn2)}
+.ex{background:var(--b2);border:1px solid rgba(255,255,255,.03);border-radius:10px;padding:14px;margin:10px auto;max-width:600px}
+.ex-t{font-family:'Archivo Black';font-size:13px;margin-bottom:4px}.ex-b{font-size:9px;color:var(--gy);line-height:1.65}.ex-b strong{color:var(--wt)}
+.ex-c{margin-top:6px;padding:8px 10px;background:rgba(239,164,32,.03);border:1px solid rgba(239,164,32,.05);border-radius:6px;font-size:9px;color:var(--gd2);line-height:1.5}
+.mv{display:flex;align-items:center;justify-content:center;gap:6px;margin:6px 0;flex-wrap:wrap}
+.mv-b{background:var(--b3);border:1px solid var(--slB);border-radius:6px;padding:6px 10px;text-align:center;min-width:70px;transition:all .6s}.mv-b .n{font-family:'JetBrains Mono';font-size:14px;font-weight:700}.mv-b .l{font-size:6px;color:var(--gy)}.mv-b.lit{border-color:var(--gn);box-shadow:0 0 10px rgba(0,230,118,.05)}.mv-b.glit{border-color:var(--gd);box-shadow:0 0 10px rgba(239,164,32,.05)}
+.mv-a{color:var(--gd);font-size:10px}
+.prob-bar{height:20px;border-radius:4px;overflow:hidden;display:flex;margin:4px 0;background:var(--b4)}.prob-seg{height:100%;transition:width 1.5s cubic-bezier(.25,1,.5,1);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono';font-size:7px;font-weight:600;color:#000;width:0}
+.fb{margin-bottom:4px}.fb-t{display:flex;justify-content:space-between;font-size:7px;margin-bottom:1px}.fb-tr{height:3px;background:var(--b4);border-radius:2px;overflow:hidden}.fb-fl{height:100%;border-radius:2px;width:0;transition:width .8s cubic-bezier(.25,1,.5,1)}
+.rng{position:relative;width:90px;height:90px;margin:0 auto}.rng svg{transform:rotate(-90deg)}.rng-c{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}.rng-n{font-family:'Archivo Black';font-size:22px}.rng-l{font-family:'JetBrains Mono';font-size:5px;letter-spacing:2px;color:var(--gy)}
+.mf{position:relative;height:50px;background:linear-gradient(90deg,rgba(0,230,118,.02) 0%,rgba(0,230,118,.02) 38%,rgba(239,164,32,.06) 38%,rgba(239,164,32,.06) 62%,rgba(0,230,118,.02) 62%);border-radius:5px;margin:6px 0;overflow:hidden;border:1px solid rgba(255,255,255,.02)}.mf .ball{position:absolute;top:50%;width:12px;height:12px;border-radius:50%;transform:translate(-50%,-50%);transition:left 3s cubic-bezier(.22,1,.36,1)}
+.og{display:grid;gap:0;border:1px solid var(--slB);border-radius:6px;overflow:hidden;margin:6px 0}.og-cell{padding:4px 6px;border-bottom:1px solid rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.02);font-size:8px}.og-cell:last-child{border-right:0}.og-cell.hdr{background:var(--slH);font-family:'JetBrains Mono';font-size:6px;letter-spacing:1px;color:var(--gy)}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+@media(max-width:768px){.g2,.g3,.g4{grid-template-columns:1fr}}
+.nxt{text-align:center;margin-top:16px}
+.dt{width:100%;border-collapse:collapse;max-width:650px;margin:0 auto}.dt th,.dt td{padding:5px 6px;text-align:left;font-size:9px;border-bottom:1px solid rgba(255,255,255,.03)}.dt th{font-family:'JetBrains Mono';font-size:6px;letter-spacing:1.5px;color:var(--gy);text-transform:uppercase}.dt tr.hl td{color:var(--gd);font-weight:700}
+/* FACTOR BUBBLE */
+.factor-bubble{display:inline-flex;align-items:center;gap:4px;padding:5px 10px;border-radius:20px;font-family:'JetBrains Mono';font-size:8px;font-weight:600;margin:2px;cursor:default;transition:all .5s;opacity:.4;transform:scale(.9);border:1px solid transparent}
+.factor-bubble.lit{opacity:1;transform:scale(1);animation:pulseGn 2s ease-in-out infinite}
+.factor-bubble.lit.risk{animation:none;box-shadow:0 0 8px var(--rd)}
+/* LEGACY */
+.legacy-card{background:linear-gradient(135deg,rgba(239,164,32,.02),rgba(0,230,118,.01));border:1px solid rgba(239,164,32,.06);border-radius:12px;padding:16px;margin:8px auto;max-width:600px;text-align:center}
+.legacy-card .era{font-family:'JetBrains Mono';font-size:7px;letter-spacing:3px;color:var(--gd);margin-bottom:4px}
+.legacy-card .name{font-family:'Archivo Black';font-size:clamp(16px,2.5vw,24px);margin-bottom:4px}
+.legacy-card .detail{font-size:10px;color:var(--gy);line-height:1.6}
+.legacy-card .detail strong{color:var(--wt)}
+.legacy-line{width:2px;height:30px;background:linear-gradient(to bottom,var(--gd),var(--gn));margin:0 auto}
+/* BAR CHART */
+.bar-wrap{display:flex;align-items:flex-end;gap:10px;height:140px;margin:12px auto;max-width:500px}
+.bar-col{flex:1;display:flex;flex-direction:column;align-items:center;height:100%;justify-content:flex-end}
+.bar{width:100%;border-radius:4px 4px 0 0;transition:height 1.5s cubic-bezier(.25,1,.5,1);height:0}
+.bar-val{font-family:'JetBrains Mono';font-size:9px;font-weight:700;margin-bottom:2px;opacity:0;transition:opacity .5s}.bar-val.show{opacity:1}
+.bar-lbl{font-family:'JetBrains Mono';font-size:6px;color:var(--gy);margin-top:3px}
+/* USER CALC */
+.ucalc{background:var(--b2);border:1px solid var(--slB);border-radius:10px;padding:14px;max-width:500px;margin:10px auto}
+.ucalc input[type=range]{width:100%;accent-color:var(--gd);margin:4px 0}
+/* TIMELINE */
+.tl{position:relative;padding-left:20px;max-width:500px;margin:12px auto}.tl::before{content:'';position:absolute;left:5px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--gd),var(--gn))}
+.tl-i{position:relative;margin-bottom:16px;padding-left:14px;opacity:0;transform:translateX(-12px);transition:all .5s}.tl-i.show{opacity:1;transform:translateX(0)}.tl-i::before{content:'';position:absolute;left:-19px;top:3px;width:8px;height:8px;border-radius:50%}
+/* COMP ROW */
+.cr{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:0;border-bottom:1px solid rgba(255,255,255,.02);opacity:0;transform:translateX(-16px);transition:all .4s}.cr.show{opacity:1;transform:translateX(0)}.cr .c{padding:5px 6px;font-size:9px}.cr .c.x{color:var(--rd);opacity:.4}.cr .c.ch{color:var(--gn2);font-weight:700}.cr.hdr .c{font-family:'JetBrains Mono';font-size:6px;letter-spacing:1px;color:var(--gy);text-transform:uppercase;opacity:1;transform:none}.cr.sba{background:rgba(239,164,32,.02);border:1px solid rgba(239,164,32,.05);border-radius:6px;margin-top:3px}
+.cr.sba .c{color:var(--gd);font-weight:700}
+/* FUND */
+.fund-r{display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.02);opacity:0;transform:translateX(-16px);transition:all .4s}.fund-r.show{opacity:1;transform:translateX(0)}
+.fund-bar{height:5px;border-radius:3px;transition:width 1.5s cubic-bezier(.25,1,.5,1);width:0}
+.fund-pct{font-family:'Archivo Black';font-size:18px;min-width:40px}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nl">SBA <small>× Superstar Platforms</small></div>
+  <div class="nt" id="tabs"></div>
+</nav>
+<div id="app"></div>
+<script>
+const T=[{id:'cover',l:'Cover'},{id:'legacy',l:'Legacy'},{id:'what',l:'What Is SBA'},{id:'journey',l:'Journey'},{id:'engines',l:'12 Engines'},{id:'moat',l:'Moat'},{id:'rev',l:'Revenue'},{id:'users',l:'Earnings'},{id:'path',l:'$1B Path'},{id:'partner',l:'Partner'},{id:'close',l:'Legacy Close'},{id:'ask',l:'The Ask'}];
+let cur='cover',TT=[];
+const $=id=>document.getElementById(id);
+function clr(){TT.forEach(clearTimeout);TT=[]}
+function nav(){$('tabs').innerHTML=T.map(t=>`<button class="tb${t.id===cur?' on':''}" onclick="go('${t.id}')">${t.l}</button>`).join('')}
+function go(id){clr();cur=id;nav();ren();window.scrollTo({top:0})}
+function ren(){$('app').innerHTML=`<div class="V on">${(W[cur]||W.cover)()}</div>`;setTimeout(()=>{const h=H[cur];if(h)h()},100)}
+function dl(ms){return new Promise(r=>{TT.push(setTimeout(r,ms))})}
+function fmt(n){return'$'+n.toLocaleString()}
+function aV(el,s,e,d){if(!el)return;const t0=performance.now();!function f(n){const p=Math.min((n-t0)/d,1);const v=Math.floor(s+(e-s)*(1-Math.pow(1-p,3)));el.textContent='$'+v.toLocaleString();if(p<1)requestAnimationFrame(f)}(t0)}
+const H={};const W={};
+
+/* ═══ COVER ═══ */
+W.cover=()=>`<div style="min-height:86vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative">
+<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,rgba(239,164,32,.04),transparent 60%);pointer-events:none"></div>
+<div style="position:relative;z-index:1">
+<div style="margin-bottom:16px"><span class="bdg o">Confidential · March 2026</span></div>
+<h1 style="font-family:'Archivo Black';font-size:clamp(34px,7vw,76px);line-height:.92">SPORTS BET<br><span class="gd">ARBITRAGE</span></h1>
+<div style="font-family:'Archivo Black';font-size:clamp(12px,2vw,20px);color:var(--gy);margin-top:8px;letter-spacing:1px">Let's Take SBA <span class="gd">Farr-ther</span> Together</div>
+<p style="font-size:10px;color:var(--gy);max-width:420px;margin:12px auto 0">Two dynasties. One billion-dollar future.<br>12 patent-pending engines. Zero user risk. $212B market.</p>
+<div style="display:flex;gap:24px;justify-content:center;margin-top:24px;flex-wrap:wrap">
+${[['$212B+','Market'],['12','Engines'],['60','Leagues'],['39','Books']].map(([v,l])=>`<div><div style="font-family:'JetBrains Mono';font-size:18px;font-weight:700;color:var(--gn)">${v}</div><div style="font-family:'JetBrains Mono';font-size:6px;letter-spacing:1.5px;color:var(--gy)">${l.toUpperCase()}</div></div>`).join('')}
+</div>
+<div style="margin-top:20px"><button class="sbtn gl" style="width:auto;padding:10px 24px;display:inline-block" onclick="go('legacy')">ENTER →</button></div>
+<div style="margin-top:24px;font-size:9px;color:var(--gy)">Prepared for <strong style="color:var(--wt)">The Farr Family / Superstar Platforms</strong><br>Introduced by <strong class="gd">Carlos</strong></div>
+</div></div>`;
+
+/* ═══ FARR LEGACY OPENER ═══ */
+W.legacy=()=>`<div class="S"><div class="label">Two Dynasties</div><div class="title">The Farr Legacy Meets <span class="gd">SBA</span></div><div class="explain">From the football field to the boardroom to the biggest technology play in sports betting. This is how dynasties are built.</div></div>
+
+<div class="legacy-card">
+  <div class="era">THE FOUNDATION · 1960s-1970s</div>
+  <div class="name">Mel Farr Sr.</div>
+  <div class="detail"><strong>NFL Rookie of the Year (1967)</strong> · Detroit Lions · 2× Pro Bowl<br>From Beaumont, Texas to the biggest stage in football.<br>After the NFL: Built <strong>Mel Farr Automotive Group</strong> — the <strong>largest African-American owned business in the United States</strong>. $400M+ in revenue. The "Superstar Dealer."<br><em style="color:var(--gd)">"Mel Farr, the Superstar, for a Farr Better Deal."</em></div>
+</div>
+<div class="legacy-line"></div>
+<div class="legacy-card">
+  <div class="era">THE NEXT GENERATION · 1980s-1990s</div>
+  <div class="name">Mike Farr & Mel Farr Jr.</div>
+  <div class="detail"><strong>Both sons → UCLA → NFL.</strong><br>Mike: Broke UCLA's single-season reception record. Caught passes from <strong>Troy Aikman</strong>. Detroit Lions "Third Down Receiver" — led team in receptions during their <strong>only playoff victory</strong>. Then doubled Mel Farr Ford from <strong>$200M to $400M</strong>.<br>Mel Jr.: UCLA → NFL. The Farr name is synonymous with winning.</div>
+</div>
+<div class="legacy-line"></div>
+<div class="legacy-card">
+  <div class="era">TODAY · 2024-2026</div>
+  <div class="name">Superstar Platforms, Inc.</div>
+  <div class="detail">Mike Farr, CEO. Named in honor of his father — <strong>the Superstar Dealer</strong>.<br>OTC: DWIS · Filing Form 10 with SEC · Building a <strong>national technology conglomerate</strong>.<br>Portfolio: <strong>PawnTrust</strong> (fintech for 11,000+ pawn shops) · <strong>Automotive distribution</strong> · Strategic acquisitions.<br><br>Now they need a <strong>crown jewel tech asset</strong>. A technology so powerful, so proprietary, that it transforms the entire company's trajectory.</div>
+</div>
+<div class="legacy-line"></div>
+<div class="legacy-card" style="border-color:rgba(0,230,118,.12);background:linear-gradient(135deg,rgba(0,230,118,.02),rgba(239,164,32,.01))">
+  <div class="era" style="color:var(--gn)">THE CROWN JEWEL</div>
+  <div class="name" style="color:var(--gd)">Sports Bet Arbitrage</div>
+  <div class="detail"><strong>12 patent-pending engines.</strong> 132,000+ lines of code. Exclusive ESPN API.<br>The most advanced AI-powered sports arbitrage platform ever built.<br><strong>$212 billion market.</strong> Zero user risk. Infinite scalability.<br><br>The Farr family turned football into business empires.<br><strong style="color:var(--gd)">SBA turns sports into a money-printing machine.</strong><br><br>Same DNA. Different field. <span class="gn">Bigger opportunity.</span></div>
+</div>
+
+<div class="nxt"><button class="sbtn gl" style="width:auto;margin:0 auto;padding:10px 24px" onclick="go('what')">DISCOVER SBA →</button></div>`;
+
+/* ═══ WHAT IS SBA ═══ */
+W.what=()=>`<div class="S"><div class="label">01 · The Basics</div><div class="title">What Is Sports Bet Arbitrage?</div></div>
+<div class="ex"><div class="ex-t">💡 30-Second Explainer</div><div class="ex-b">Store A sells sneakers for <strong>$80</strong>. Store B buys for <strong>$100</strong>. Buy from A → sell to B → <strong>$20 profit, zero risk</strong>.<br><br>Sports arbitrage: different sportsbooks price the same game differently. Bet <strong>both sides</strong> on different books → <strong>guaranteed profit no matter who wins</strong>. Not gambling — <strong>math</strong>.<br><br>SBA scans <strong>60 leagues, 39 sportsbooks, every 60 seconds</strong>.</div></div>
+<div class="nxt"><button class="sbtn gl" style="width:auto;margin:0 auto;padding:10px 24px" onclick="go('journey')">WATCH IT HAPPEN →</button></div>`;
+
+/* ═══ JOURNEY — BETSLIP STORY ═══ */
+W.journey=()=>`<div class="S"><div class="label">02 · The Experience</div><div class="title">One Bet. Five Strategies. <span class="gd">Watch It Evolve.</span></div><div class="explain">Steph Curry Pts O/U 30.5. Watch SBA transform it step by step.</div></div>
+<div class="S" id="j1"><div class="label">Step 1</div><div class="title">Scanner Finds It</div>
+<div class="slip" id="j1-s"><div class="slip-top"><span class="sp">🏀 NBA · PROPS</span><span class="lv" id="j1-st">SCANNING</span></div><div class="orow"><div class="odd scan" id="j1a"><div class="ov" style="color:var(--gy)">???</div><div class="ol">Over 30.5</div><div class="ob">SEARCHING...</div></div><div class="odd scan" id="j1b"><div class="ov" style="color:var(--gy)">???</div><div class="ol">Under 30.5</div><div class="ob">SEARCHING...</div></div></div><div id="j1-m" style="padding:0 10px"></div><div class="tot" id="j1-t" style="display:none"><div class="big gn"></div><div class="ts"></div></div><div class="rvl" id="j1-r"><div class="rvl-in" id="j1-bd"></div></div><button class="sbtn gl" id="j1-btn" style="display:none" onclick="jS('j2')">NEXT: VALUE BET FAV →</button></div></div>
+<div class="S" id="j2" style="display:none"><div class="label">Step 2</div><div class="title">Value Bet <span class="gd">Favorite</span></div><div class="explain">Shift weight to the favorite. Bigger win if right, break even if wrong.</div><div class="slip"><div class="slip-top"><span class="sp">📈 VALUE FAV</span><span class="lv">ACTIVE</span></div><div class="orow"><div class="odd" style="opacity:.4"><div class="ov pl">+125</div><div class="ol">Over · DK</div></div><div class="odd gact"><div class="ov mn">-110</div><div class="ol">Under · FD</div><div class="xtra" style="display:block">Heavy: <span class="sv">$800</span></div></div></div><div class="tot"><div class="big" style="color:var(--gd2)">+$250 if fav wins</div><div class="ts">$0 LOSS IF WRONG</div></div><button class="sbtn gl" onclick="jS('j3')">NEXT: VALUE DOG →</button></div></div>
+<div class="S" id="j3" style="display:none"><div class="label">Step 3</div><div class="title">Value Bet <span class="gn">Underdog</span></div><div class="explain">Flip it. Heavy on the underdog. Massive if it hits.</div><div class="slip"><div class="slip-top"><span class="sp">📈 VALUE DOG</span><span class="lv">ACTIVE</span></div><div class="orow"><div class="odd act"><div class="ov pl">+125</div><div class="ol">Over · DK</div><div class="xtra" style="display:block">Heavy: <span class="sv">$800</span></div></div><div class="odd" style="opacity:.4"><div class="ov mn">-110</div><div class="ol">Under · FD</div></div></div><div class="tot"><div class="big gn">+$380 if dog wins</div><div class="ts">$0 LOSS IF WRONG</div></div><button class="sbtn gn" onclick="jS('j4')">NEXT: DOUBLE VALUE →</button></div></div>
+<div class="S" id="j4" style="display:none"><div class="label">Step 4</div><div class="title">Double Value Bet</div><div class="explain">Both value bets at once. 4 bets, 2 pairs. Minimum beats sure bet.</div><div class="slip w"><div class="slip-top"><span class="sp">🔄 DOUBLE VALUE · 4 BETS</span><span class="lv">ACTIVE</span></div><div style="display:grid;grid-template-columns:1fr 1fr"><div style="padding:8px;border-right:1px solid var(--slB);text-align:center"><div style="font-family:'JetBrains Mono';font-size:6px;color:var(--gn);letter-spacing:1px">DOG PAIR</div><div style="font-family:'JetBrains Mono';font-size:10px;color:var(--gn2);margin-top:3px">+$20,000</div></div><div style="padding:8px;text-align:center"><div style="font-family:'JetBrains Mono';font-size:6px;color:var(--gd);letter-spacing:1px">FAV PAIR</div><div style="font-family:'JetBrains Mono';font-size:10px;color:var(--gd2);margin-top:3px">+$724</div></div></div><div class="tot"><div class="big" style="color:var(--gd2)">Min +$724 · Max +$20,000</div><div class="ts">BOTH BEAT SUREBET</div></div><button class="sbtn gl" onclick="jS('j5')">HOUSE MONEY →</button></div></div>
+<div class="S" id="j5" style="display:none"><div class="label">Step 5</div><div class="title">House <span class="gn">Money</span></div><div class="slip"><div class="slip-top"><span class="sp">💰 SETTLED</span><span style="font-size:7px;color:var(--gn)">✓</span></div><div style="padding:14px;text-align:center"><div class="mv"><div class="mv-b"><div class="n">$1,000</div><div class="l">RETURNED ✓</div></div><div class="mv-a">+</div><div class="mv-b lit"><div class="n" style="color:var(--gn2)">$724</div><div class="l">HOUSE MONEY</div></div></div></div><button class="sbtn pp" onclick="jS('j6')">POWER PLAY →</button></div></div>
+<div class="S" id="j6" style="display:none"><div class="label">Step 6</div><div class="title"><span class="pp">$350 → $35,938</span></div><div class="slip" style="border-color:rgba(179,136,255,.1)"><div class="slip-top" style="background:rgba(179,136,255,.02)"><span class="sp" style="color:var(--pp)">🏆 POWER PLAY</span><span style="font-family:'JetBrains Mono';font-size:6px;color:var(--pp)">HOUSE MONEY</span></div><div class="sim" id="j6-legs"></div><div id="j6-t" style="display:none;text-align:center;padding:10px;background:rgba(179,136,255,.02);border-top:1px solid rgba(179,136,255,.05)"><div style="font-family:'Archivo Black';font-size:28px;color:var(--pp)" id="j6-p">$0</div><div style="font-size:7px;color:var(--gy)">ZERO ORIGINAL CAPITAL AT RISK</div></div><button class="sbtn pp" id="j6-btn" style="display:none" onclick="jS('j7')">THE FULL PICTURE →</button></div></div>
+<div class="S" id="j7" style="display:none"><div class="label">Complete</div><div class="title">One Bet → <span class="gd">$55,938</span></div><div class="slip w"><div class="slip-top"><span class="sp">📊 ALL 5 STRATEGIES</span><span class="lv">COMPLETE</span></div><div class="sim" id="j7-sum"></div><div style="text-align:center;padding:10px;background:rgba(239,164,32,.02);border-top:1px solid rgba(239,164,32,.04)"><div style="font-family:'Archivo Black';font-size:clamp(20px,4vw,32px);color:var(--gd)">$55,938</div><div style="font-size:8px;color:var(--gy)">Keith did this by hand. $12K → $1.8M in 9 months. <strong style="color:var(--gd2)">Now imagine the machine.</strong></div></div></div><div class="nxt"><button class="sbtn gl" style="width:auto;margin:0 auto;padding:10px 20px" onclick="go('engines')">12 ENGINES →</button></div></div>`;
+
+H.journey=()=>{runJ()};
+async function runJ(){
+  const a=$('j1a'),b=$('j1b');if(!a)return;
+  await dl(1500);
+  a.classList.remove('scan');a.classList.add('act');a.querySelector('.ov').textContent='+125';a.querySelector('.ov').className='ov pl';a.querySelector('.ob').textContent='DRAFTKINGS';
+  await dl(1200);
+  b.classList.remove('scan');b.classList.add('act');b.querySelector('.ov').textContent='-110';b.querySelector('.ov').className='ov mn';b.querySelector('.ob').textContent='FANDUEL';
+  $('j1-st').innerHTML='<span style="color:var(--gn)">⚡ FOUND</span>';
+  await dl(600);
+  $('j1-m').innerHTML=`<div class="mv" style="animation:fu .4s ease"><div class="mv-b"><div class="n">$1,000</div><div class="l">BANKROLL</div></div><div class="mv-a">→</div><div class="mv-b lit"><div class="n" style="color:var(--gn2)">$459</div><div class="l">→ DK</div></div><div class="mv-b glit"><div class="n" style="color:var(--gd2)">$541</div><div class="l">→ FD</div></div></div>`;
+  await dl(800);
+  const t=$('j1-t');t.style.display='block';t.querySelector('.big').textContent='+$151.21';t.querySelector('.ts').textContent='15.1% ROI · GUARANTEED';
+  await dl(500);
+  const r=$('j1-r');r.classList.add('open');r.style.maxHeight='200px';
+  $('j1-bd').innerHTML=`<div class="bdg g"><span class="dt"></span> GUARANTEED</div><div class="bd"><div class="bd-r"><span class="l">Curry 31+</span><span class="v gn">DK pays $1,151</span></div><div class="bd-r"><span class="l">Curry 30-</span><span class="v gn">FD pays $1,151</span></div><div class="bd-r"><span class="l">Profit</span><span class="v gn">+$151.21</span></div></div>`;
+  $('j1-btn').style.display='block';
+}
+function jS(id){document.querySelectorAll('.S[id^=j]').forEach(s=>s.style.display='none');$(id).style.display='flex';$(id).scrollIntoView({behavior:'smooth'});if(id==='j6')runJ6();if(id==='j7')runJ7()}
+async function runJ6(){
+  const l=$('j6-legs');l.innerHTML='';
+  const picks=['⚡ Curry O30.5 — +4900','Chiefs ML — -500','Lakers ML — -500','Yankees ML — -500','Man City ML — -500'];
+  for(const p of picks){await dl(600);const a=p.includes('4900');l.innerHTML+=`<div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.02);font-size:9px;color:${a?'var(--pp)':'var(--gy)'};font-weight:${a?700:400};animation:slideR .3s ease">${p}</div>`}
+  await dl(400);$('j6-t').style.display='block';aV($('j6-p'),0,35938,1800);await dl(2000);$('j6-btn').style.display='block';
+}
+async function runJ7(){
+  const s=$('j7-sum');s.innerHTML='';
+  for(const[n,v,c] of [['Sure Bet','+$151','var(--gn2)'],['Value Fav','+$250','var(--gd2)'],['Value Dog','+$380','var(--gn2)'],['Double Value','+$724','var(--gd2)'],['Power Play','+$35,938','var(--pp)']]){
+    await dl(350);s.innerHTML+=`<div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.02);animation:slideR .3s ease"><span style="font-size:10px;font-weight:600">${n}</span><span style="font-family:'JetBrains Mono';font-size:13px;font-weight:700;color:${c}">${v}</span></div>`;
+  }
+}
+
+/* ═══ 12 ENGINES ═══ */
+W.engines=()=>`<div class="S"><div class="label">03 · Patent-Pending</div><div class="title">12 Proprietary Engines</div><div class="explain">Each one auto-demonstrates below. Scroll to watch them work.</div></div>
+<!-- SURE BET -->
+<div class="S" id="en1" data-r="0"><div class="label">Engine 01</div><div class="title">⚡ Sure Bet</div><div class="slip"><div class="slip-top"><span class="sp">⚡ MATH PROOF</span><span class="lv">LIVE</span></div><div class="sim" id="en1-s"></div></div></div>
+<!-- VALUE BET -->
+<div class="S" id="en2" data-r="0"><div class="label">Engine 02</div><div class="title">📈 Value Bet</div><div class="slip"><div class="slip-top"><span class="sp">📈 AI DETECTION</span><span class="lv">ANALYZING</span></div><div class="sim" id="en2-s"></div></div></div>
+<!-- MIDDLE -->
+<div class="S" id="en3" data-r="0"><div class="label">Engine 03</div><div class="title">🎯 Middle Bet</div><div class="slip"><div class="slip-top"><span class="sp">🎯 PROBABILITY</span><span class="lv">LIVE</span></div><div class="sim" id="en3-s"></div></div></div>
+<!-- POWER PLAY -->
+<div class="S" id="en4" data-r="0"><div class="label">Engine 04</div><div class="title">🏆 Power Play</div><div class="slip" style="border-color:rgba(179,136,255,.08)"><div class="slip-top" style="background:rgba(179,136,255,.02)"><span class="sp" style="color:var(--pp)">🏆 COMPOUND MATH</span><span class="lv" style="color:var(--pp)">BUILDING</span></div><div class="sim" id="en4-s"></div></div></div>
+<!-- WAR ROOM -->
+<div class="S" id="en5" data-r="0"><div class="label">Engine 05</div><div class="title">🏟️ War Room</div><div class="slip"><div class="slip-top"><span class="sp">🏟️ WATCH SCORE</span><span class="lv">MONITORING</span></div><div class="sim" id="en5-s"></div></div></div>
+<!-- AI SYNTHESIS -->
+<div class="S" id="en6" data-r="0"><div class="label">Engine 06 · ESPN Exclusive</div><div class="title">🤖 AI Synthesis</div><div class="slip"><div class="slip-top"><span class="sp">🤖 FULL PIPELINE</span><span class="lv">PROCESSING</span></div><div class="sim" id="en6-s"></div></div></div>
+<!-- FACTORS -->
+<div class="S" id="en7" data-r="0"><div class="label">Engine 07</div><div class="title">🎛️ Factor System</div><div class="slip"><div class="slip-top"><span class="sp">🎛️ 14 SPORTS · LIVE BUBBLES</span><span class="lv">SCORING</span></div><div class="sim" id="en7-s"></div></div></div>
+<!-- COMPACT: HEDGE -->
+<div class="S" id="en8" data-r="0"><div class="label">Engine 08</div><div class="title">🧮 Hedge Calculator</div><div class="slip"><div class="slip-top"><span class="sp">🧮 3 STRATEGIES</span><span class="lv">ACTIVE</span></div><div class="sim" id="en8-s"></div></div></div>
+<!-- COMPACT: TRACKER -->
+<div class="S" id="en9" data-r="0"><div class="label">Engine 09</div><div class="title">📊 Bet Tracker</div><div class="slip"><div class="slip-top"><span class="sp">📊 15+ STATE VARS</span><span class="lv">TRACKING</span></div><div class="sim" id="en9-s"></div></div></div>
+<!-- COMPACT: PROMO -->
+<div class="S" id="en10" data-r="0"><div class="label">Engine 10</div><div class="title">🎁 Promo Stacker</div><div class="slip"><div class="slip-top"><span class="sp">🎁 ROI AMPLIFIER</span><span class="lv">STACKING</span></div><div class="sim" id="en10-s"></div></div></div>
+<!-- COMPACT: ESPN -->
+<div class="S" id="en11" data-r="0"><div class="label">Engine 11 · Exclusive</div><div class="title">📡 ESPN API</div><div class="slip"><div class="slip-top"><span class="sp" style="color:var(--rd)">📡 LIVE FEED</span><span class="lv">STREAMING</span></div><div class="sim" id="en11-s"></div></div></div>
+<!-- COMPACT: DOUBLE VALUE -->
+<div class="S" id="en12" data-r="0"><div class="label">Engine 12</div><div class="title">🔄 Double Value Bet</div><div class="slip"><div class="slip-top"><span class="sp">🔄 OUTCOME MATRIX</span><span class="lv">PROVING</span></div><div class="sim" id="en12-s"></div></div></div>
+<div class="nxt"><button class="sbtn gl" style="width:auto;margin:0 auto;padding:10px 20px" onclick="go('moat')">OUR MOAT →</button></div>`;
+
+H.engines=()=>{
+  const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting&&e.target.dataset.r==='0'){e.target.dataset.r='1';const fn=EN[e.target.id];if(fn)fn()}})},{threshold:.2});
+  document.querySelectorAll('[id^=en]').forEach(el=>{if(el.dataset.r!==undefined)obs.observe(el)});
+};
+const EN={};
+
+// EN1: SURE BET
+EN.en1=async()=>{const s=$('en1-s');s.innerHTML=`<div class="formula"><span class="label">Implied Probability:</span>+125: 100÷225 = <span class="hl">44.4%</span> · -110: 110÷210 = <span class="hl">52.4%</span><br>Combined: 96.8% <span class="hl">< 100% = ARB</span></div><div class="prob-bar"><div id="p1a" class="prob-seg" style="background:var(--gn)">44.4%</div><div id="p1b" class="prob-seg" style="background:var(--gd)">52.4%</div><div id="p1c" class="prob-seg" style="background:rgba(255,255,255,.06)">3.2%</div></div><div style="display:flex;justify-content:space-between;font-family:'JetBrains Mono';font-size:6px;color:var(--gy)"><span>DK</span><span>FD</span><span style="color:var(--gn2)">PROFIT</span></div><div class="plain"><strong>The missing 3.2%</strong> is your guaranteed profit. <span class="mint">Mathematically impossible to lose.</span></div>`;await dl(300);$('p1a').style.width='44.4%';$('p1b').style.width='52.4%';$('p1c').style.width='3.2%'};
+
+// EN2: VALUE BET
+EN.en2=async()=>{const s=$('en2-s');s.innerHTML=`<div class="mv"><div class="mv-b"><div class="n" style="color:var(--gn2)">+340</div><div class="l">BOOK (22.7%)</div></div><div class="mv-a">vs</div><div class="mv-b lit"><div class="n" style="color:var(--gd2)">+280</div><div class="l">AI TRUE (26.3%)</div></div></div><div class="formula">Edge = 26.3% − 22.7% = <span class="hl">+3.6% EV</span></div><div class="plain"><strong>Book is wrong.</strong> They think 22.7%. Our AI says 26.3%. That gap = <span class="mint">your edge on every bet</span>.</div>`};
+
+// EN3: MIDDLE
+EN.en3=async()=>{const s=$('en3-s');s.innerHTML=`<div class="formula">Over 8.5 (BetRivers) + Under 9.0 (PointsBet)<br>If score=9: <span class="gl">BOTH WIN → +$380 jackpot</span></div><div class="mf"><div class="ball" id="b3" style="left:5%;background:var(--gn);box-shadow:0 0 8px var(--gn)"></div></div><div class="g3" style="text-align:center"><div style="background:var(--b3);border-radius:4px;padding:4px"><div style="font-family:'JetBrains Mono';font-size:12px;color:var(--gn2)">+$34</div><div style="font-size:6px;color:var(--gy)">Under</div></div><div id="m3" style="background:rgba(239,164,32,.04);border:1px solid rgba(239,164,32,.08);border-radius:4px;padding:4px;transition:.5s"><div style="font-family:'JetBrains Mono';font-size:12px;color:var(--gd)">+$380</div><div style="font-size:6px;color:var(--gd)">★ MIDDLE</div></div><div style="background:var(--b3);border-radius:4px;padding:4px"><div style="font-family:'JetBrains Mono';font-size:12px;color:var(--gn2)">+$34</div><div style="font-size:6px;color:var(--gy)">Over</div></div></div>`;await dl(500);$('b3').style.left='50%';await dl(3200);$('b3').style.background='var(--gd)';$('b3').style.boxShadow='0 0 16px var(--gd)';const m=$('m3');if(m){m.style.transform='scale(1.05)';m.style.borderColor='rgba(239,164,32,.3)'}};
+
+// EN4: POWER PLAY
+EN.en4=async()=>{const s=$('en4-s');s.innerHTML=`<div id="e4l"></div><div id="e4t" style="display:none;text-align:center;padding:8px;background:rgba(179,136,255,.02)"><div style="font-family:'Archivo Black';font-size:26px;color:var(--pp)" id="e4p">$0</div></div>`;const l=$('e4l');const picks=['⚡ Curry O30.5 +4900 (50×)','Chiefs ML -500 (1.2×)','Lakers ML -500 (1.2×)','Yankees ML -500 (1.2×)','Man City ML -500 (1.2×)'];for(const p of picks){await dl(600);const a=p.includes('4900');l.innerHTML+=`<div style="padding:3px 0;border-bottom:1px solid rgba(255,255,255,.02);font-size:9px;color:${a?'var(--pp)':'var(--gy)'};font-weight:${a?700:400};animation:slideR .3s ease">${p}</div>`}await dl(400);$('e4t').style.display='block';aV($('e4p'),0,35938,1800)};
+
+// EN5: WAR ROOM
+let ws5=0;
+EN.en5=async()=>{ws5=0;const s=$('en5-s');
+const facts=[{n:'Exposure',v:15,m:20,c:'gn'},{n:'Position',v:18,m:20,c:'gn'},{n:'Volatility',v:12,m:15,c:'gd'},{n:'Time',v:10,m:15,c:'gd'},{n:'CLV',v:14,m:15,c:'gn'},{n:'Factors',v:12,m:15,c:'cy'}];
+s.innerHTML=`<div class="g2"><div><div style="font-family:'JetBrains Mono';font-size:6px;letter-spacing:1px;color:var(--gd);margin-bottom:3px">COMPOSITE FORMULA</div>${facts.map((f,i)=>`<div class="fb"><div class="fb-t"><span style="color:var(--wt)">${f.n}</span><span style="font-family:'JetBrains Mono';font-size:7px;color:var(--${f.c})">${f.v}/${f.m}</span></div><div class="fb-tr"><div class="fb-fl" id="w5f${i}" style="background:var(--${f.c})"></div></div></div>`).join('')}
+<div style="display:flex;gap:2px;flex-wrap:wrap;margin-top:4px" id="w5b"></div><div style="font-family:'JetBrains Mono';font-size:7px;color:var(--gy);margin-top:3px;min-height:10px" id="w5x"></div></div>
+<div style="text-align:center"><div class="rng"><svg width="90" height="90" viewBox="0 0 90 90"><circle cx="45" cy="45" r="38" fill="none" stroke="rgba(255,255,255,.02)" stroke-width="4"/><circle id="w5r" cx="45" cy="45" r="38" fill="none" stroke="url(#wg)" stroke-width="4" stroke-dasharray="239" stroke-dashoffset="239" stroke-linecap="round"/><defs><linearGradient id="wg"><stop offset="0%" stop-color="#28C840"/><stop offset="100%" stop-color="var(--gn)"/></linearGradient></defs></svg><div class="rng-c"><div class="rng-n gn" id="w5s">0</div><div class="rng-l">WATCH SCORE</div></div></div><div id="w5st" style="font-family:'JetBrains Mono';font-size:7px;color:var(--gn);margin-top:3px">CALCULATING...</div></div></div>`;
+facts.forEach((f,i)=>setTimeout(()=>{const e=$('w5f'+i);if(e)e.style.width=(f.v/f.m*100)+'%'},i*80));
+const iv=setInterval(()=>{ws5++;if($('w5s'))$('w5s').textContent=ws5;if($('w5r'))$('w5r').setAttribute('stroke-dashoffset',239-(ws5/100)*239);if(ws5>=81){clearInterval(iv);if($('w5st'))$('w5st').textContent='SECURE — HOLD'}},22);
+$('w5b').innerHTML=[{n:'Star Out',v:-15,t:'r'},{n:'Home',v:8,t:'g'},{n:'B2B',v:-10,t:'r'},{n:'Sharp$',v:12,t:'g'},{n:'Injury',v:-18,t:'r'},{n:'Line↑',v:10,t:'g'}].map(b=>`<button style="font-size:6px;padding:2px 4px;background:${b.t==='r'?'rgba(255,82,82,.04)':'rgba(0,230,118,.04)'};color:${b.t==='r'?'var(--rd)':'var(--gn)'};border:1px solid ${b.t==='r'?'rgba(255,82,82,.06)':'rgba(0,230,118,.06)'};border-radius:3px;cursor:pointer;font-family:'JetBrains Mono'" onclick="w5c(this,${b.v})">${b.n}(${b.v>0?'+':''}${b.v})</button>`).join('')};
+function w5c(el,v){ws5=Math.max(0,Math.min(100,ws5+v));$('w5s').textContent=ws5;$('w5r').setAttribute('stroke-dashoffset',239-(ws5/100)*239);$('w5x').innerHTML=`${v>0?'<span class="gn">+'+v+'</span>':'<span class="rd">'+v+'</span>'} → ${ws5}`;el.style.opacity='.2';el.disabled=true;const s=$('w5st');s.textContent=ws5>=70?'SECURE — HOLD':ws5>=40?'MONITOR — HEDGE':'CRITICAL';s.style.color=ws5>=70?'var(--gn)':ws5>=40?'var(--gd)':'var(--rd)'}
+
+// EN6: AI SYNTHESIS
+EN.en6=async()=>{const s=$('en6-s');s.innerHTML=`<div style="font-family:'JetBrains Mono';font-size:6px;color:var(--gd);letter-spacing:1px;margin-bottom:3px">ESPN → 11 AIs → CONSENSUS → FAIR ODDS</div><div id="e6d"></div><div id="e6v"></div><div id="e6r" style="display:none"></div>`;
+const data=['✓ Curry 28.4 PPG','✓ Last 5: avg 30.8','✓ Klay OUT','✓ Home: 30.1','✓ Foster +2.3 FTA'];const d=$('e6d');for(const x of data){await dl(280);d.innerHTML+=`<span style="font-family:'JetBrains Mono';font-size:8px;color:var(--gn);animation:slideR .2s ease">${x}<br></span>`}
+await dl(300);const models=['GPT-4o','Claude','Gemini','DeepSeek','Qwen3','Llama','Mistral','Grok','Cohere','Yi','Phi-3'];const v=$('e6v');for(const m of models){await dl(150);const sc=68+Math.floor(Math.random()*25);v.innerHTML+=`<span style="font-family:'JetBrains Mono';font-size:7px;color:${sc>75?'var(--gn)':'var(--gd)'};animation:slideR .2s ease">${m}:${sc}% </span>`}
+await dl(300);$('e6r').style.display='block';$('e6r').innerHTML=`<div style="text-align:center;padding:8px;background:rgba(0,230,118,.02);border-radius:6px;margin-top:4px"><div style="font-family:'Archivo Black';font-size:20px;color:var(--gn)">82% · +4.5% EDGE</div><div style="font-size:8px;color:var(--gy)">Book: -115 (53.5%) → AI: -138 (58.0%)</div></div>`};
+
+// EN7: FACTORS WITH BUBBLES
+EN.en7=async()=>{const s=$('en7-s');
+const factors=[
+  {n:'Star Player',v:'+0',sc:100,c:'gn',risk:false},{n:'Klay OUT',v:'+3.2%',sc:78,c:'gn',risk:false},
+  {n:'Home Court',v:'+1.7',sc:85,c:'gn',risk:false},{n:'2-Day Rest',v:'+0.8',sc:72,c:'gn',risk:false},
+  {n:'Ref: Foster',v:'+2.3 FTA',sc:80,c:'gn',risk:false},{n:'vs BOS',v:'+2.6',sc:82,c:'gn',risk:false},
+  {n:'Line Stable',v:'Neutral',sc:65,c:'gd',risk:false},{n:'62% Public',v:'Moderate',sc:55,c:'gd',risk:false},
+];
+s.innerHTML=`<div style="font-family:'JetBrains Mono';font-size:6px;letter-spacing:1px;color:var(--gd);margin-bottom:4px">NBA · CURRY OVER 30.5 · FACTOR BUBBLES</div><div style="display:flex;flex-wrap:wrap;gap:3px;margin-bottom:8px" id="e7-bubbles"></div><div id="e7-bars"></div><div class="plain" style="margin-top:6px"><strong>Bubbles light up</strong> as each factor is scored. <span style="color:var(--gn)">Green = favorable</span>. <span style="color:var(--gd)">Gold = neutral</span>. <span style="color:var(--rd)">Red = risk</span>. These feed directly into the <span class="mint">Watch Score</span>.</div>`;
+const bb=$('e7-bubbles');const bars=$('e7-bars');
+bb.innerHTML=factors.map((f,i)=>`<div class="factor-bubble" id="fb${i}" style="color:var(--${f.c});border-color:var(--${f.c})33;background:var(--${f.c})08">${f.n} <span style="font-weight:400">${f.v}</span></div>`).join('');
+for(let i=0;i<factors.length;i++){
+  const f=factors[i];
+  await dl(400);
+  const bubble=$('fb'+i);if(bubble)bubble.classList.add('lit');
+  bars.innerHTML+=`<div class="fb" style="animation:slideR .3s ease"><div class="fb-t"><span style="color:var(--wt)">${f.n} <span style="color:var(--${f.c})">${f.v}</span></span><span style="font-family:'JetBrains Mono';font-size:7px;color:var(--${f.c})">${f.sc}/100</span></div><div class="fb-tr"><div class="fb-fl" id="e7f${i}" style="background:var(--${f.c})"></div></div></div>`;
+  const bar=$('e7f'+i);if(bar)setTimeout(()=>bar.style.width=f.sc+'%',50);
+}};
+
+// EN8: HEDGE (compact)
+EN.en8=async()=>{$('en8-s').innerHTML=`<div class="g3" style="gap:4px">${[{n:'ELIMINATE RISK',d:'+$33.95 guaranteed',c:'gn'},{n:'MINIMIZE LOSS',d:'Max +$67.90 / Loss $4.12',c:'gd'},{n:'PROFIT ALL',d:'$22-$46 range',c:'cy'}].map(h=>`<div style="padding:8px;background:rgba(0,0,0,.2);border:1px solid var(--${h.c})22;border-radius:6px;text-align:center;cursor:pointer;transition:.3s" onmouseover="this.style.borderColor='var(--${h.c})'" onmouseout="this.style.borderColor='var(--${h.c})22'"><div style="font-family:'JetBrains Mono';font-size:7px;color:var(--${h.c});letter-spacing:1px">${h.n}</div><div style="font-size:8px;color:var(--gy);margin-top:2px">${h.d}</div></div>`).join('')}</div><div class="plain" style="margin-top:4px">Anti-detection stake rounding: $459→$460. <span class="mint">Sportsbooks flag exact decimals.</span></div>`};
+
+// EN9: TRACKER (compact)
+EN.en9=async()=>{const s=$('en9-s');s.innerHTML=`<div id="e9l"></div><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin-top:6px"><div style="background:var(--b3);border-radius:4px;padding:4px;text-align:center"><div style="font-family:'JetBrains Mono';font-size:14px;font-weight:700;color:var(--gn2)">$4,200</div><div style="font-size:5px;color:var(--gy)">LOCKED</div></div><div style="background:var(--b3);border-radius:4px;padding:4px;text-align:center"><div style="font-family:'JetBrains Mono';font-size:14px;font-weight:700;color:var(--gd2)">$347</div><div style="font-size:5px;color:var(--gy)">P&L</div></div><div style="background:var(--b3);border-radius:4px;padding:4px;text-align:center"><div style="font-family:'JetBrains Mono';font-size:14px;font-weight:700">12</div><div style="font-size:5px;color:var(--gy)">BETS</div></div></div>`;const bets=[{e:'Lakers/Celtics',t:'SURE',p:'+$34'},{e:'Chiefs/Eagles',t:'MIDDLE',p:'+$28'},{e:'Curry O30.5',t:'VALUE',p:'+$47'},{e:'City/Arsenal',t:'SURE',p:'+$51'}];const l=$('e9l');for(const b of bets){await dl(400);l.innerHTML+=`<div style="display:flex;justify-content:space-between;padding:3px 0;border-bottom:1px solid rgba(255,255,255,.02);font-size:8px;animation:slideR .3s ease"><span>${b.e} <span style="color:var(--gd);font-size:6px">${b.t}</span></span><span style="font-family:'JetBrains Mono';color:var(--gn2)">${b.p}</span></div>`}};
+
+// EN10: PROMO (compact)
+EN.en10=async()=>{$('en10-s').innerHTML=`<div class="g2"><div style="text-align:center;padding:8px"><div style="font-family:'JetBrains Mono';font-size:6px;color:var(--gy);letter-spacing:1px">WITHOUT PROMOS</div><div style="font-family:'Archivo Black';font-size:18px;margin:3px 0">3.4%</div><div style="font-family:'JetBrains Mono';font-size:9px;color:var(--gy)">+$33.95</div></div><div style="text-align:center;padding:8px;background:rgba(0,230,118,.02);border:1px solid rgba(0,230,118,.06);border-radius:6px"><div style="font-family:'JetBrains Mono';font-size:6px;color:var(--gn);letter-spacing:1px">WITH PROMO STACK</div><div style="font-family:'Archivo Black';font-size:18px;color:var(--gn2);margin:3px 0">27.9%</div><div style="font-family:'JetBrains Mono';font-size:9px;color:var(--gn2)">+$278.95</div></div></div><div class="plain" style="margin-top:4px">Same arb. <span class="mint">8× the return</span> with sportsbook promos layered on top.</div>`};
+
+// EN11: ESPN (compact)
+EN.en11=async()=>{const s=$('en11-s');s.innerHTML=`<div id="e11f"></div>`;const players=[{p:'Curry',s:'ACTIVE',c:'gn',w:'+0'},{p:'LeBron',s:'QUEST',c:'rd',w:'-12'},{p:'Tatum',s:'PROB',c:'gd',w:'+3'},{p:'Klay',s:'OUT',c:'rd',w:'-8'},{p:'Davis',s:'ACTIVE',c:'gn',w:'+0'},{p:'White',s:'ACTIVE',c:'gn',w:'+5'}];const f=$('e11f');for(const p of players){await dl(300);f.innerHTML+=`<div style="display:flex;justify-content:space-between;padding:3px 0;border-bottom:1px solid rgba(255,255,255,.02);font-size:8px;animation:slideR .2s ease"><span style="font-weight:600">${p.p}</span><span style="font-family:'JetBrains Mono';font-size:6px;color:var(--${p.c});border:1px solid var(--${p.c})33;padding:0 3px;border-radius:2px">${p.s}</span><span style="font-family:'JetBrains Mono';font-size:7px;color:var(--${p.c})">${p.w}</span></div>`}s.innerHTML+=`<div style="padding:4px;background:rgba(255,82,82,.03);border-radius:4px;margin-top:4px;font-size:7px;text-align:center;color:var(--rd)">⚠ Combined WS impact: -20 → Auto-hedge triggered</div>`};
+
+// EN12: DOUBLE VALUE (compact)
+EN.en12=async()=>{$('en12-s').innerHTML=`<div class="og" style="grid-template-columns:auto 1fr 1fr"><div class="og-cell hdr"></div><div class="og-cell hdr">OVER WINS</div><div class="og-cell hdr">UNDER WINS</div><div class="og-cell">Dog Pair</div><div class="og-cell" style="color:var(--gn2);font-weight:700">+$20,000</div><div class="og-cell" style="color:var(--gy)">-$580</div><div class="og-cell">Fav Pair</div><div class="og-cell" style="color:var(--gy)">-$530</div><div class="og-cell" style="color:var(--gd2);font-weight:700">+$724</div><div class="og-cell hdr">COMBINED</div><div class="og-cell" style="color:var(--gn2);font-weight:700;font-size:11px">+$20,470</div><div class="og-cell" style="color:var(--gd2);font-weight:700;font-size:11px">+$724</div></div><div class="plain" style="margin-top:4px"><strong>Minimum ($724) beats Sure Bet ($151) by $573.</strong> <span class="mint">Always.</span></div>`};
+
+/* ═══ MOAT ═══ */
+W.moat=()=>`<div class="S"><div class="label">Our Moat</div><div class="title">Why Nobody Can Copy SBA</div></div>
+<div style="max-width:600px;margin:0 auto"><div class="cr hdr"><div class="c">FEATURE</div><div class="c">ODDSJAM ($160M)</div><div class="c">OTHERS</div><div class="c">SBA</div></div><div id="mt-rows"></div></div>
+<div class="g2" style="max-width:600px;margin:12px auto"><div class="ex" style="margin:0"><div class="ex-t">🏗️ Technical</div><div class="ex-b"><strong>132K+ lines</strong>. 12 engines. ESPN exclusive. <strong>18-24 months</strong> to replicate.</div></div><div class="ex" style="margin:0"><div class="ex-t">💰 Economic</div><div class="ex-b">Zero marginal cost per user. Viral affiliate. <strong>Pure software</strong> at scale.</div></div></div>
+<div class="nxt"><button class="sbtn gl" style="width:auto;margin:0 auto;padding:10px 20px" onclick="go('rev')">REVENUE →</button></div>`;
+H.moat=()=>{const rows=[['AI (12 LLMs)','✗','✗','✦ Exclusive'],['ESPN Live','✗','✗','✦ Exclusive'],['War Room','✗','✗','✦ Patent'],['Middle Bets','✗','✗','✦ Patent'],['Power Play','✗','✗','✦ Patent'],['Factor System','✗','✗','✦ Patent'],['Deep Links','Basic','✗','✦ 39 Books'],['Products','2','1','12 Engines'],['Valuation','$160M','$20-30M','$10-15M Pre']];const c=$('mt-rows');c.innerHTML='';rows.forEach((r,i)=>{const last=r[0]==='Valuation';const d=document.createElement('div');d.className='cr'+(last?' sba':'');d.innerHTML=`<div class="c">${r[0]}</div><div class="c${r[1]==='✗'?' x':''}">${r[1]}</div><div class="c${r[2]==='✗'?' x':''}">${r[2]}</div><div class="c ch">${r[3]}</div>`;c.appendChild(d);TT.push(setTimeout(()=>d.classList.add('show'),i*200))})};
+
+/* ═══ REVENUE ═══ */
+W.rev=()=>`<div class="S"><div class="label">Revenue</div><div class="title">How SBA Makes Money</div></div>
+<div class="g4" style="max-width:600px;margin:0 auto">${[{t:'BASIC',p:'$1K'},{t:'PLUS',p:'$2K'},{t:'ELITE',p:'$5K',g:1},{t:'PRO',p:'$10K'}].map(c=>`<div style="background:var(--b2);border:1px solid ${c.g?'rgba(239,164,32,.1)':'var(--slB)'};border-radius:8px;padding:8px;text-align:center"><div style="font-family:'JetBrains Mono';font-size:6px;letter-spacing:1px;color:${c.g?'var(--gn)':'var(--gd)'}">${c.t}</div><div style="font-family:'Archivo Black';font-size:20px;margin:2px 0">${c.p}</div><div style="font-size:7px;color:var(--gy)">40-day</div></div>`).join('')}</div>
+<div style="max-width:600px;margin:12px auto"><div class="bar-wrap" id="rv-b"></div></div>
+<div class="nxt"><button class="sbtn gl" style="width:auto;margin:0 auto;padding:10px 20px" onclick="go('users')">USER EARNINGS →</button></div>`;
+H.rev=()=>{const bars=[{q:'Q2 26',a:'$420K',h:12,c:'var(--gd)'},{q:'Q3 26',a:'$1.2M',h:25,c:'var(--gd)'},{q:'Q4 26',a:'$3.4M',h:42,c:'var(--gd)'},{q:'Q1 27',a:'$8.1M',h:65,c:'var(--gn)'},{q:'Q2 27',a:'$18.6M',h:100,c:'var(--gn)'}];$('rv-b').innerHTML=bars.map(b=>`<div class="bar-col"><div class="bar-val" id="bv${b.q.replace(/\s/g,'')}" style="color:${b.c}">${b.a}</div><div class="bar" id="bb${b.q.replace(/\s/g,'')}" style="background:linear-gradient(to top,var(--b4),${b.c})"></div><div class="bar-lbl">${b.q}</div></div>`).join('');bars.forEach((b,i)=>{const k=b.q.replace(/\s/g,'');TT.push(setTimeout(()=>{const bar=$('bb'+k);if(bar)bar.style.height=b.h+'%';const v=$('bv'+k);if(v)v.classList.add('show')},i*300+200))})};
+
+/* ═══ USER EARNINGS ═══ */
+W.users=()=>`<div class="S"><div class="label">User Economics</div><div class="title">What Users <span class="gn">Actually Earn</span></div><div class="explain">Drag the sliders. This is why nobody cancels.</div></div>
+<div class="ucalc"><div style="margin-bottom:8px"><div style="display:flex;justify-content:space-between;font-size:9px"><span style="color:var(--gy)">Bankroll</span><span style="font-family:'JetBrains Mono';font-weight:600" id="ub">$5,000</span></div><input type="range" min="1000" max="50000" step="1000" value="5000" id="ubr" oninput="uc()"></div>
+<div style="margin-bottom:8px"><div style="display:flex;justify-content:space-between;font-size:9px"><span style="color:var(--gy)">Arbs/Day</span><span style="font-family:'JetBrains Mono';font-weight:600" id="ua">4</span></div><input type="range" min="1" max="10" step="1" value="4" id="uar" oninput="uc()"></div>
+<div style="margin-bottom:8px"><div style="display:flex;justify-content:space-between;font-size:9px"><span style="color:var(--gy)">Avg ROI</span><span style="font-family:'JetBrains Mono';font-weight:600" id="ur">3%</span></div><input type="range" min="1" max="30" step="0.5" value="3" id="urr" oninput="uc()"></div>
+<div class="g3" id="ucr"></div><div style="margin-top:6px;text-align:center;font-size:8px;color:var(--gd2)" id="ucpb"></div></div>
+<div class="nxt"><button class="sbtn gl" style="width:auto;margin:0 auto;padding:10px 20px" onclick="go('path')">$1B PATH →</button></div>`;
+H.users=()=>{uc()};
+function uc(){const b=+($('ubr')||{}).value||5000,a=+($('uar')||{}).value||4,r=+($('urr')||{}).value||3;$('ub').textContent=fmt(b);$('ua').textContent=a;$('ur').textContent=r+'%';const d=b*(r/100)*a,m=d*30,y=d*365;$('ucr').innerHTML=`<div style="background:var(--b3);border-radius:6px;padding:6px;text-align:center"><div style="font-family:'JetBrains Mono';font-size:16px;font-weight:700;color:var(--gn2)">${fmt(Math.round(d))}</div><div style="font-size:6px;color:var(--gy)">DAILY</div></div><div style="background:var(--b3);border-radius:6px;padding:6px;text-align:center"><div style="font-family:'JetBrains Mono';font-size:16px;font-weight:700;color:var(--gn2)">${fmt(Math.round(m))}</div><div style="font-size:6px;color:var(--gy)">MONTHLY</div></div><div style="background:var(--b3);border-radius:6px;padding:6px;text-align:center"><div style="font-family:'JetBrains Mono';font-size:16px;font-weight:700;color:var(--gn2)">${fmt(Math.round(y))}</div><div style="font-size:6px;color:var(--gy)">YEARLY</div></div>`;$('ucpb').textContent=`$5K sub pays back in ${Math.ceil(5000/d)} day${Math.ceil(5000/d)>1?'s':''}`}
+
+/* ═══ $1B PATH ═══ */
+W.path=()=>`<div class="S"><div class="label">Growth</div><div class="title">$2M → <span class="gd">$1 Billion</span></div></div>
+<div class="tl" id="tl-i"></div>
+<div class="ex"><div class="ex-c"><strong>$2M at $15M pre → rides to $160M (OddsJam) = 80× return.</strong> SBA has 6× their tech.</div></div>
+<div class="nxt"><button class="sbtn gl" style="width:auto;margin:0 auto;padding:10px 20px" onclick="go('partner')">PARTNERSHIP →</button></div>`;
+H.path=()=>{const phases=[{p:'Phase 1',t:'NOW',v:'$10-15M',d:'$2M investment. Scale to 1K+ members.',r:'Entry position',c:'gd'},{p:'Phase 2',t:'Q4 2026',v:'$50-80M',d:'Series A. Superstar helps source.',r:'5-8× return',c:'gd'},{p:'Phase 3',t:'2027',v:'$150-300M',d:'Institutional capital. $20M+ ARR.',r:'15-30× return',c:'gn'},{p:'Phase 4',t:'2028+',v:'$500M-$1B+',d:'Acquisition or IPO.',r:'80-100×+ return',c:'gn'}];$('tl-i').innerHTML=phases.map((p,i)=>`<div class="tl-i" style="--c:var(--${p.c})"><div style="font-family:'JetBrains Mono';font-size:6px;letter-spacing:1px;color:var(--${p.c})">${p.t}</div><div style="font-family:'Archivo Black';font-size:14px;margin:2px 0">${p.p} <span style="font-size:11px;color:var(--${p.c})">(${p.v})</span></div><div style="font-size:9px;color:var(--gy)">${p.d}</div><div style="font-family:'JetBrains Mono';font-size:9px;font-weight:700;color:var(--${p.c});margin-top:2px">${p.r}</div></div>`).join('');document.querySelectorAll('.tl-i').forEach((item,i)=>{item.style.cssText+=``;const s=document.createElement('style');s.textContent=`.tl-i:nth-child(${i+1})::before{background:var(--${phases[i].c});box-shadow:0 0 6px var(--${phases[i].c})}`;document.head.appendChild(s);TT.push(setTimeout(()=>item.classList.add('show'),i*500))})};
+
+/* ═══ PARTNERSHIP ═══ */
+W.partner=()=>`<div class="S"><div class="label">Partnership</div><div class="title">What We Build <span class="gd">Together</span></div></div>
+<div class="g2" style="max-width:600px;margin:0 auto"><div class="ex" style="margin:0"><div class="ex-t">SBA Brings</div><div class="ex-b">→ 12 patent-pending engines<br>→ 132K+ lines of code<br>→ Exclusive ESPN API<br>→ Zero marginal cost<br>→ Viral affiliate engine<br>→ $212B market</div></div><div class="ex" style="margin:0"><div class="ex-t">Superstar Brings</div><div class="ex-b">→ $2M capital<br>→ OTC listing (DWIS)<br>→ SEC Form 10 filing<br>→ Deal flow network<br>→ M&A expertise<br>→ The Farr legacy & network</div></div></div>
+<div class="ex"><div class="ex-t">The Crown Jewel Strategy</div><div class="ex-b">Superstar Platforms is building a <strong>national technology conglomerate</strong>. PawnTrust is fintech. Automotive is distribution. <strong>SBA is the crown jewel</strong> — the highest-growth, highest-margin, most defensible tech asset in the portfolio. SBA transforms Superstar from a holding company into a <strong>technology powerhouse</strong>.</div></div>
+<div class="nxt"><button class="sbtn gl" style="width:auto;margin:0 auto;padding:10px 20px" onclick="go('close')">THE LEGACY →</button></div>`;
+
+/* ═══ FARR LEGACY CLOSER ═══ */
+W.close=()=>`<div class="S"><div class="label">Two Dynasties. One Future.</div><div class="title">The <span class="gd">Farr</span> Legacy Continues</div></div>
+<div class="legacy-card">
+  <div class="era">1967</div>
+  <div class="detail">Mel Farr Sr. steps onto the field. <strong>NFL Rookie of the Year.</strong></div>
+</div>
+<div class="legacy-line"></div>
+<div class="legacy-card">
+  <div class="era">1975-1998</div>
+  <div class="detail">Mel Farr Automotive Group becomes the <strong>largest African-American owned business in America.</strong> $400M+.</div>
+</div>
+<div class="legacy-line"></div>
+<div class="legacy-card">
+  <div class="era">1991</div>
+  <div class="detail">Mike Farr leads the Detroit Lions to their <strong>only playoff victory.</strong> Catches passes from Troy Aikman at UCLA. Then doubles the family business from <strong>$200M to $400M.</strong></div>
+</div>
+<div class="legacy-line"></div>
+<div class="legacy-card">
+  <div class="era">2025-2026</div>
+  <div class="detail">Mike Farr launches <strong>Superstar Platforms</strong> — named for his father. Files Form 10 with the SEC. Builds PawnTrust. Closes automotive distribution. Acquires tech assets.</div>
+</div>
+<div class="legacy-line"></div>
+<div class="legacy-card" style="border-color:rgba(0,230,118,.15);background:linear-gradient(135deg,rgba(0,230,118,.02),rgba(239,164,32,.02))">
+  <div class="era" style="color:var(--gn)">2026 AND BEYOND</div>
+  <div class="name" style="color:var(--gd)">Superstar × SBA</div>
+  <div class="detail">The Farr family turned football into a business empire.<br>Keith Pratt turned sports betting into a technology revolution.<br><br><strong>Together: $2M → $1 billion.</strong><br><br>Same winning mentality. Same relentless work ethic.<br>Different generation. <span style="color:var(--gn)">Bigger stage.</span><br><br><em style="color:var(--gd)">"If a man does not know to which port he sails, no wind is favorable."</em><br><span style="font-size:8px;color:var(--gy)">— Seneca, as quoted by Mel Farr Sr.</span></div>
+</div>
+<div class="nxt"><button class="sbtn gl" style="width:auto;margin:0 auto;padding:10px 24px" onclick="go('ask')">THE ASK →</button></div>`;
+
+/* ═══ THE ASK ═══ */
+W.ask=()=>`<div style="min-height:82vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
+<div class="tg">The Investment</div>
+<div style="font-family:'Archivo Black';font-size:clamp(40px,7vw,80px);color:var(--gd);line-height:1" id="ask-n">$0</div>
+<div style="font-family:'JetBrains Mono';font-size:8px;letter-spacing:3px;color:var(--gy);margin-top:4px">SEED · SUBSIDIARY PARTNERSHIP</div>
+<div style="font-family:'Archivo Black';font-size:clamp(12px,2vw,20px);color:var(--gy);margin-top:10px">Let's Take SBA <span class="gd">Farr-ther</span> Together</div>
+<div style="max-width:500px;width:100%;margin-top:20px" id="ask-f"></div>
+<div style="max-width:500px;width:100%;margin-top:16px"><table class="dt"><thead><tr><th>Company</th><th>Value</th><th>Products</th></tr></thead><tbody><tr><td>OddsJam</td><td>$160M</td><td>2</td></tr><tr><td>Action Network</td><td>$240M</td><td>3</td></tr><tr><td>Better Collective</td><td>$1.2B</td><td>5</td></tr><tr class="hl"><td>★ SBA Target</td><td>$500M-$1B+</td><td>12</td></tr></tbody></table></div>
+<div style="margin-top:20px"><div style="font-family:'Archivo Black';font-size:13px">Keith Pratt</div><div style="font-size:9px;color:var(--gy)">CEO · Sports Bet Arbitrage LLC</div><div style="font-size:8px;color:var(--gy);margin-top:4px">Introduced by <strong class="gd">Carlos</strong> → The Farr Family / Superstar Platforms</div></div>
+<div style="margin-top:16px;font-family:'JetBrains Mono';font-size:5px;letter-spacing:3px;color:var(--gy);opacity:.25">CONFIDENTIAL · SUPERSTAR PLATFORMS ONLY</div>
+</div>`;
+H.ask=()=>{aV($('ask-n'),0,2000000,2500);const funds=[{p:'40%',l:'Engineering & Scale',c:'var(--gd)',w:'40%'},{p:'25%',l:'Marketing & Acquisition',c:'var(--gn)',w:'25%'},{p:'20%',l:'Legal & Compliance',c:'var(--cy)',w:'20%'},{p:'15%',l:'Operations',c:'var(--pp)',w:'15%'}];$('ask-f').innerHTML=funds.map(f=>`<div class="fund-r"><div class="fund-pct" style="color:${f.c}">${f.p}</div><div style="flex:1"><div style="font-size:9px;color:var(--gy)">${f.l}</div><div class="fund-bar" style="background:${f.c}" data-w="${f.w}"></div></div></div>`).join('');document.querySelectorAll('.fund-r').forEach((r,i)=>{TT.push(setTimeout(()=>{r.classList.add('show');const b=r.querySelector('.fund-bar');if(b)TT.push(setTimeout(()=>b.style.width=b.dataset.w,80))},i*300+600))})};
+
+nav();ren();
+</script>
+</body>
+</html>
