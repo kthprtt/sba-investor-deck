@@ -22,7 +22,37 @@ nav{position:fixed;top:0;left:0;right:0;z-index:10000;background:rgba(4,6,10,.94
 @keyframes glow{0%,100%{box-shadow:0 0 6px var(--gd)}50%{box-shadow:0 0 20px var(--gd)}}
 @keyframes pulseGn{0%,100%{box-shadow:0 0 4px var(--gn)}50%{box-shadow:0 0 14px var(--gn)}}
 @keyframes radialGlow{0%{box-shadow:0 0 20px rgba(0,230,118,.05),0 0 60px rgba(239,164,32,.03)}50%{box-shadow:0 0 40px rgba(0,230,118,.12),0 0 100px rgba(239,164,32,.08)}100%{box-shadow:0 0 20px rgba(0,230,118,.05),0 0 60px rgba(239,164,32,.03)}}
-@media(max-width:768px){.V{padding:50px 10px 20px}.nt{display:none}}
+@media(max-width:768px){
+.V{padding:50px 10px 20px}
+.nt{display:none}
+.slip{width:98vw;border-radius:10px}
+.slip.w{width:98vw}
+.sim{padding:14px}
+.formula{font-size:11px;padding:12px}
+.plain{font-size:12px;padding:10px 12px}
+.ex{padding:16px;margin:10px 6px}
+.ex-t{font-size:16px}
+.ex-b{font-size:12px}
+.g2,.g3,.g4{grid-template-columns:1fr}
+.legacy-card{margin:8px 4px;padding:20px}
+.legacy-card .detail{font-size:13px}
+.mv-b{min-width:60px;padding:8px}
+.mv-b .n{font-size:16px}
+.orow{padding:10px}
+.odd{padding:12px 6px}
+.odd .ov{font-size:22px}
+.odd .ol{font-size:9px}
+.tot .big{font-size:22px}
+.tot .ts{font-size:9px}
+.fb-t{font-size:10px}
+.rng{width:100px;height:100px}
+.rng-n{font-size:26px}
+.og-cell{padding:6px 8px;font-size:11px}
+.ucalc{margin:10px 6px;padding:12px}
+.bar-wrap{height:120px}
+.dt th,.dt td{padding:6px 4px;font-size:11px}
+.cr .c{padding:4px 5px;font-size:10px}
+}
 .tg{font-family:'JetBrains Mono';font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gd);opacity:.55;margin-bottom:5px}
 .H1{font-family:'Archivo Black';font-size:clamp(28px,4vw,46px);line-height:1.05;margin-bottom:10px}
 .H2{font-family:'Archivo Black';font-size:clamp(20px,2.8vw,30px);line-height:1.08;margin-bottom:8px}
@@ -313,17 +343,17 @@ W.engines=()=>{
   const prevId=idx>0?ENG_LIST[idx-1].id:null;
   const nextId=idx<ENG_LIST.length-1?ENG_LIST[idx+1].id:null;
   return `<div style="min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:56px 20px 40px">
-    <div style="display:flex;align-items:center;gap:12px;margin-bottom:6px">
-      <button class="sbtn dk" style="width:auto;padding:6px 14px;margin:0;font-size:10px" onclick="engView='hub';ren()">← ALL ENGINES</button>
-      <span style="font-family:'JetBrains Mono';font-size:10px;color:var(--gy);letter-spacing:2px">ENGINE ${String(idx+1).padStart(2,'0')} OF 12 · PATENT-PENDING</span>
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:10px">
+      <button class="sbtn dk" style="width:auto;padding:8px 18px;margin:0;font-size:12px" onclick="engView='hub';ren()">← ALL ENGINES</button>
+      <span style="font-family:'JetBrains Mono';font-size:12px;color:var(--gy);letter-spacing:2px">ENGINE ${String(idx+1).padStart(2,'0')} OF 12 · PATENT-PENDING</span>
     </div>
-    <div style="font-size:40px;margin-bottom:4px">${eng.icon}</div>
-    <div style="font-family:'Archivo Black';font-size:clamp(24px,4vw,38px);text-align:center;margin-bottom:6px">${eng.name}</div>
-    <div style="font-size:15px;color:var(--gy);max-width:500px;text-align:center;margin-bottom:20px">${eng.desc}</div>
-    <div class="slip"><div class="slip-top"><span class="sp">${eng.icon} ${eng.name.toUpperCase()}</span><span class="lv">LIVE</span></div><div class="sim" id="${eng.id}-s"></div></div>
-    <div style="display:flex;gap:10px;margin-top:20px">
-      ${prevId?`<button class="sbtn dk" style="width:auto;padding:10px 20px;margin:0;font-size:12px" onclick="engView='${prevId}';ren()">← PREV</button>`:''}
-      ${nextId?`<button class="sbtn gl" style="width:auto;padding:10px 20px;margin:0;font-size:12px" onclick="engView='${nextId}';ren()">NEXT ENGINE →</button>`:`<button class="sbtn gl" style="width:auto;padding:10px 20px;margin:0;font-size:12px" onclick="go('moat')">OUR MOAT →</button>`}
+    <div style="font-size:52px;margin-bottom:6px">${eng.icon}</div>
+    <div style="font-family:'Archivo Black';font-size:clamp(28px,5vw,46px);text-align:center;margin-bottom:8px">${eng.name}</div>
+    <div style="font-size:17px;color:var(--gy);max-width:560px;text-align:center;margin-bottom:24px;line-height:1.5">${eng.desc}</div>
+    <div class="slip" style="min-height:200px"><div class="slip-top"><span class="sp">${eng.icon} ${eng.name.toUpperCase()}</span><span class="lv">LIVE</span></div><div class="sim" style="padding:18px 20px;min-height:160px;font-size:14px" id="${eng.id}-s"></div></div>
+    <div style="display:flex;gap:12px;margin-top:24px">
+      ${prevId?`<button class="sbtn dk" style="width:auto;padding:12px 24px;margin:0;font-size:14px" onclick="engView='${prevId}';ren()">← PREV</button>`:''}
+      ${nextId?`<button class="sbtn gl" style="width:auto;padding:12px 24px;margin:0;font-size:14px" onclick="engView='${nextId}';ren()">NEXT ENGINE →</button>`:`<button class="sbtn gl" style="width:auto;padding:12px 24px;margin:0;font-size:14px" onclick="go('moat')">OUR MOAT →</button>`}
     </div>
   </div>`;
 };
@@ -588,7 +618,7 @@ H.ask=()=>{
 };
 
 /* ═══ COACH K AI — POWERED BY CLAUDE ═══ */
-const CK_OPEN=`<div id="ck-overlay" style="position:fixed;bottom:70px;right:20px;width:360px;max-height:520px;background:rgba(11,16,24,.97);backdrop-filter:blur(20px);border:1px solid rgba(239,164,32,.12);border-radius:16px;box-shadow:0 16px 48px rgba(0,0,0,.6);z-index:10001;display:flex;flex-direction:column;animation:fu .3s ease">
+const CK_OPEN=`<div id="ck-overlay" style="position:fixed;bottom:70px;right:10px;width:min(380px,calc(100vw - 20px));max-height:min(520px,70vh);background:rgba(11,16,24,.97);backdrop-filter:blur(20px);border:1px solid rgba(239,164,32,.12);border-radius:16px;box-shadow:0 16px 48px rgba(0,0,0,.6);z-index:10001;display:flex;flex-direction:column;animation:fu .3s ease">
 <div style="padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.04);display:flex;align-items:center;gap:8px">
 <div style="width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--gd),var(--gd2));display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:var(--bg)">K</div>
 <div><div style="font-family:'Archivo Black';font-size:13px;color:var(--gd)">Coach K</div><div style="font-family:'JetBrains Mono';font-size:8px;color:var(--gy);letter-spacing:1px">SBA AI ASSISTANT · POWERED BY AI</div></div>
