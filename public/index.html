@@ -90,7 +90,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:10000;background:rgba(4,6,10,.94
 .formula .hl{color:var(--gn2);font-weight:600}.formula .gl{color:var(--gd2);font-weight:600}.formula .rl{color:var(--rd2)}.formula .pl{color:var(--pp);font-weight:600}
 .formula .label{color:var(--gy);font-size:10px;letter-spacing:1px;display:block;margin-bottom:2px}
 .plain{background:rgba(239,164,32,.02);border-left:3px solid var(--gd);padding:10px 14px;margin:6px 0;font-size:13px;color:var(--gy);line-height:1.65;border-radius:0 6px 6px 0}.plain strong{color:var(--gd2)}.plain .mint{color:var(--gn2)}
-.ex{background:var(--b2);border:1px solid rgba(255,255,255,.03);border-radius:12px;padding:18px;margin:12px auto;max-width:650px}
+.ex{background:var(--b2);border:1px solid rgba(255,255,255,.03);border-radius:12px;padding:18px;margin:12px auto;max-width:700px}
 .ex-t{font-family:'Archivo Black';font-size:17px;margin-bottom:6px}.ex-b{font-size:13px;color:var(--gy);line-height:1.7}.ex-b strong{color:var(--wt)}
 .ex-c{margin-top:8px;padding:10px 14px;background:rgba(239,164,32,.03);border:1px solid rgba(239,164,32,.05);border-radius:8px;font-size:13px;color:var(--gd2);line-height:1.55}
 .mv{display:flex;align-items:center;justify-content:center;gap:6px;margin:6px 0;flex-wrap:wrap}
@@ -110,15 +110,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:10000;background:rgba(4,6,10,.94
 .factor-bubble.lit{opacity:1;transform:scale(1);animation:pulseGn 2s ease-in-out infinite}
 .factor-bubble.lit.risk{animation:none;box-shadow:0 0 8px var(--rd)}
 /* LEGACY */
-.legacy-card{background:linear-gradient(135deg,rgba(239,164,32,.02),rgba(0,230,118,.01));border:1px solid rgba(239,164,32,.06);border-radius:14px;padding:24px;margin:10px auto;max-width:650px;text-align:center;opacity:0;transform:translateY(16px);transition:all .7s ease}
+.legacy-card{background:linear-gradient(135deg,rgba(239,164,32,.02),rgba(0,230,118,.01));border:1px solid rgba(239,164,32,.06);border-radius:16px;padding:32px;margin:14px auto;max-width:780px;text-align:center;opacity:0;transform:translateY(16px);transition:all .7s ease}
 .legacy-card.show{opacity:1;transform:translateY(0)}
 .legacy-card .era{font-family:'JetBrains Mono';font-size:10px;letter-spacing:3px;color:var(--gd);margin-bottom:6px}
 .legacy-card .name{font-family:'Archivo Black';font-size:clamp(20px,3vw,30px);margin-bottom:6px}
-.legacy-card .detail{font-size:14px;color:var(--gy);line-height:1.7}
+.legacy-card .detail{font-size:16px;color:var(--gy);line-height:1.75}
 .legacy-card .detail strong{color:var(--wt)}
 .legacy-line{width:2px;height:30px;background:linear-gradient(to bottom,var(--gd),var(--gn));margin:0 auto;opacity:0;transition:opacity .5s}.legacy-line.show{opacity:1}
 /* BAR CHART */
-.bar-wrap{display:flex;align-items:flex-end;gap:10px;height:140px;margin:12px auto;max-width:500px}
+.bar-wrap{display:flex;align-items:flex-end;gap:12px;height:180px;margin:12px auto;max-width:500px}
 .bar-col{flex:1;display:flex;flex-direction:column;align-items:center;height:100%;justify-content:flex-end}
 .bar{width:100%;border-radius:4px 4px 0 0;transition:height 1.5s cubic-bezier(.25,1,.5,1);height:0}
 .bar-val{font-family:'JetBrains Mono';font-size:9px;font-weight:700;margin-bottom:2px;opacity:0;transition:opacity .5s}.bar-val.show{opacity:1}
@@ -136,6 +136,28 @@ nav{position:fixed;top:0;left:0;right:0;z-index:10000;background:rgba(4,6,10,.94
 .fund-r{display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.02);opacity:0;transform:translateX(-16px);transition:all .4s}.fund-r.show{opacity:1;transform:translateX(0)}
 .fund-bar{height:5px;border-radius:3px;transition:width 1.5s cubic-bezier(.25,1,.5,1);width:0}
 .fund-pct{font-family:'Archivo Black';font-size:18px;min-width:40px}
+
+/* TERMINAL */
+.term{background:#080C14;border:1px solid rgba(255,255,255,.04);border-radius:12px;overflow:hidden;margin:16px auto;width:min(900px,95vw);box-shadow:0 12px 40px rgba(0,0,0,.5)}
+.term-bar{display:flex;gap:6px;padding:10px 14px;background:rgba(255,255,255,.015);border-bottom:1px solid rgba(255,255,255,.04);align-items:center}
+.dot{width:10px;height:10px;border-radius:50%}.dr{background:#FF5F57}.dy{background:#FEBC2E}.dg{background:#28C840}
+.term-title{font-family:'JetBrains Mono';font-size:11px;color:var(--gy);margin-left:10px}
+.term-body{padding:16px 20px;font-family:'JetBrains Mono';font-size:13px;line-height:2.1;max-height:360px;overflow-y:auto;color:#4A5568}
+/* MATH VIZ */
+.mv-bx{background:var(--b3);border:2px solid var(--slB);border-radius:14px;padding:20px 30px;text-align:center;min-width:140px;transition:all .8s cubic-bezier(.22,1,.36,1)}
+.mv-bx .n{font-family:'JetBrains Mono';font-size:26px;font-weight:700}
+.mv-bx .l{font-size:11px;color:var(--gy);margin-top:4px}
+.mv-bx.lit{border-color:var(--gn);box-shadow:0 0 24px rgba(0,230,118,.12)}
+.mv-bx.glit{border-color:var(--gd);box-shadow:0 0 24px rgba(239,164,32,.12)}
+.mv-ar{font-size:22px;color:var(--gd);font-family:'JetBrains Mono';font-weight:700}
+.math-viz{display:flex;align-items:center;justify-content:center;gap:16px;margin:20px auto;flex-wrap:wrap;max-width:900px}
+/* WEIGHT BAR */
+.wt-bar{height:36px;border-radius:8px;display:flex;overflow:hidden;margin:12px auto;max-width:500px;border:1px solid rgba(255,255,255,.04)}
+.wt-seg{height:100%;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono';font-size:12px;font-weight:600;transition:width 1.2s cubic-bezier(.22,1,.36,1)}
+/* TICKER */
+@keyframes tickScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+/* ENGINE FULL */
+.eng-full{min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 24px 40px}
 </style>
 </head>
 <body>
@@ -145,7 +167,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:10000;background:rgba(4,6,10,.94
 </nav>
 <div id="app"></div>
 <script>
-const T=[{id:'cover',l:'Cover'},{id:'legacy',l:'Legacy'},{id:'what',l:'What Is SBA'},{id:'journey',l:'Journey'},{id:'engines',l:'12 Engines'},{id:'moat',l:'Moat'},{id:'rev',l:'Revenue'},{id:'users',l:'Earnings'},{id:'path',l:'$1B Path'},{id:'partner',l:'Partner'},{id:'close',l:'Legacy Close'},{id:'ask',l:'The Ask'}];
+const T=[{id:'cover',l:'Cover'},{id:'legacy',l:'Legacy'},{id:'what',l:'What Is SBA'},{id:'journey',l:'Journey'},{id:'engines',l:'12 Engines'},{id:'moat',l:'Moat'},{id:'rev',l:'Revenue'},{id:'growth_eng',l:'Growth Engine'},{id:'users',l:'Earnings'},{id:'path',l:'$1B Path'},{id:'partner',l:'Partner'},{id:'close',l:'Legacy Close'},{id:'ask',l:'The Ask'}];
 let cur='cover',TT=[];
 const $=id=>document.getElementById(id);
 function clr(){TT.forEach(clearTimeout);TT=[]}
@@ -181,7 +203,7 @@ W.legacy=()=>`<div class="S"><div class="label">Two Dynasties</div><div class="t
   <div class="name" style="font-size:clamp(24px,4vw,36px)">Mel Farr Sr.</div>
   <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:12px 0" id="leg-badges1"></div>
   <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:14px 0" id="leg-stats1"></div>
-  <div class="detail" style="margin-top:12px">From <strong>Beaumont, Texas</strong> — son of a truck driver and a domestic worker. Rose to become the <strong>7th overall pick</strong> in the NFL Draft. After football, built <strong>Mel Farr Automotive Group</strong> into the <strong style="color:var(--gd)">largest African-American owned business in the United States</strong>.<br><br><span style="font-family:'Archivo Black';font-size:clamp(14px,2vw,20px);color:var(--gd);display:block;margin-top:8px">"Mel Farr, the Superstar, for a Farr Better Deal."</span></div>
+  <div class="detail" style="margin-top:12px">From <strong>Beaumont, Texas</strong> — son of a truck driver and a domestic worker. Rose to become the <strong>7th overall pick</strong> in the NFL Draft. After football, built <strong>Mel Farr Automotive Group</strong> into the <strong style="color:var(--gd)">largest African-American owned business in the United States</strong>.<br><br><span style="font-family:'Archivo Black';font-size:clamp(16px,2.5vw,24px);color:var(--gd);display:block;margin-top:8px">"Mel Farr, the Superstar, for a Farr Better Deal."</span></div>
 </div>
 <div class="legacy-line"></div>
 
@@ -226,13 +248,13 @@ H.legacy=async()=>{
   await dl(500);
   const b1=$('leg-badges1');if(b1){
     const badges=['🏆 NFL ROOKIE OF THE YEAR','⭐ 2× PRO BOWL','🏈 7TH OVERALL PICK','🎯 DETROIT LIONS'];
-    badges.forEach((b,i)=>TT.push(setTimeout(()=>{b1.innerHTML+=`<span class="bdg o" style="animation:fu .4s ease;font-size:9px;padding:5px 12px">${b}</span>`;},i*300+800)));
+    badges.forEach((b,i)=>TT.push(setTimeout(()=>{b1.innerHTML+=`<span class="bdg o" style="animation:fu .4s ease;font-size:10px;padding:6px 14px">${b}</span>`;},i*300+800)));
   }
   // MEL SR stats
   const s1=$('leg-stats1');if(s1){
     const stats=[{n:'leg1a',v:4446,l:'YARDS',p:'',d:1500},{n:'leg1b',v:36,l:'TOUCHDOWNS',p:'',d:1200},{n:'leg1c',v:400,l:'MILLION REVENUE',p:'$',d:2000},{n:'leg1d',v:11,l:'DEALERSHIPS',p:'',d:1000}];
     stats.forEach((st,i)=>TT.push(setTimeout(()=>{
-      s1.innerHTML+=`<div style="text-align:center;min-width:70px;animation:fu .4s ease"><div style="font-family:'JetBrains Mono';font-size:22px;font-weight:700;color:var(--gd)" id="${st.n}">${st.p}0</div><div style="font-family:'JetBrains Mono';font-size:7px;letter-spacing:1.5px;color:var(--gy)">${st.l}</div></div>`;
+      s1.innerHTML+=`<div style="text-align:center;min-width:70px;animation:fu .4s ease"><div style="font-family:'JetBrains Mono';font-size:28px;font-weight:700;color:var(--gd)" id="${st.n}">${st.p}0</div><div style="font-family:'JetBrains Mono';font-size:9px;letter-spacing:1.5px;color:var(--gy)">${st.l}</div></div>`;
       setTimeout(()=>{const el=$(st.n);if(el){const t0=performance.now();!function f(now){const p=Math.min((now-t0)/st.d,1);el.textContent=st.p+Math.floor(st.v*(1-Math.pow(1-p,3))).toLocaleString();if(p<1)requestAnimationFrame(f)}(t0)}},100);
     },i*400+1500)));
   }
@@ -240,12 +262,12 @@ H.legacy=async()=>{
   // MIKE badges
   const b2=$('leg-badges2');if(b2){
     const badges=['🎓 UCLA · FIRST HONORS','🏈 DETROIT LIONS','📺 "THIRD DOWN RECEIVER"','🏆 ONLY PLAYOFF VICTORY'];
-    badges.forEach((b,i)=>TT.push(setTimeout(()=>{b2.innerHTML+=`<span class="bdg o" style="animation:fu .4s ease;font-size:9px;padding:5px 12px">${b}</span>`;},i*300+3500)));
+    badges.forEach((b,i)=>TT.push(setTimeout(()=>{b2.innerHTML+=`<span class="bdg o" style="animation:fu .4s ease;font-size:10px;padding:6px 14px">${b}</span>`;},i*300+3500)));
   }
   const s2=$('leg-stats2');if(s2){
     const stats=[{n:'leg2a',v:69,l:'NFL RECEPTIONS',p:'',d:1200},{n:'leg2b',v:716,l:'NFL YARDS',p:'',d:1500},{n:'leg2c',v:400,l:'M SALES (DOUBLED)',p:'$',d:2000},{n:'leg2d',v:4,l:'BOWL GAMES',p:'',d:1000}];
     stats.forEach((st,i)=>TT.push(setTimeout(()=>{
-      s2.innerHTML+=`<div style="text-align:center;min-width:70px;animation:fu .4s ease"><div style="font-family:'JetBrains Mono';font-size:22px;font-weight:700;color:var(--gd)" id="${st.n}">${st.p}0</div><div style="font-family:'JetBrains Mono';font-size:7px;letter-spacing:1.5px;color:var(--gy)">${st.l}</div></div>`;
+      s2.innerHTML+=`<div style="text-align:center;min-width:70px;animation:fu .4s ease"><div style="font-family:'JetBrains Mono';font-size:28px;font-weight:700;color:var(--gd)" id="${st.n}">${st.p}0</div><div style="font-family:'JetBrains Mono';font-size:9px;letter-spacing:1.5px;color:var(--gy)">${st.l}</div></div>`;
       setTimeout(()=>{const el=$(st.n);if(el){const t0=performance.now();!function f(now){const p=Math.min((now-t0)/st.d,1);el.textContent=st.p+Math.floor(st.v*(1-Math.pow(1-p,3))).toLocaleString();if(p<1)requestAnimationFrame(f)}(t0)}},100);
     },i*400+5000)));
   }
@@ -253,12 +275,12 @@ H.legacy=async()=>{
   // SUPERSTAR badges
   const b3=$('leg-badges3');if(b3){
     const badges=['📊 OTC: DWIS','📋 SEC FORM 10','🏢 TECH CONGLOMERATE','🔧 PAWNTRUST'];
-    badges.forEach((b,i)=>TT.push(setTimeout(()=>{b3.innerHTML+=`<span class="bdg o" style="animation:fu .4s ease;font-size:9px;padding:5px 12px">${b}</span>`;},i*300+7000)));
+    badges.forEach((b,i)=>TT.push(setTimeout(()=>{b3.innerHTML+=`<span class="bdg o" style="animation:fu .4s ease;font-size:10px;padding:6px 14px">${b}</span>`;},i*300+7000)));
   }
   const s3=$('leg-stats3');if(s3){
     const stats=[{n:'leg3a',v:11000,l:'PAWN SHOPS',p:'',d:2000},{n:'leg3b',v:3,l:'SUBSIDIARIES',p:'',d:800}];
     stats.forEach((st,i)=>TT.push(setTimeout(()=>{
-      s3.innerHTML+=`<div style="text-align:center;min-width:70px;animation:fu .4s ease"><div style="font-family:'JetBrains Mono';font-size:22px;font-weight:700;color:var(--gd)" id="${st.n}">${st.p}0</div><div style="font-family:'JetBrains Mono';font-size:7px;letter-spacing:1.5px;color:var(--gy)">${st.l}</div></div>`;
+      s3.innerHTML+=`<div style="text-align:center;min-width:70px;animation:fu .4s ease"><div style="font-family:'JetBrains Mono';font-size:28px;font-weight:700;color:var(--gd)" id="${st.n}">${st.p}0</div><div style="font-family:'JetBrains Mono';font-size:9px;letter-spacing:1.5px;color:var(--gy)">${st.l}</div></div>`;
       setTimeout(()=>{const el=$(st.n);if(el){const t0=performance.now();!function f(now){const p=Math.min((now-t0)/st.d,1);el.textContent=st.p+Math.floor(st.v*(1-Math.pow(1-p,3))).toLocaleString();if(p<1)requestAnimationFrame(f)}(t0)}},100);
     },i*400+8500)));
   }
@@ -267,27 +289,53 @@ H.legacy=async()=>{
   const s4=$('leg-stats4');if(s4){
     const stats=[{n:'leg4a',v:12,l:'ENGINES',p:'',d:1000},{n:'leg4b',v:132000,l:'LINES OF CODE',p:'',d:2500},{n:'leg4c',v:212,l:'BILLION $ MARKET',p:'$',d:2000},{n:'leg4d',v:39,l:'SPORTSBOOKS',p:'',d:1200}];
     stats.forEach((st,i)=>TT.push(setTimeout(()=>{
-      s4.innerHTML+=`<div style="text-align:center;min-width:70px;animation:fu .4s ease"><div style="font-family:'JetBrains Mono';font-size:22px;font-weight:700;color:var(--gn)" id="${st.n}">${st.p}0</div><div style="font-family:'JetBrains Mono';font-size:7px;letter-spacing:1.5px;color:var(--gy)">${st.l}</div></div>`;
+      s4.innerHTML+=`<div style="text-align:center;min-width:70px;animation:fu .4s ease"><div style="font-family:'JetBrains Mono';font-size:28px;font-weight:700;color:var(--gn)" id="${st.n}">${st.p}0</div><div style="font-family:'JetBrains Mono';font-size:9px;letter-spacing:1.5px;color:var(--gy)">${st.l}</div></div>`;
       setTimeout(()=>{const el=$(st.n);if(el){const t0=performance.now();!function f(now){const p=Math.min((now-t0)/st.d,1);el.textContent=st.p+Math.floor(st.v*(1-Math.pow(1-p,3))).toLocaleString();if(p<1)requestAnimationFrame(f)}(t0)}},100);
     },i*400+10000)));
   }
 };
 /* ═══ WHAT IS SBA ═══ */
-W.what=()=>`<div class="S"><div class="label">01 · The Basics</div><div class="title">What Is Sports Bet Arbitrage?</div></div>
+W.what=()=>`<div style="min-height:88vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 20px"><div class="S"><div class="label" style="font-size:11px">01 · The Basics</div><div class="title">What Is Sports Bet Arbitrage?</div></div>
 <div class="ex"><div class="ex-t">💡 30-Second Explainer</div><div class="ex-b">Store A sells sneakers for <strong>$80</strong>. Store B buys for <strong>$100</strong>. Buy from A → sell to B → <strong>$20 profit, zero risk</strong>.<br><br>Sports arbitrage: different sportsbooks price the same game differently. Bet <strong>both sides</strong> on different books → <strong>guaranteed profit no matter who wins</strong>. Not gambling — <strong>math</strong>.<br><br>SBA scans <strong>60 leagues, 39 sportsbooks, every 60 seconds</strong>.</div></div>
 <div class="nxt"><button class="sbtn gl" style="width:auto;margin:0 auto;padding:10px 24px" onclick="go('journey')">WATCH IT HAPPEN →</button></div>`;
 
 /* ═══ JOURNEY — BETSLIP STORY ═══ */
 W.journey=()=>`<div class="S"><div class="label">02 · The Experience</div><div class="title">One Bet. Five Strategies. <span class="gd">Watch It Evolve.</span></div><div class="explain">Steph Curry Pts O/U 30.5. Watch SBA transform it step by step.</div></div>
 <div class="S" id="j1"><div class="label">Step 1</div><div class="title">Scanner Finds It</div>
-<div style="background:#080C14;border:1px solid rgba(255,255,255,.03);border-radius:12px;overflow:hidden;margin:0 auto 12px;max-width:900px;width:95vw"><div style="display:flex;gap:5px;padding:8px 12px;background:rgba(255,255,255,.01);border-bottom:1px solid rgba(255,255,255,.03)"><div style="width:8px;height:8px;border-radius:50%;background:#FF5F57"></div><div style="width:8px;height:8px;border-radius:50%;background:#FEBC2E"></div><div style="width:8px;height:8px;border-radius:50%;background:#28C840"></div><span style="margin-left:8px;font-family:'JetBrains Mono';font-size:9px;color:var(--gy)">arb-engine-v3.js</span></div><div id="j1-code" style="padding:12px 14px;font-family:'JetBrains Mono';font-size:12px;line-height:2;max-height:280px;overflow-y:auto;color:#4A5568"></div></div>
-<div class="slip" id="j1-s"><div class="slip-top"><span class="sp">🏀 NBA · PROPS</span><span class="lv" id="j1-st">SCANNING</span></div><div class="orow"><div class="odd scan" id="j1a"><div class="ov" style="color:var(--gy)">???</div><div class="ol">Over 30.5</div><div class="ob">SEARCHING...</div></div><div class="odd scan" id="j1b"><div class="ov" style="color:var(--gy)">???</div><div class="ol">Under 30.5</div><div class="ob">SEARCHING...</div></div></div><div id="j1-m" style="padding:0 14px"></div><div class="tot" id="j1-t" style="display:none"><div class="big gn"></div><div class="ts"></div></div><div class="rvl" id="j1-r"><div class="rvl-in" id="j1-bd"></div></div><button class="sbtn gl" id="j1-btn" style="display:none" onclick="jS('j2')">NEXT: VALUE BET FAV →</button></div></div>
-<div class="S" id="j2" style="display:none"><div class="label">Step 2</div><div class="title">Value Bet <span class="gd">Favorite</span></div><div class="explain">Shift weight to the favorite. Bigger win if right, break even if wrong.</div><div class="slip"><div class="slip-top"><span class="sp">📈 VALUE FAV</span><span class="lv">ACTIVE</span></div><div class="orow"><div class="odd" style="opacity:.4"><div class="ov pl">+125</div><div class="ol">Over · DK</div></div><div class="odd gact"><div class="ov mn">-110</div><div class="ol">Under · FD</div><div class="xtra" style="display:block">Heavy: <span class="sv">$800</span></div></div></div><div class="tot"><div class="big" style="color:var(--gd2)">+$250 if fav wins</div><div class="ts">$0 LOSS IF WRONG</div></div><button class="sbtn gl" onclick="jS('j3')">NEXT: VALUE DOG →</button></div></div>
-<div class="S" id="j3" style="display:none"><div class="label">Step 3</div><div class="title">Value Bet <span class="gn">Underdog</span></div><div class="explain">Flip it. Heavy on the underdog. Massive if it hits.</div><div class="slip"><div class="slip-top"><span class="sp">📈 VALUE DOG</span><span class="lv">ACTIVE</span></div><div class="orow"><div class="odd act"><div class="ov pl">+125</div><div class="ol">Over · DK</div><div class="xtra" style="display:block">Heavy: <span class="sv">$800</span></div></div><div class="odd" style="opacity:.4"><div class="ov mn">-110</div><div class="ol">Under · FD</div></div></div><div class="tot"><div class="big gn">+$380 if dog wins</div><div class="ts">$0 LOSS IF WRONG</div></div><button class="sbtn gn" onclick="jS('j4')">NEXT: DOUBLE VALUE →</button></div></div>
-<div class="S" id="j4" style="display:none"><div class="label">Step 4</div><div class="title">Double Value Bet</div><div class="explain">Both value bets at once. 4 bets, 2 pairs. Minimum beats sure bet.</div><div class="slip w"><div class="slip-top"><span class="sp">🔄 DOUBLE VALUE · 4 BETS</span><span class="lv">ACTIVE</span></div><div style="display:grid;grid-template-columns:1fr 1fr"><div style="padding:8px;border-right:1px solid var(--slB);text-align:center"><div style="font-family:'JetBrains Mono';font-size:6px;color:var(--gn);letter-spacing:1px">DOG PAIR</div><div style="font-family:'JetBrains Mono';font-size:10px;color:var(--gn2);margin-top:3px">+$20,000</div></div><div style="padding:8px;text-align:center"><div style="font-family:'JetBrains Mono';font-size:6px;color:var(--gd);letter-spacing:1px">FAV PAIR</div><div style="font-family:'JetBrains Mono';font-size:10px;color:var(--gd2);margin-top:3px">+$724</div></div></div><div class="tot"><div class="big" style="color:var(--gd2)">Min +$724 · Max +$20,000</div><div class="ts">BOTH BEAT SUREBET</div></div><button class="sbtn gl" onclick="jS('j5')">HOUSE MONEY →</button></div></div>
-<div class="S" id="j5" style="display:none"><div class="label">Step 5</div><div class="title">House <span class="gn">Money</span></div><div class="slip"><div class="slip-top"><span class="sp">💰 SETTLED</span><span style="font-size:7px;color:var(--gn)">✓</span></div><div style="padding:14px;text-align:center"><div class="mv"><div class="mv-b"><div class="n">$1,000</div><div class="l">RETURNED ✓</div></div><div class="mv-a">+</div><div class="mv-b lit"><div class="n" style="color:var(--gn2)">$724</div><div class="l">HOUSE MONEY</div></div></div></div><button class="sbtn pp" onclick="jS('j6')">POWER PLAY →</button></div></div>
-<div class="S" id="j6" style="display:none"><div class="label">Step 6</div><div class="title"><span class="pp">$350 → $35,938</span></div><div class="slip" style="border-color:rgba(179,136,255,.1)"><div class="slip-top" style="background:rgba(179,136,255,.02)"><span class="sp" style="color:var(--pp)">🏆 POWER PLAY</span><span style="font-family:'JetBrains Mono';font-size:6px;color:var(--pp)">HOUSE MONEY</span></div><div class="sim" id="j6-legs"></div><div id="j6-t" style="display:none;text-align:center;padding:10px;background:rgba(179,136,255,.02);border-top:1px solid rgba(179,136,255,.05)"><div style="font-family:'Archivo Black';font-size:28px;color:var(--pp)" id="j6-p">$0</div><div style="font-size:7px;color:var(--gy)">ZERO ORIGINAL CAPITAL AT RISK</div></div><button class="sbtn pp" id="j6-btn" style="display:none" onclick="jS('j7')">THE FULL PICTURE →</button></div></div>
-<div class="S" id="j7" style="display:none"><div class="label">Complete</div><div class="title">One Bet → <span class="gd">$55,938</span></div><div class="slip w"><div class="slip-top"><span class="sp">📊 ALL 5 STRATEGIES</span><span class="lv">COMPLETE</span></div><div class="sim" id="j7-sum"></div><div style="text-align:center;padding:10px;background:rgba(239,164,32,.02);border-top:1px solid rgba(239,164,32,.04)"><div style="font-family:'Archivo Black';font-size:clamp(20px,4vw,32px);color:var(--gd)">$55,938</div><div style="font-size:8px;color:var(--gy)">Keith did this by hand. $12K → $1.8M in 9 months. <strong style="color:var(--gd2)">Now imagine the machine.</strong></div></div></div><div class="nxt"><button class="sbtn gl" style="width:auto;margin:0 auto;padding:10px 20px" onclick="go('engines')">12 ENGINES →</button></div></div>`;
+<div class="term"><div class="term-bar"><div class="dot dr"></div><div class="dot dy"></div><div class="dot dg"></div><span class="term-title">arb-engine-v3.js · Railway Production</span></div><div class="term-body" id="j1-code"></div></div>
+<div class="slip" id="j1-s"><div class="slip-top"><span class="sp">🏀 NBA · PROPS</span><span class="lv" id="j1-st">SCANNING</span></div><div class="orow"><div class="odd scan" id="j1a"><div class="ov" style="color:var(--gy)">???</div><div class="ol">Over 30.5</div><div class="ob">SEARCHING...</div></div><div class="odd scan" id="j1b"><div class="ov" style="color:var(--gy)">???</div><div class="ol">Under 30.5</div><div class="ob">SEARCHING...</div></div></div><div id="j1-m" style="padding:0 14px"></div><div class="tot" id="j1-t" style="display:none"><div class="big gn"></div><div class="ts"></div></div><div class="rvl" id="j1-r"><div class="rvl-in" id="j1-bd"></div></div><button class="sbtn gl" id="j1-btn" style="display:none" onclick="jS('j2')">NEXT: VALUE BET FAVORITE →</button></div>
+<div id="j-tick" style="display:none;width:min(900px,95vw);margin:8px auto;overflow:hidden;height:30px;background:rgba(0,230,118,.02);border:1px solid rgba(0,230,118,.04);border-radius:6px;display:none"><div id="j-tick-i" style="display:flex;gap:40px;font-family:JetBrains Mono;font-size:10px;color:var(--gn);white-space:nowrap;animation:tickScroll 25s linear infinite;padding-left:100%"></div></div></div>
+<div class="S" id="j2" style="display:none"><div class="label">Step 2 · Value Bet Favorite</div><div class="title">Shift Weight to the <span class="gd">Favorite</span></div><div class="explain">Same bet. Same books. More money on the favorite side. Bigger win if right — break even if wrong.</div><div id="j2-viz"></div><div class="slip"><div class="slip-top"><span class="sp">📈 VALUE FAV</span><span class="lv">ACTIVE</span></div><div class="orow"><div class="odd" style="opacity:.4"><div class="ov pl">+125</div><div class="ol">Over · DK</div></div><div class="odd gact"><div class="ov mn">-110</div><div class="ol">Under · FD</div><div class="xtra" style="display:block">Heavy: <span class="sv">$800</span></div></div></div><div class="tot"><div class="big" style="color:var(--gd2)">+$250 if fav wins</div><div class="ts">$0 LOSS IF WRONG</div></div><button class="sbtn gl" onclick="jS('j3')">NEXT: VALUE DOG →</button></div></div>
+<div class="S" id="j3" style="display:none"><div class="label">Step 3 · Value Bet Underdog</div><div class="title">Flip It — Heavy on the <span class="gn">Underdog</span></div><div class="explain">Now the weight goes the other way. Massive payout if it hits — break even if it doesn't.</div><div id="j3-viz"></div><div class="slip"><div class="slip-top"><span class="sp">📈 VALUE DOG</span><span class="lv">ACTIVE</span></div><div class="orow"><div class="odd act"><div class="ov pl">+125</div><div class="ol">Over · DK</div><div class="xtra" style="display:block">Heavy: <span class="sv">$800</span></div></div><div class="odd" style="opacity:.4"><div class="ov mn">-110</div><div class="ol">Under · FD</div></div></div><div class="tot"><div class="big gn">+$380 if dog wins</div><div class="ts">$0 LOSS IF WRONG</div></div><button class="sbtn gn" onclick="jS('j4')">NEXT: DOUBLE VALUE →</button></div></div>
+<div class="S" id="j4" style="display:none"><div class="label">Step 4</div><div class="title">Double Value Bet</div><div class="explain">Both value bets at once. 4 bets, 2 pairs. Minimum beats sure bet.</div><div class="slip w"><div class="slip-top"><span class="sp">🔄 DOUBLE VALUE · 4 BETS</span><span class="lv">ACTIVE</span></div><div style="display:grid;grid-template-columns:1fr 1fr" id="j4-pairs">
+<div style="padding:16px;border-right:1px solid var(--slB);text-align:center;opacity:0;transition:all .8s" id="j4p1">
+<div style="font-family:'JetBrains Mono';font-size:10px;color:var(--gn);letter-spacing:2px;margin-bottom:6px">PAIR 1: DOG VALUE</div>
+<div style="font-size:12px;margin:4px 0">Over +125: <strong>$800</strong> · Under -110: <strong>$200</strong></div>
+<div style="font-family:'JetBrains Mono';font-size:22px;color:var(--gn2);margin-top:8px;font-weight:700" id="j4v1">$0</div>
+<div style="font-size:9px;color:var(--gy)">IF DOG WINS</div>
+</div>
+<div style="padding:16px;text-align:center;opacity:0;transition:all .8s" id="j4p2">
+<div style="font-family:'JetBrains Mono';font-size:10px;color:var(--gd);letter-spacing:2px;margin-bottom:6px">PAIR 2: FAV VALUE</div>
+<div style="font-size:12px;margin:4px 0">Over +125: <strong>$200</strong> · Under -110: <strong>$800</strong></div>
+<div style="font-family:'JetBrains Mono';font-size:22px;color:var(--gd2);margin-top:8px;font-weight:700" id="j4v2">$0</div>
+<div style="font-size:9px;color:var(--gy)">IF FAV WINS</div>
+</div></div>
+<div style="padding:10px 14px;text-align:center;background:rgba(0,230,118,.02);border-top:1px solid rgba(0,230,118,.04);display:none" id="j4-vs">
+<div style="font-family:'JetBrains Mono';font-size:9px;color:var(--gy);letter-spacing:2px;margin-bottom:4px">VS SURE BET</div>
+<div style="display:flex;justify-content:center;gap:20px">
+<div><div style="font-family:'JetBrains Mono';font-size:11px;color:var(--gy)">Sure Bet</div><div style="font-family:'JetBrains Mono';font-size:16px;color:var(--gy)">+$151</div></div>
+<div><div style="font-family:'JetBrains Mono';font-size:11px;color:var(--gd)">Min Double Value</div><div style="font-family:'JetBrains Mono';font-size:16px;color:var(--gd2);font-weight:700">+$724</div></div>
+<div><div style="font-family:'JetBrains Mono';font-size:11px;color:var(--gn)">Max Double Value</div><div style="font-family:'JetBrains Mono';font-size:16px;color:var(--gn2);font-weight:700">+$20,000</div></div>
+</div></div>
+<div class="tot" id="j4-tot" style="display:none"><div class="big" style="color:var(--gd2)">Min: +$724 · Max: +$20,000</div><div class="ts">BOTH OUTCOMES BEAT THE $151 SUREBET — ALWAYS</div></div><button class="sbtn gl" id="j4-btn" style="display:none" onclick="jS('j5')">HOUSE MONEY →</button></div></div>
+<div class="S" id="j5" style="display:none"><div class="label">Step 5 · Settlement</div><div class="title">Capital <span class="gn">Recovered</span></div><div class="explain">Bet settles. Your $1,000 comes back. The profit is house money — zero risk forward.</div><div class="slip"><div class="slip-top"><span class="sp">💰 SETTLEMENT</span><span style="font-size:9px;color:var(--gn)">✓ SETTLED</span></div><div style="padding:20px;text-align:center" id="j5-anim"></div><button class="sbtn pp" onclick="jS('j6')">POWER PLAY →</button></div></div>
+<div class="S" id="j6" style="display:none"><div class="label">Step 6 · Power Play</div><div class="title">House Money → <span class="pp">Jackpot</span></div><div class="explain">$350 of house money. +4900 anchor from your arb. Stack 4 heavy favorites.</div><div class="slip" style="border-color:rgba(179,136,255,.1)"><div class="slip-top" style="background:rgba(179,136,255,.02)"><span class="sp" style="color:var(--pp)">🏆 POWER PLAY</span><span style="font-family:'JetBrains Mono';font-size:6px;color:var(--pp)">HOUSE MONEY</span></div><div class="sim" id="j6-legs"></div><div id="j6-t" style="display:none;text-align:center;padding:10px;background:rgba(179,136,255,.02);border-top:1px solid rgba(179,136,255,.05)"><div style="font-family:'Archivo Black';font-size:clamp(36px,6vw,56px);color:var(--pp);text-shadow:0 0 30px rgba(179,136,255,.2)" id="j6-p">$0</div><div style="font-size:7px;color:var(--gy)">ZERO ORIGINAL CAPITAL AT RISK</div></div><button class="sbtn pp" id="j6-btn" style="display:none" onclick="jS('j7')">THE FULL PICTURE →</button></div></div>
+<div class="S" id="j7" style="display:none"><div class="label">The Complete Picture</div><div class="title">One Bet → <span class="gd">$55,938</span></div><div class="explain">From a $151 sure bet to $55,938 — all from one Steph Curry prop.</div><div class="slip w" style="width:min(940px,95vw)"><div class="slip-top"><span class="sp">📊 ALL 5 STRATEGIES · STACKED</span><span class="lv">COMPLETE</span></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--slB)">
+<div style="padding:16px 20px" id="j7-sum"></div>
+<div style="padding:16px 20px;display:flex;align-items:flex-end;justify-content:center;gap:8px;height:260px" id="j7-bars"></div>
+</div>
+<div style="text-align:center;padding:16px;background:linear-gradient(135deg,rgba(239,164,32,.03),rgba(0,230,118,.02));border-top:1px solid rgba(239,164,32,.06)"><div style="font-family:'JetBrains Mono';font-size:10px;letter-spacing:3px;color:var(--gd);margin-bottom:4px">TOTAL FROM ONE BET</div><div style="font-family:'Archivo Black';font-size:clamp(28px,5vw,44px);color:var(--gd)" id="j7-total">$0</div><div style="font-size:11px;color:var(--gy);margin-top:6px">Keith did this by hand. $12K → $1.8M in 9 months. <strong style="color:var(--gd2)">Now imagine the machine.</strong></div></div></div><div class="nxt"><button class="sbtn gl" style="width:auto;margin:0 auto;padding:10px 20px" onclick="go('engines')">12 ENGINES →</button></div></div>`;
 
 H.journey=()=>{runJ()};
 async function runJ(){
@@ -320,26 +368,77 @@ async function runJ(){
   b.classList.remove('scan');b.classList.add('act');b.querySelector('.ov').textContent='-110';b.querySelector('.ov').className='ov mn';b.querySelector('.ob').textContent='FANDUEL';
   $('j1-st').innerHTML='<span style="color:var(--gn)">⚡ FOUND</span>';
   await dl(600);
-  $('j1-m').innerHTML=`<div class="mv" style="animation:fu .4s ease"><div class="mv-b"><div class="n">$1,000</div><div class="l">BANKROLL</div></div><div class="mv-a">→</div><div class="mv-b lit"><div class="n" style="color:var(--gn2)">$397</div><div class="l">→ DRAFTKINGS</div></div><div class="mv-b glit"><div class="n" style="color:var(--gd2)">$603</div><div class="l">→ FANDUEL</div></div></div>`;
+  $('j1-m').innerHTML=`<div class="math-viz" style="animation:fu .5s ease"><div class="mv-bx"><div class="n" style="color:var(--wt)">$1,000</div><div class="l">YOUR BANKROLL</div></div><div class="mv-ar">→</div><div class="mv-bx lit"><div class="n" style="color:var(--gn2)">$396.98</div><div class="l">→ DRAFTKINGS</div></div><div class="mv-bx glit"><div class="n" style="color:var(--gd2)">$603.02</div><div class="l">→ FANDUEL</div></div></div>`;
   await dl(800);
   const t=$('j1-t');t.style.display='block';t.querySelector('.big').textContent='+$151.21';t.querySelector('.ts').textContent='15.1% ROI · GUARANTEED · ZERO RISK';
   await dl(500);
   const r=$('j1-r');r.classList.add('open');r.style.maxHeight='200px';
   $('j1-bd').innerHTML=`<div class="bdg g"><span class="dt"></span> GUARANTEED</div><div class="bd"><div class="bd-r"><span class="l">Curry scores 31+ (Over wins)</span><span class="v gn">DK pays $1,151</span></div><div class="bd-r"><span class="l">Curry scores 30- (Under wins)</span><span class="v gn">FD pays $1,151</span></div><div class="bd-r"><span class="l">Your profit either way</span><span class="v gn">+$151.21</span></div></div>`;
   $('j1-btn').style.display='block';
+  var tk=$('j-tick');var tki=$('j-tick-i');
+  if(tk&&tki){tk.style.display='block';
+    var msgs=['⚡ 3 new arbs found · NBA Props · 4.2% ROI','🏀 Celtics/Heat ML · DK vs FD · 4.1%','⚾ Yankees O8.5 · Middle detected · +$380 zone','🏈 Chiefs -3.5 · BetMGM vs Caesars · 2.9%','⚽ Arsenal BTTS · Pinnacle vs Bovada · 3.7%','🏒 Rangers ML · clean 2-way · 5.2%','📡 ESPN: LeBron QUESTIONABLE · Watch Scores updating','⚡ 8 arbs broadcasting now','🎯 Middle: Dodgers runs 8.5/9.0 · 28% hit','🏆 Power Play anchor: +5200 underdog'];
+    tki.innerHTML=msgs.concat(msgs).map(function(m){return '<span>'+m+'</span>'}).join('')}
 }
-function jS(id){document.querySelectorAll('.S[id^=j]').forEach(s=>s.style.display='none');$(id).style.display='flex';$(id).scrollIntoView({behavior:'smooth'});if(id==='j6')runJ6();if(id==='j7')runJ7()}
+function jS(id){document.querySelectorAll('.S[id^=j]').forEach(s=>s.style.display='none');$(id).style.display='flex';$(id).scrollIntoView({behavior:'smooth'});if(id==='j2')runJ2b();if(id==='j3')runJ3b();if(id==='j4')runJ4b();if(id==='j5')runJ5b();if(id==='j6')runJ6();if(id==='j7')runJ7()}
+async function runJ2b(){var v=$('j2-viz');if(v){v.innerHTML='<div class="math-viz" style="animation:fu .5s ease"><div class="mv-bx"><div class="n" style="color:var(--wt)">$1,000</div><div class="l">BANKROLL</div></div><div class="mv-ar">→</div><div class="mv-bx"><div class="n" style="color:var(--gy)">$200</div><div class="l">DOG (light)</div></div><div class="mv-bx glit"><div class="n" style="color:var(--gd2)">$800</div><div class="l">FAV (heavy)</div></div></div><div class="wt-bar"><div class="wt-seg" id="j2wL" style="width:50%;background:rgba(0,230,118,.15);color:var(--gn2)">50%</div><div class="wt-seg" id="j2wR" style="width:50%;background:rgba(239,164,32,.15);color:var(--gd2)">50%</div></div>';await dl(800);var wL=$('j2wL'),wR=$('j2wR');if(wL){wL.style.width='20%';wL.textContent='20%'}if(wR){wR.style.width='80%';wR.textContent='80%'}}}
+async function runJ3b(){var v=$('j3-viz');if(v){v.innerHTML='<div class="math-viz" style="animation:fu .5s ease"><div class="mv-bx"><div class="n" style="color:var(--wt)">$1,000</div><div class="l">BANKROLL</div></div><div class="mv-ar">→</div><div class="mv-bx lit"><div class="n" style="color:var(--gn2)">$800</div><div class="l">DOG (heavy)</div></div><div class="mv-bx"><div class="n" style="color:var(--gy)">$200</div><div class="l">FAV (light)</div></div></div><div class="wt-bar"><div class="wt-seg" id="j3wL" style="width:50%;background:rgba(0,230,118,.15);color:var(--gn2)">50%</div><div class="wt-seg" id="j3wR" style="width:50%;background:rgba(239,164,32,.15);color:var(--gd2)">50%</div></div>';await dl(800);var wL=$('j3wL'),wR=$('j3wR');if(wL){wL.style.width='80%';wL.textContent='80%'}if(wR){wR.style.width='20%';wR.textContent='20%'}}}
+async function runJ4b(){
+  await dl(600);var p1=$('j4p1');if(p1)p1.style.opacity='1';
+  await dl(400);var v1=$('j4v1');if(v1){var t0=performance.now();!function f(n){var p=Math.min((n-t0)/1200,1);v1.textContent='+$'+Math.floor(20000*(1-Math.pow(1-p,3))).toLocaleString();if(p<1)requestAnimationFrame(f);else v1.textContent='+$20,000'}(t0)}
+  await dl(800);var p2=$('j4p2');if(p2)p2.style.opacity='1';
+  await dl(400);var v2=$('j4v2');if(v2){var t1=performance.now();!function f(n){var p=Math.min((n-t1)/1000,1);v2.textContent='+$'+Math.floor(724*(1-Math.pow(1-p,3))).toLocaleString();if(p<1)requestAnimationFrame(f);else v2.textContent='+$724'}(t1)}
+  await dl(800);var vs=$('j4-vs');if(vs)vs.style.display='block';
+  await dl(600);var t=$('j4-tot');if(t)t.style.display='block';
+  await dl(400);var b=$('j4-btn');if(b)b.style.display='block';
+}
+async function runJ5b(){var a=$('j5-anim');if(!a)return;a.innerHTML='<div style="font-family:JetBrains Mono;font-size:10px;letter-spacing:3px;color:var(--gy);animation:bk 1.5s infinite">SETTLING...</div>';await dl(1200);a.innerHTML='<div class="math-viz"><div class="mv-bx"><div class="n" style="color:var(--wt)">$1,000</div><div class="l">RETURNED ✓</div></div><div class="mv-ar">+</div><div class="mv-bx lit"><div class="n" style="color:var(--gn2)">$724</div><div class="l">HOUSE MONEY</div></div></div>';await dl(800);a.innerHTML+='<div style="font-size:13px;color:var(--gy);margin-top:12px;animation:fu .5s ease">$724 is <strong style=color:var(--wt)>pure profit</strong>. None of your original capital at risk.</div>'}
 async function runJ6(){
   const l=$('j6-legs');l.innerHTML='';
-  const picks=['⚡ Curry O30.5 — +4900','Chiefs ML — -500','Lakers ML — -500','Yankees ML — -500','Man City ML — -500'];
-  for(const p of picks){await dl(600);const a=p.includes('4900');l.innerHTML+=`<div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.02);font-size:9px;color:${a?'var(--pp)':'var(--gy)'};font-weight:${a?700:400};animation:slideR .3s ease">${p}</div>`}
-  await dl(400);$('j6-t').style.display='block';aV($('j6-p'),0,35938,1800);await dl(2000);$('j6-btn').style.display='block';
+  // Add multiplier display
+  l.innerHTML='<div id="j6mx" style="text-align:center;padding:8px;background:rgba(179,136,255,.03);border:1px solid rgba(179,136,255,.06);border-radius:8px;margin-bottom:10px"><div style="font-family:JetBrains Mono;font-size:9px;color:var(--gy);letter-spacing:2px">COMBINED MULTIPLIER</div><div style="font-family:Archivo Black;font-size:28px;color:var(--pp)" id="j6mxv">—</div></div><div id="j6ll"></div>';
+  const ll=$('j6ll');const mxv=$('j6mxv');
+  const picks=[
+    {n:'⚡ Anchor: Curry Over 30.5',o:'+4900',mx:'50.0×',c:'var(--pp)',w:700},
+    {n:'Leg 2: Kansas City Chiefs ML',o:'-500',mx:'60.0×',c:'var(--gy)',w:400},
+    {n:'Leg 3: Los Angeles Lakers ML',o:'-500',mx:'72.0×',c:'var(--gy)',w:400},
+    {n:'Leg 4: New York Yankees ML',o:'-500',mx:'86.4×',c:'var(--gy)',w:400},
+    {n:'Leg 5: Manchester City ML',o:'-500',mx:'102.7×',c:'var(--gy)',w:400},
+  ];
+  for(const p of picks){
+    await dl(700);
+    ll.innerHTML+=`<div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.02);font-size:12px;color:${p.c};font-weight:${p.w};animation:slideR .4s ease"><span>${p.n}</span><span style="font-family:JetBrains Mono;font-size:13px">${p.o}</span></div>`;
+    if(mxv)mxv.textContent=p.mx;
+  }
+  await dl(600);
+  $('j6-t').style.display='block';
+  // Dramatic quartic ease-out counter (fast spin → slow to final)
+  const payEl=$('j6-p');const t0=performance.now();
+  !function f(n){const p=Math.min((n-t0)/2500,1);const eased=1-Math.pow(1-p,4);payEl.textContent='$'+Math.floor(35938*eased).toLocaleString();if(p<1)requestAnimationFrame(f);else{payEl.textContent='$35,938';payEl.style.textShadow='0 0 50px rgba(179,136,255,.35)'}}(t0);
+  await dl(2800);$('j6-btn').style.display='block';
 }
 async function runJ7(){
-  const s=$('j7-sum');s.innerHTML='';
-  for(const[n,v,c] of [['Sure Bet','+$151','var(--gn2)'],['Value Fav','+$250','var(--gd2)'],['Value Dog','+$380','var(--gn2)'],['Double Value','+$724','var(--gd2)'],['Power Play','+$35,938','var(--pp)']]){
-    await dl(350);s.innerHTML+=`<div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.02);animation:slideR .3s ease"><span style="font-size:10px;font-weight:600">${n}</span><span style="font-family:'JetBrains Mono';font-size:13px;font-weight:700;color:${c}">${v}</span></div>`;
+  const s=$('j7-sum');const bars=$('j7-bars');
+  s.innerHTML='';if(bars)bars.innerHTML='';
+  const data=[
+    {n:'Sure Bet',v:151,d:'+$151',c:'var(--gn2)',bg:'rgba(0,230,118,.6)'},
+    {n:'Value Fav',v:250,d:'+$250',c:'var(--gd2)',bg:'rgba(239,164,32,.6)'},
+    {n:'Value Dog',v:380,d:'+$380',c:'var(--gn2)',bg:'rgba(0,230,118,.6)'},
+    {n:'Double Value',v:724,d:'+$724',c:'var(--gd2)',bg:'rgba(239,164,32,.6)'},
+    {n:'Power Play',v:35938,d:'+$35,938',c:'var(--pp)',bg:'rgba(179,136,255,.7)'},
+  ];
+  if(bars){bars.innerHTML=data.map(function(d,i){return '<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%"><div id="j7bv'+i+'" style="font-family:JetBrains Mono;font-size:9px;font-weight:700;color:'+d.c+';margin-bottom:3px;opacity:0;transition:opacity .4s">'+d.d+'</div><div id="j7bb'+i+'" style="width:100%;border-radius:4px 4px 0 0;background:'+d.bg+';height:0;transition:height 1s cubic-bezier(.22,1,.36,1)"></div><div style="font-family:JetBrains Mono;font-size:7px;color:var(--gy);margin-top:3px;text-align:center">'+d.n.split(' ')[0]+'</div></div>'}).join('')}
+  for(var i=0;i<data.length;i++){
+    var d=data[i];await dl(500);
+    s.innerHTML+='<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.02);animation:slideR .4s ease"><div style="font-size:13px;font-weight:600">'+d.n+'</div><div style="font-family:JetBrains Mono;font-size:15px;font-weight:700;color:'+d.c+'">'+d.d+'</div></div>';
+    var maxH=220;var h=i===4?maxH:Math.max(12,Math.round((d.v/1000)*maxH*.8));
+    var bar=$('j7bb'+i);var val=$('j7bv'+i);
+    if(bar)bar.style.height=Math.min(h,maxH)+'px';
+    if(val)val.style.opacity='1';
   }
+  await dl(400);
+  var totEl=$('j7-total');
+  if(totEl){var t0=performance.now();!function f(n){var p=Math.min((n-t0)/2000,1);totEl.textContent='$'+Math.floor(55938*(1-Math.pow(1-p,3))).toLocaleString();if(p<1)requestAnimationFrame(f);else totEl.textContent='$55,938'}(t0)}
 }
 
 /* ═══ 12 ENGINES ═══ */
@@ -365,15 +464,15 @@ W.engines=()=>{
   const eng=ENG_LIST[idx];
   const prevId=idx>0?ENG_LIST[idx-1].id:null;
   const nextId=idx<ENG_LIST.length-1?ENG_LIST[idx+1].id:null;
-  return `<div style="min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:56px 20px 40px">
+  return `<div class="eng-full">
     <div style="display:flex;align-items:center;gap:14px;margin-bottom:10px">
       <button class="sbtn dk" style="width:auto;padding:8px 18px;margin:0;font-size:12px" onclick="engView='hub';ren()">← ALL ENGINES</button>
       <span style="font-family:'JetBrains Mono';font-size:12px;color:var(--gy);letter-spacing:2px">ENGINE ${String(idx+1).padStart(2,'0')} OF 12 · PATENT-PENDING</span>
     </div>
-    <div style="font-size:52px;margin-bottom:6px">${eng.icon}</div>
-    <div style="font-family:'Archivo Black';font-size:clamp(28px,5vw,46px);text-align:center;margin-bottom:8px">${eng.name}</div>
-    <div style="font-size:17px;color:var(--gy);max-width:560px;text-align:center;margin-bottom:24px;line-height:1.5">${eng.desc}</div>
-    <div class="slip" style="min-height:200px"><div class="slip-top"><span class="sp">${eng.icon} ${eng.name.toUpperCase()}</span><span class="lv">LIVE</span></div><div class="sim" style="padding:18px 20px;min-height:160px;font-size:14px" id="${eng.id}-s"></div></div>
+    <div style="font-size:60px;margin-bottom:10px">${eng.icon}</div>
+    <div style="font-family:'Archivo Black';font-size:clamp(30px,5.5vw,50px);text-align:center;margin-bottom:10px">${eng.name}</div>
+    <div style="font-size:18px;color:var(--gy);max-width:620px;text-align:center;margin-bottom:28px;line-height:1.5">${eng.desc}</div>
+    <div class="slip" style="min-height:240px;width:min(900px,95vw)"><div class="slip-top"><span class="sp">${eng.icon} ${eng.name.toUpperCase()}</span><span class="lv">LIVE</span></div><div class="sim" style="padding:24px 28px;min-height:220px;font-size:15px" id="${eng.id}-s"></div></div>
     <div style="display:flex;gap:12px;margin-top:24px">
       ${prevId?`<button class="sbtn dk" style="width:auto;padding:12px 24px;margin:0;font-size:14px" onclick="engView='${prevId}';ren()">← PREV</button>`:''}
       ${nextId?`<button class="sbtn gl" style="width:auto;padding:12px 24px;margin:0;font-size:14px" onclick="engView='${nextId}';ren()">NEXT ENGINE →</button>`:`<button class="sbtn gl" style="width:auto;padding:12px 24px;margin:0;font-size:14px" onclick="go('moat')">OUR MOAT →</button>`}
@@ -382,11 +481,11 @@ W.engines=()=>{
 };
 
 function renderEngHub(){
-  return `<div style="min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:56px 20px 40px">
+  return `<div style="min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 20px 40px">
     <div class="label" style="font-size:12px">03 · Patent-Pending Technology</div>
-    <div style="font-family:'Archivo Black';font-size:clamp(26px,4.5vw,44px);text-align:center;margin-bottom:6px">12 Proprietary Engines</div>
+    <div style="font-family:'Archivo Black';font-size:clamp(28px,5vw,46px);text-align:center;margin-bottom:8px">12 Proprietary Engines</div>
     <div style="font-size:15px;color:var(--gy);max-width:520px;text-align:center;margin-bottom:24px">Click any engine to see it work live. Each one is a standalone patent-pending product.</div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;max-width:800px;width:100%">
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;max-width:960px;width:100%">
       ${ENG_LIST.map((e,i)=>`<div style="background:var(--b2);border:1px solid var(--slB);border-radius:12px;padding:16px;cursor:pointer;transition:all .3s;text-align:center" onclick="engView='${e.id}';ren()" onmouseover="this.style.borderColor='rgba(239,164,32,.25)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.4)'" onmouseout="this.style.borderColor='var(--slB)';this.style.transform='none';this.style.boxShadow='none'">
         <div style="font-size:28px;margin-bottom:6px">${e.icon}</div>
         <div style="font-family:'JetBrains Mono';font-size:8px;color:var(--gd);letter-spacing:1.5px;margin-bottom:4px">ENGINE ${String(i+1).padStart(2,'0')}</div>
@@ -472,56 +571,297 @@ EN.en11=async()=>{const s=$('en11-s');s.innerHTML=`<div id="e11f"></div>`;const 
 EN.en12=async()=>{$('en12-s').innerHTML=`<div class="og" style="grid-template-columns:auto 1fr 1fr"><div class="og-cell hdr"></div><div class="og-cell hdr">OVER WINS</div><div class="og-cell hdr">UNDER WINS</div><div class="og-cell">Dog Pair</div><div class="og-cell" style="color:var(--gn2);font-weight:700">+$20,000</div><div class="og-cell" style="color:var(--gy)">-$580</div><div class="og-cell">Fav Pair</div><div class="og-cell" style="color:var(--gy)">-$530</div><div class="og-cell" style="color:var(--gd2);font-weight:700">+$724</div><div class="og-cell hdr">COMBINED</div><div class="og-cell" style="color:var(--gn2);font-weight:700;font-size:11px">+$20,470</div><div class="og-cell" style="color:var(--gd2);font-weight:700;font-size:11px">+$724</div></div><div class="plain" style="margin-top:4px"><strong>Minimum ($724) beats Sure Bet ($151) by $573.</strong> <span class="mint">Always.</span></div>`};
 
 /* ═══ MOAT ═══ */
-W.moat=()=>`<div class="S"><div class="label">Our Moat</div><div class="title">Why Nobody Can Copy SBA</div></div>
+W.moat=()=>`<div style="min-height:90vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 20px 40px"><div class="S"><div class="label" style="font-size:11px">The Competitive Moat</div><div class="title" style="font-size:clamp(24px,4vw,38px)">Why Nobody Can Copy SBA</div><div class="explain" style="font-size:14px">Watch the comparison build. SBA wins every column.</div></div>
 <div style="max-width:600px;margin:0 auto"><div class="cr hdr"><div class="c">FEATURE</div><div class="c">ODDSJAM ($160M)</div><div class="c">OTHERS</div><div class="c">SBA</div></div><div id="mt-rows"></div></div>
 <div class="g2" style="max-width:600px;margin:12px auto"><div class="ex" style="margin:0"><div class="ex-t">🏗️ Technical</div><div class="ex-b"><strong>132K+ lines</strong>. 12 engines. ESPN exclusive. <strong>18-24 months</strong> to replicate.</div></div><div class="ex" style="margin:0"><div class="ex-t">💰 Economic</div><div class="ex-b">Zero marginal cost per user. Viral affiliate. <strong>Pure software</strong> at scale.</div></div></div>
-<div class="nxt"><button class="sbtn gl" style="width:auto;margin:0 auto;padding:10px 20px" onclick="go('rev')">REVENUE →</button></div>`;
-H.moat=()=>{const rows=[['AI (12 LLMs)','✗','✗','✦ Exclusive'],['ESPN Live','✗','✗','✦ Exclusive'],['War Room','✗','✗','✦ Patent'],['Middle Bets','✗','✗','✦ Patent'],['Power Play','✗','✗','✦ Patent'],['Factor System','✗','✗','✦ Patent'],['Deep Links','Basic','✗','✦ 39 Books'],['Products','2','1','12 Engines'],['Valuation','$160M','$20-30M','$10-15M Pre']];const c=$('mt-rows');c.innerHTML='';rows.forEach((r,i)=>{const last=r[0]==='Valuation';const d=document.createElement('div');d.className='cr'+(last?' sba':'');d.innerHTML=`<div class="c">${r[0]}</div><div class="c${r[1]==='✗'?' x':''}">${r[1]}</div><div class="c${r[2]==='✗'?' x':''}">${r[2]}</div><div class="c ch">${r[3]}</div>`;c.appendChild(d);TT.push(setTimeout(()=>d.classList.add('show'),i*200))})};
+<div id="mt-score" style="text-align:center;font-family:'JetBrains Mono';font-size:14px;letter-spacing:1px;margin-top:16px;min-height:24px"></div><div class="nxt"><button class="sbtn gl" style="width:auto;margin:0 auto;padding:14px 28px;font-size:14px" onclick="go('rev')">REVENUE MODEL →</button></div></div>`;
+H.moat=()=>{var rows=[
+['Arbitrage Scanner','✓','✓','AI Enhanced',1,1],
+['AI Engine (11 LLMs)','✗','✗','Exclusive',0,0],
+['ESPN Live Data','✗','✗','Exclusive API',0,0],
+['War Room + Watch Score','✗','✗','Patent-Pending',0,0],
+['Middle Bet Detection','✗','✗','Patent-Pending',0,0],
+['Power Play Parlay','✗','✗','Patent-Pending',0,0],
+['Factor System','✗','✗','Patent-Pending',0,0],
+['Hedge Calculator','✗','Basic','Patent + Anti-Detect',0,0],
+['Promo Stacking','✗','✗','3.4% to 27.9%',0,0],
+['Bet Tracker + OCR','✗','✗','12 Scenarios',0,0],
+['Deep Links','Basic','✗','39 Books',1,0],
+['Total Products','2','1','12 Engines',0,0]
+];var sS=0,oS=0,tS=0;var c=$('mt-rows');c.innerHTML='';
+rows.forEach(function(r,i){var d=document.createElement('div');d.style.cssText='display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:0;border-bottom:1px solid rgba(255,255,255,.03);opacity:0;transform:translateX(-16px);transition:all .4s';var c1='<div style="padding:8px 10px;font-size:13px;font-weight:500">'+r[0]+'</div>';var c2='<div style="padding:8px 10px;font-size:12px;text-align:center;'+(r[1]==='✗'?'color:var(--rd);opacity:.4':'')+'">'+r[1]+'</div>';var c3='<div style="padding:8px 10px;font-size:12px;text-align:center;'+(r[2]==='✗'?'color:var(--rd);opacity:.4':r[2]==='Basic'?'color:var(--gy)':'')+'">'+r[2]+'</div>';var c4='<div style="padding:8px 10px;font-size:12px;text-align:center;color:var(--gn2);font-weight:700"><span style="opacity:0;transform:scale(3);transition:all .3s cubic-bezier(.17,.67,.35,1.5);display:inline-block" class="mck">✦</span> <span style="opacity:0;transition:opacity .3s" class="mvl">'+r[3]+'</span></div>';d.innerHTML=c1+c2+c3+c4;c.appendChild(d);TT.push(setTimeout(function(){d.style.opacity='1';d.style.transform='translateX(0)';setTimeout(function(){var ck=d.querySelector('.mck');var vl=d.querySelector('.mvl');if(ck){ck.style.opacity='1';ck.style.transform='scale(1)'}if(vl)setTimeout(function(){vl.style.opacity='1'},150);sS++;if(r[4])oS+=r[4];if(r[5])tS+=r[5];var sc=$('mt-score');if(sc)sc.innerHTML='<span style="color:var(--gn2);font-weight:700">SBA: '+sS+'/12</span> <span style="color:var(--gy);margin:0 12px">·</span> <span style="color:var(--rd);opacity:.6">OddsJam: '+oS+'/12</span> <span style="color:var(--gy);margin:0 12px">·</span> <span style="color:var(--rd);opacity:.4">Others: '+tS+'/12</span>'},300)},i*200))});
+TT.push(setTimeout(function(){var vr=document.createElement('div');vr.style.cssText='display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:0;background:rgba(239,164,32,.03);border:1px solid rgba(239,164,32,.06);border-radius:8px;margin-top:8px;opacity:0;transform:scale(.98);transition:all .5s';vr.innerHTML='<div style="padding:12px;font-size:15px;font-weight:700;color:var(--gd)">VALUATION</div><div style="padding:12px;font-size:14px;text-align:center;color:var(--gy)">$160M</div><div style="padding:12px;font-size:14px;text-align:center;color:var(--gy)">$20-30M</div><div style="padding:12px;font-size:15px;text-align:center;color:var(--gd);font-weight:700">$10-15M Pre</div>';c.appendChild(vr);setTimeout(function(){vr.style.opacity='1';vr.style.transform='scale(1)'},100)},rows.length*200+400))};
 
 /* ═══ REVENUE ═══ */
-W.rev=()=>`<div class="S"><div class="label">Revenue</div><div class="title">How SBA Makes Money</div></div>
-<div class="g4" style="max-width:600px;margin:0 auto">${[{t:'BASIC',p:'$1K'},{t:'PLUS',p:'$2K'},{t:'ELITE',p:'$5K',g:1},{t:'PRO',p:'$10K'}].map(c=>`<div style="background:var(--b2);border:1px solid ${c.g?'rgba(239,164,32,.1)':'var(--slB)'};border-radius:8px;padding:8px;text-align:center"><div style="font-family:'JetBrains Mono';font-size:6px;letter-spacing:1px;color:${c.g?'var(--gn)':'var(--gd)'}">${c.t}</div><div style="font-family:'Archivo Black';font-size:20px;margin:2px 0">${c.p}</div><div style="font-size:7px;color:var(--gy)">40-day</div></div>`).join('')}</div>
-<div style="max-width:600px;margin:12px auto"><div class="bar-wrap" id="rv-b"></div></div>
-<div class="nxt"><button class="sbtn gl" style="width:auto;margin:0 auto;padding:10px 20px" onclick="go('users')">USER EARNINGS →</button></div>`;
+W.rev=()=>`<div style="min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 20px 40px"><div class="S"><div class="label" style="font-size:11px">Revenue Model</div><div class="title" style="font-size:clamp(24px,4vw,38px)">How SBA Makes Money</div><div class="explain">Four subscription tiers. 40-day cycles. Watch the revenue build quarter by quarter.</div></div>
+<div class="g4" style="max-width:600px;margin:0 auto">${[{t:'BASIC',p:'$1K'},{t:'PLUS',p:'$2K'},{t:'ELITE',p:'$5K',g:1},{t:'PRO',p:'$10K'}].map(c=>`<div style="background:var(--b2);border:1px solid ${c.g?'rgba(239,164,32,.1)':'var(--slB)'};border-radius:8px;padding:8px;text-align:center"><div style="font-family:'JetBrains Mono';font-size:6px;letter-spacing:1px;color:${c.g?'var(--gn)':'var(--gd)'}">${c.t}</div><div style="font-family:'Archivo Black';font-size:26px;margin:4px 0">${c.p}</div><div style="font-size:7px;color:var(--gy)">40-day</div></div>`).join('')}</div>
+<div style="max-width:600px;margin:12px auto"><div class="bar-wrap" id="rv-b" style="height:220px;max-width:800px"></div></div>
+<div class="nxt" style="margin-top:20px"><button class="sbtn gl" style="width:auto;margin:0 auto;padding:14px 28px;font-size:14px" onclick="go('users')">USER EARNINGS →</button></div></div>`;
 H.rev=()=>{const bars=[{q:'Q2 26',a:'$420K',h:12,c:'var(--gd)'},{q:'Q3 26',a:'$1.2M',h:25,c:'var(--gd)'},{q:'Q4 26',a:'$3.4M',h:42,c:'var(--gd)'},{q:'Q1 27',a:'$8.1M',h:65,c:'var(--gn)'},{q:'Q2 27',a:'$18.6M',h:100,c:'var(--gn)'}];$('rv-b').innerHTML=bars.map(b=>`<div class="bar-col"><div class="bar-val" id="bv${b.q.replace(/\s/g,'')}" style="color:${b.c}">${b.a}</div><div class="bar" id="bb${b.q.replace(/\s/g,'')}" style="background:linear-gradient(to top,var(--b4),${b.c})"></div><div class="bar-lbl">${b.q}</div></div>`).join('');bars.forEach((b,i)=>{const k=b.q.replace(/\s/g,'');TT.push(setTimeout(()=>{const bar=$('bb'+k);if(bar)bar.style.height=b.h+'%';const v=$('bv'+k);if(v)v.classList.add('show')},i*300+200))})};
 
+/* ═══ GROWTH ENGINE — AFFILIATE MODEL ═══ */
+W.growth_eng=()=>`<div style="min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 20px 40px">
+<div class="S"><div class="label" style="font-size:11px">The Growth Engine</div><div class="title" style="font-size:clamp(26px,4.5vw,42px)">How SBA Gets to <span class="gn">100,000 Users</span></div><div class="explain" style="font-size:15px;max-width:560px">Not ads. Not cold outreach. A self-replicating growth machine where every user is financially incentivized to bring more users.</div></div>
+
+<!-- THE MATH -->
+<div class="slip" style="width:min(940px,95vw)">
+  <div class="slip-top"><span class="sp">📈 VIRAL GROWTH MODEL</span><span class="lv">LIVE SIMULATION</span></div>
+  <div style="padding:20px">
+    <div style="text-align:center;margin-bottom:16px">
+      <div style="font-family:'JetBrains Mono';font-size:10px;color:var(--gd);letter-spacing:2px;margin-bottom:6px">THE COMPOUND EFFECT</div>
+      <div style="font-size:15px;color:var(--gy);max-width:600px;margin:0 auto">Each user recruits <strong style="color:var(--wt)">just 2 people</strong>. Those 2 each recruit 2. Watch what happens in 12 months:</div>
+    </div>
+    <div style="display:flex;align-items:flex-end;justify-content:center;gap:6px;height:200px;margin:16px auto;max-width:860px" id="ge-bars"></div>
+    <div style="display:flex;justify-content:space-around;max-width:860px;margin:4px auto 0;padding:0 4px" id="ge-labels"></div>
+    <div style="text-align:center;margin-top:12px">
+      <div style="font-family:'Archivo Black';font-size:clamp(28px,4vw,40px);color:var(--gn)" id="ge-total">0</div>
+      <div style="font-family:'JetBrains Mono';font-size:10px;color:var(--gy);letter-spacing:2px">TOTAL USERS FROM 100 FOUNDING MEMBERS</div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY IT WORKS -->
+<div style="max-width:940px;margin:18px auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px" id="ge-reasons">
+  <div class="ex" style="margin:0;padding:22px;opacity:0;transform:translateY(12px);transition:all .5s" id="ge-r1">
+    <div style="font-size:32px;margin-bottom:6px">💰</div>
+    <div class="ex-t" style="font-size:17px">Users Make Real Money</div>
+    <div class="ex-b" style="font-size:13px">$5K bankroll = <strong style="color:var(--gn2)">$600/day</strong>. When people see their account growing daily, they tell everyone. Not hype — <strong>math-backed results</strong> that speak for themselves.</div>
+  </div>
+  <div class="ex" style="margin:0;padding:22px;opacity:0;transform:translateY(12px);transition:all .5s" id="ge-r2">
+    <div style="font-size:32px;margin-bottom:6px">🔄</div>
+    <div class="ex-t" style="font-size:17px">7-Level Commission</div>
+    <div class="ex-b" style="font-size:13px"><strong>45-60% commissions</strong> across 7 levels. 4 affiliate types. 7 ranks from Rookie to Legend. Team Volume Bonuses. Users don't just refer — they <strong>build teams</strong>.</div>
+  </div>
+  <div class="ex" style="margin:0;padding:22px;opacity:0;transform:translateY(12px);transition:all .5s" id="ge-r3">
+    <div style="font-size:32px;margin-bottom:6px">🚀</div>
+    <div class="ex-t" style="font-size:17px">Zero Churn Fuel</div>
+    <div class="ex-b" style="font-size:13px">$5K sub earns back in <strong style="color:var(--gn2)">8 days</strong>. Remaining 32 days = pure profit. Nobody cancels a money printer. <strong>Near 100% retention</strong> means the base only grows.</div>
+  </div>
+</div>
+
+<!-- THE FLYWHEEL -->
+<div class="slip" style="width:min(940px,95vw);margin-top:14px">
+  <div class="slip-top"><span class="sp">🔄 THE SBA FLYWHEEL</span><span style="font-family:'JetBrains Mono';font-size:9px;color:var(--gn)">SELF-REINFORCING</span></div>
+  <div style="padding:24px">
+    <div style="position:relative;width:min(480px,90vw);height:min(480px,90vw);margin:0 auto" id="ge-fly">
+      <!-- SVG circle path -->
+      <svg viewBox="0 0 480 480" style="position:absolute;inset:0;width:100%;height:100%">
+        <circle cx="240" cy="240" r="190" fill="none" stroke="rgba(255,255,255,.03)" stroke-width="2"/>
+        <circle cx="240" cy="240" r="190" fill="none" stroke="url(#flyGrad)" stroke-width="3" stroke-dasharray="1194" stroke-dashoffset="1194" id="ge-fly-ring" stroke-linecap="round" style="transition:stroke-dashoffset 3s cubic-bezier(.22,1,.36,1)"/>
+        <!-- Animated dot traveling the ring -->
+        <circle r="6" fill="var(--gd)" id="ge-fly-dot" opacity="0">
+          <animateMotion dur="8s" repeatCount="indefinite" path="M240,50 A190,190 0 1,1 239.9,50"/>
+        </circle>
+        <defs><linearGradient id="flyGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="var(--gd)"/><stop offset="50%" stop-color="var(--gn)"/><stop offset="100%" stop-color="var(--pp)"/></linearGradient></defs>
+      </svg>
+      <!-- Center text -->
+      <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;z-index:2">
+        <div style="font-family:'Archivo Black';font-size:clamp(18px,3vw,28px);color:var(--gd)">INFINITE</div>
+        <div style="font-family:'Archivo Black';font-size:clamp(18px,3vw,28px);color:var(--gn)">LOOP</div>
+        <div style="font-family:'JetBrains Mono';font-size:9px;color:var(--gy);margin-top:4px;letter-spacing:2px">ZERO MARKETING COST</div>
+      </div>
+      <!-- Flywheel nodes positioned around the circle -->
+      <div id="ge-fly-nodes"></div>
+    </div>
+    <div style="margin-top:16px;font-size:15px;color:var(--gy);max-width:650px;margin-left:auto;margin-right:auto;line-height:1.7;text-align:center">Every user who makes money <strong style="color:var(--wt)">becomes a recruiter</strong>. Every recruit who makes money <strong style="color:var(--wt)">becomes a recruiter</strong>. The cycle <strong style="color:var(--gd2)">never stops</strong> because the product <strong style="color:var(--gn2)">actually works</strong>.</div>
+  </div>
+</div>
+
+<!-- COMPARISON TO GIANTS -->
+<div style="max-width:940px;margin:18px auto">
+  <div style="font-family:'Archivo Black';font-size:18px;text-align:center;margin-bottom:12px">The Playbook of Billion-Dollar Companies</div>
+  <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:0;border:1px solid var(--slB);border-radius:10px;overflow:hidden" id="ge-comps">
+    <div style="padding:10px 14px;font-family:'JetBrains Mono';font-size:9px;color:var(--gy);letter-spacing:1px;background:var(--slH);border-bottom:1px solid var(--slB)">COMPANY</div>
+    <div style="padding:10px 14px;font-family:'JetBrains Mono';font-size:9px;color:var(--gy);letter-spacing:1px;background:var(--slH);border-bottom:1px solid var(--slB);text-align:center">GROWTH METHOD</div>
+    <div style="padding:10px 14px;font-family:'JetBrains Mono';font-size:9px;color:var(--gy);letter-spacing:1px;background:var(--slH);border-bottom:1px solid var(--slB);text-align:center">RESULT</div>
+  </div>
+</div>
+
+<!-- MILESTONES -->
+<div class="slip" style="width:min(940px,95vw);margin-top:18px">
+  <div class="slip-top"><span class="sp">📊 USER MILESTONES → VALUATION</span><span class="lv">LIVE MODEL</span></div>
+  <div style="padding:20px">
+    <div style="font-size:14px;color:var(--gy);text-align:center;margin-bottom:14px;max-width:600px;margin-left:auto;margin-right:auto">As the affiliate engine grows users, watch revenue and valuation climb:</div>
+    <div id="ge-mile" style="max-width:880px;margin:0 auto"></div>
+    <div style="margin-top:14px;text-align:center">
+      <div style="font-family:'JetBrains Mono';font-size:9px;color:var(--gy);letter-spacing:2px;margin-bottom:6px">SUPERSTAR'S $2M INVESTMENT BECOMES</div>
+      <div style="font-family:'Archivo Black';font-size:clamp(30px,5vw,48px);color:var(--gd)" id="ge-roi">$0</div>
+      <div style="font-family:'JetBrains Mono';font-size:11px;color:var(--gn);letter-spacing:1px" id="ge-roi-x">—</div>
+    </div>
+  </div>
+</div>
+
+<div class="nxt" style="margin-top:20px"><button class="sbtn gl" style="width:auto;margin:0 auto;padding:14px 28px;font-size:14px" onclick="go('users')">USER EARNINGS →</button></div>
+</div>`;
+
+H.growth_eng=async()=>{
+  // Animate the growth bars
+  var months=[100,220,480,1050,2300,5000,10900,23800,52000,80000,95000,102400];
+  var barsEl=$('ge-bars');
+  if(barsEl){
+    barsEl.innerHTML=months.map(function(v,i){
+      return '<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%"><div id="geb'+i+'" style="width:100%;border-radius:3px 3px 0 0;background:linear-gradient(to top,var(--b4),'+(i<6?'var(--gd)':'var(--gn)')+');height:0;transition:height 1s cubic-bezier(.22,1,.36,1) '+(i*0.15)+'s"></div></div>'
+    }).join('');
+    // Month labels
+    var labelsEl=$('ge-labels');
+    if(labelsEl){labelsEl.innerHTML=months.map(function(v,i){return '<div style="flex:1;text-align:center"><div style="font-family:JetBrains Mono;font-size:8px;color:var(--gy)">M'+(i+1)+'</div><div id="gev'+i+'" style="font-family:JetBrains Mono;font-size:8px;color:var(--gn);font-weight:700;opacity:0;transition:opacity .4s">'+(v>=1000?(Math.round(v/1000))+'K':v)+'</div></div>'}).join('')}
+    // Trigger bars
+    setTimeout(function(){
+      months.forEach(function(v,i){
+        var bar=$('geb'+i);
+        if(bar){var h=Math.max(6,Math.round((v/102400)*185));bar.style.height=h+'px'}
+        var lbl=$('gev'+i);
+        if(lbl)setTimeout(function(){lbl.style.opacity='1'},i*120+400);
+      });
+    },300);
+    // Count up total
+    var totEl=$('ge-total');
+    if(totEl){setTimeout(function(){
+      var t0=performance.now();
+      !function f(n){var p=Math.min((n-t0)/3000,1);var eased=1-Math.pow(1-p,3);totEl.textContent=Math.floor(102400*eased).toLocaleString()+'+';if(p<1)requestAnimationFrame(f);else totEl.textContent='102,400+'}(t0);
+    },800)}
+  }
+  
+  // Animate reason cards
+  TT.push(setTimeout(function(){var r=$('ge-r1');if(r){r.style.opacity='1';r.style.transform='translateY(0)'}},600));
+  TT.push(setTimeout(function(){var r=$('ge-r2');if(r){r.style.opacity='1';r.style.transform='translateY(0)'}},900));
+  TT.push(setTimeout(function(){var r=$('ge-r3');if(r){r.style.opacity='1';r.style.transform='translateY(0)'}},1200));
+  
+  // Animate flywheel ring + nodes
+  var ring=$('ge-fly-ring');
+  var dot=$('ge-fly-dot');
+  var nodesEl=$('ge-fly-nodes');
+  if(ring){setTimeout(function(){ring.setAttribute('stroke-dashoffset','0')},500)}
+  if(dot){setTimeout(function(){dot.setAttribute('opacity','1')},2000)}
+  if(nodesEl){
+    var nodes=[
+      {icon:'👤',label:'User Joins',c:'var(--gd)',angle:-90},
+      {icon:'💰',label:'Makes Money',c:'var(--gn)',angle:-30},
+      {icon:'📣',label:'Tells Friends',c:'var(--gd2)',angle:30},
+      {icon:'👥',label:'Friends Join',c:'var(--gn)',angle:90},
+      {icon:'💵',label:'Earns Commission',c:'var(--pp)',angle:150},
+      {icon:'🔄',label:'REPEATS ∞',c:'var(--gn)',angle:210},
+    ];
+    var cSize=Math.min(480,nodesEl.parentElement.offsetWidth||480);
+    var radius=cSize*0.395;var cx=cSize/2;var cy=cSize/2;
+    nodes.forEach(function(nd,i){
+      TT.push(setTimeout(function(){
+        var rad=nd.angle*(Math.PI/180);
+        var x=cx+radius*Math.cos(rad);
+        var y=cy+radius*Math.sin(rad);
+        var div=document.createElement('div');
+        div.style.cssText='position:absolute;left:'+x+'px;top:'+y+'px;transform:translate(-50%,-50%);text-align:center;background:var(--b2);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:10px 14px;min-width:90px;z-index:3;opacity:0;transition:all .5s cubic-bezier(.22,1,.36,1);box-shadow:0 4px 20px rgba(0,0,0,.4)';
+        div.innerHTML='<div style="font-size:26px">'+nd.icon+'</div><div style="font-family:JetBrains Mono;font-size:10px;color:'+nd.c+';margin-top:3px;letter-spacing:1px;font-weight:600">'+nd.label+'</div>';
+        nodesEl.appendChild(div);
+        setTimeout(function(){div.style.opacity='1'},50);
+      },i*350+800));
+    });
+  }
+  
+  // Animate comparison companies
+  var comps=$('ge-comps');
+  if(comps){
+    var rows=[
+      ['Uber','Rider referral credits','$80B+ valuation'],
+      ['Airbnb','Host & guest referrals','$75B+ valuation'],
+      ['Robinhood','Free stock for referrals','$8B+ (32M users)'],
+      ['PayPal','$10 signup bonus','$60B+ valuation'],
+      ['Dropbox','Free storage per referral','$8B+ valuation'],
+    ];
+    rows.forEach(function(r,i){
+      TT.push(setTimeout(function(){
+        comps.innerHTML+='<div style="padding:10px 14px;font-size:13px;font-weight:500;border-bottom:1px solid rgba(255,255,255,.02);animation:slideR .3s ease">'+r[0]+'</div><div style="padding:10px 14px;font-size:12px;color:var(--gy);text-align:center;border-bottom:1px solid rgba(255,255,255,.02);animation:slideR .3s ease">'+r[1]+'</div><div style="padding:10px 14px;font-size:12px;color:var(--gn2);font-weight:600;text-align:center;border-bottom:1px solid rgba(255,255,255,.02);animation:slideR .3s ease">'+r[2]+'</div>';
+      },i*300+2500));
+    });
+    // SBA row
+    TT.push(setTimeout(function(){
+      comps.innerHTML+='<div style="padding:12px 14px;font-size:14px;font-weight:700;color:var(--gd);background:rgba(239,164,32,.03);animation:slideR .4s ease">★ SBA</div><div style="padding:12px 14px;font-size:12px;color:var(--gd2);text-align:center;background:rgba(239,164,32,.03);font-weight:600;animation:slideR .4s ease">45-60% commission + money printer product</div><div style="padding:12px 14px;font-size:13px;color:var(--gd);font-weight:700;text-align:center;background:rgba(239,164,32,.03);animation:slideR .4s ease">100K+ users → $1B+</div>';
+    },rows.length*300+2800));
+  }
+
+  // MILESTONE VALUATION TABLE
+  var mileEl=$('ge-mile');
+  if(mileEl){
+    var milestones=[
+      {users:'1,000',rev:'$3.4M',arr:'$3.4M',val:'$30-50M',mult:'15-25×',c:'var(--gd)',w:8},
+      {users:'5,000',rev:'$17M',arr:'$17M',val:'$80-150M',mult:'40-75×',c:'var(--gd)',w:20},
+      {users:'10,000',rev:'$34M',arr:'$34M',val:'$150-300M',mult:'75-150×',c:'var(--gn)',w:35},
+      {users:'25,000',rev:'$85M',arr:'$85M',val:'$300-500M',mult:'150-250×',c:'var(--gn)',w:55},
+      {users:'50,000',rev:'$170M',arr:'$170M',val:'$500M-800M',mult:'250-400×',c:'var(--gn)',w:75},
+      {users:'100,000',rev:'$340M',arr:'$340M',val:'$1B+',mult:'500×+',c:'var(--gn)',w:100},
+    ];
+    // Header
+    mileEl.innerHTML='<div style="display:grid;grid-template-columns:.8fr .7fr .9fr 1fr .7fr;gap:0;border-bottom:2px solid rgba(255,255,255,.04);padding-bottom:6px;margin-bottom:4px"><div style="font-family:JetBrains Mono;font-size:9px;color:var(--gy);letter-spacing:1px;padding:6px 8px">USERS</div><div style="font-family:JetBrains Mono;font-size:9px;color:var(--gy);letter-spacing:1px;padding:6px 8px;text-align:center">REVENUE</div><div style="font-family:JetBrains Mono;font-size:9px;color:var(--gy);letter-spacing:1px;padding:6px 8px;text-align:center">VALUATION</div><div style="font-family:JetBrains Mono;font-size:9px;color:var(--gy);letter-spacing:1px;padding:6px 8px">GROWTH BAR</div><div style="font-family:JetBrains Mono;font-size:9px;color:var(--gy);letter-spacing:1px;padding:6px 8px;text-align:center">ROI</div></div>';
+    milestones.forEach(function(m,i){
+      TT.push(setTimeout(function(){
+        var isFinal=i===milestones.length-1;
+        var rowStyle=isFinal?'background:rgba(239,164,32,.03);border:1px solid rgba(239,164,32,.06);border-radius:8px;margin-top:4px':'border-bottom:1px solid rgba(255,255,255,.03)';
+        var row=document.createElement('div');
+        row.style.cssText='display:grid;grid-template-columns:.8fr .7fr .9fr 1fr .7fr;gap:0;'+rowStyle+';opacity:0;transform:translateX(-12px);transition:all .4s';
+        row.innerHTML='<div style="padding:10px 8px;font-size:14px;font-weight:'+(isFinal?'700':'500')+';color:'+(isFinal?'var(--gd)':'var(--wt)')+'">'+m.users+'</div><div style="padding:10px 8px;font-size:13px;text-align:center;color:var(--gy)">'+m.rev+'</div><div style="padding:10px 8px;font-size:14px;text-align:center;font-weight:700;color:'+m.c+'">'+m.val+'</div><div style="padding:10px 8px;display:flex;align-items:center"><div style="height:8px;border-radius:4px;background:'+m.c+';width:0;transition:width 1s cubic-bezier(.22,1,.36,1)" id="gebar'+i+'"></div></div><div style="padding:10px 8px;font-size:13px;text-align:center;font-family:JetBrains Mono;font-weight:700;color:'+m.c+'">'+m.mult+'</div>';
+        mileEl.appendChild(row);
+        setTimeout(function(){row.style.opacity='1';row.style.transform='translateX(0)';var bar=$('gebar'+i);if(bar)setTimeout(function(){bar.style.width=m.w+'%'},100)},50);
+        // Update the ROI counter on final row
+        if(isFinal){
+          setTimeout(function(){
+            var roiEl=$('ge-roi');var roiX=$('ge-roi-x');
+            if(roiEl){var t0=performance.now();!function f(n){var p=Math.min((n-t0)/2000,1);var eased=1-Math.pow(1-p,3);roiEl.textContent='$'+Math.floor(1000000000*eased).toLocaleString();if(p<1)requestAnimationFrame(f);else{roiEl.textContent='$1,000,000,000+';roiEl.style.textShadow='0 0 40px rgba(239,164,32,.2)'}}(t0)}
+            if(roiX){setTimeout(function(){roiX.textContent='500×+ RETURN ON $2M INVESTMENT';roiX.style.color='var(--gd)'},2200)}
+          },400);
+        }
+      },i*350+4500));
+    });
+  }
+};
+
+
 /* ═══ USER EARNINGS ═══ */
-W.users=()=>`<div class="S"><div class="label">User Economics</div><div class="title">What Users <span class="gn">Actually Earn</span></div><div class="explain">Drag the sliders. This is why nobody cancels.</div></div>
-<div class="ucalc"><div style="margin-bottom:8px"><div style="display:flex;justify-content:space-between;font-size:9px"><span style="color:var(--gy)">Bankroll</span><span style="font-family:'JetBrains Mono';font-weight:600" id="ub">$5,000</span></div><input type="range" min="1000" max="50000" step="1000" value="5000" id="ubr" oninput="uc()"></div>
+W.users=()=>`<div style="min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 20px 40px"><div class="S"><div class="label" style="font-size:11px">User Economics</div><div class="title">What Users <span class="gn">Actually Earn</span></div><div class="explain">Drag the sliders. This is why nobody cancels.</div></div>
+<div class="ucalc" style="max-width:700px;padding:24px"><div style="margin-bottom:8px"><div style="display:flex;justify-content:space-between;font-size:9px"><span style="color:var(--gy)">Bankroll</span><span style="font-family:'JetBrains Mono';font-weight:600" id="ub">$5,000</span></div><input type="range" min="1000" max="50000" step="1000" value="5000" id="ubr" oninput="uc()"></div>
 <div style="margin-bottom:8px"><div style="display:flex;justify-content:space-between;font-size:9px"><span style="color:var(--gy)">Arbs/Day</span><span style="font-family:'JetBrains Mono';font-weight:600" id="ua">4</span></div><input type="range" min="1" max="10" step="1" value="4" id="uar" oninput="uc()"></div>
 <div style="margin-bottom:8px"><div style="display:flex;justify-content:space-between;font-size:9px"><span style="color:var(--gy)">Avg ROI</span><span style="font-family:'JetBrains Mono';font-weight:600" id="ur">3%</span></div><input type="range" min="1" max="30" step="0.5" value="3" id="urr" oninput="uc()"></div>
 <div class="g3" id="ucr"></div><div style="margin-top:6px;text-align:center;font-size:8px;color:var(--gd2)" id="ucpb"></div></div>
-<div class="nxt"><button class="sbtn gl" style="width:auto;margin:0 auto;padding:10px 20px" onclick="go('path')">$1B PATH →</button></div>`;
+<div class="nxt" style="margin-top:20px"><button class="sbtn gl" style="width:auto;margin:0 auto;padding:14px 28px;font-size:14px" onclick="go('path')">$1B PATH →</button></div></div>`;
 H.users=()=>{uc()};
-function uc(){const b=+($('ubr')||{}).value||5000,a=+($('uar')||{}).value||4,r=+($('urr')||{}).value||3;$('ub').textContent=fmt(b);$('ua').textContent=a;$('ur').textContent=r+'%';const d=b*(r/100)*a,m=d*30,y=d*365;$('ucr').innerHTML=`<div style="background:var(--b3);border-radius:6px;padding:6px;text-align:center"><div style="font-family:'JetBrains Mono';font-size:16px;font-weight:700;color:var(--gn2)">${fmt(Math.round(d))}</div><div style="font-size:6px;color:var(--gy)">DAILY</div></div><div style="background:var(--b3);border-radius:6px;padding:6px;text-align:center"><div style="font-family:'JetBrains Mono';font-size:16px;font-weight:700;color:var(--gn2)">${fmt(Math.round(m))}</div><div style="font-size:6px;color:var(--gy)">MONTHLY</div></div><div style="background:var(--b3);border-radius:6px;padding:6px;text-align:center"><div style="font-family:'JetBrains Mono';font-size:16px;font-weight:700;color:var(--gn2)">${fmt(Math.round(y))}</div><div style="font-size:6px;color:var(--gy)">YEARLY</div></div>`;$('ucpb').textContent=`$5K sub pays back in ${Math.ceil(5000/d)} day${Math.ceil(5000/d)>1?'s':''}`}
+function uc(){const b=+($('ubr')||{}).value||5000,a=+($('uar')||{}).value||4,r=+($('urr')||{}).value||3;$('ub').textContent=fmt(b);$('ua').textContent=a;$('ur').textContent=r+'%';const d=b*(r/100)*a,m=d*30,y=d*365;$('ucr').innerHTML=`<div style="background:var(--b3);border-radius:6px;padding:6px;text-align:center"><div style="font-family:'JetBrains Mono';font-size:22px;font-weight:700;color:var(--gn2)">${fmt(Math.round(d))}</div><div style="font-size:6px;color:var(--gy)">DAILY</div></div><div style="background:var(--b3);border-radius:6px;padding:6px;text-align:center"><div style="font-family:'JetBrains Mono';font-size:22px;font-weight:700;color:var(--gn2)">${fmt(Math.round(m))}</div><div style="font-size:6px;color:var(--gy)">MONTHLY</div></div><div style="background:var(--b3);border-radius:6px;padding:6px;text-align:center"><div style="font-family:'JetBrains Mono';font-size:22px;font-weight:700;color:var(--gn2)">${fmt(Math.round(y))}</div><div style="font-size:6px;color:var(--gy)">YEARLY</div></div>`;$('ucpb').textContent=`$5K sub pays back in ${Math.ceil(5000/d)} day${Math.ceil(5000/d)>1?'s':''}`}
 
 /* ═══ $1B PATH ═══ */
-W.path=()=>`<div class="S"><div class="label">Growth</div><div class="title">$2M → <span class="gd">$1 Billion</span></div></div>
-<div class="tl" id="tl-i"></div>
+W.path=()=>`<div style="min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 20px 40px"><div class="S"><div class="label" style="font-size:11px">Growth Roadmap</div><div class="title" style="font-size:clamp(24px,4vw,38px)">$2M → <span class="gd">$1 Billion</span></div><div class="explain">Watch Superstar's investment appreciate at every phase.</div></div>
+<div class="tl" id="tl-i" style="max-width:700px"></div>
 <div class="ex"><div class="ex-c"><strong>$2M at $15M pre → rides to $160M (OddsJam) = 80× return.</strong> SBA has 6× their tech.</div></div>
-<div class="nxt"><button class="sbtn gl" style="width:auto;margin:0 auto;padding:10px 20px" onclick="go('partner')">PARTNERSHIP →</button></div>`;
-H.path=()=>{const phases=[{p:'Phase 1',t:'NOW',v:'$10-15M',d:'$2M investment. Scale to 1K+ members.',r:'Entry position',c:'gd'},{p:'Phase 2',t:'Q4 2026',v:'$50-80M',d:'Series A. Superstar helps source.',r:'5-8× return',c:'gd'},{p:'Phase 3',t:'2027',v:'$150-300M',d:'Institutional capital. $20M+ ARR.',r:'15-30× return',c:'gn'},{p:'Phase 4',t:'2028+',v:'$500M-$1B+',d:'Acquisition or IPO.',r:'80-100×+ return',c:'gn'}];$('tl-i').innerHTML=phases.map((p,i)=>`<div class="tl-i" style="--c:var(--${p.c})"><div style="font-family:'JetBrains Mono';font-size:6px;letter-spacing:1px;color:var(--${p.c})">${p.t}</div><div style="font-family:'Archivo Black';font-size:14px;margin:2px 0">${p.p} <span style="font-size:11px;color:var(--${p.c})">(${p.v})</span></div><div style="font-size:9px;color:var(--gy)">${p.d}</div><div style="font-family:'JetBrains Mono';font-size:9px;font-weight:700;color:var(--${p.c});margin-top:2px">${p.r}</div></div>`).join('');document.querySelectorAll('.tl-i').forEach((item,i)=>{item.style.cssText+=``;const s=document.createElement('style');s.textContent=`.tl-i:nth-child(${i+1})::before{background:var(--${phases[i].c});box-shadow:0 0 6px var(--${phases[i].c})}`;document.head.appendChild(s);TT.push(setTimeout(()=>item.classList.add('show'),i*500))})};
+<div class="nxt" style="margin-top:20px"><button class="sbtn gl" style="width:auto;margin:0 auto;padding:14px 28px;font-size:14px" onclick="go('partner')">THE PARTNERSHIP →</button></div></div>`;
+H.path=()=>{const phases=[{p:'Phase 1',t:'NOW',v:'$10-15M',d:'$2M investment. Scale to 1K+ members.',r:'Entry position',c:'gd'},{p:'Phase 2',t:'Q4 2026',v:'$50-80M',d:'Series A. Superstar helps source.',r:'5-8× return',c:'gd'},{p:'Phase 3',t:'2027',v:'$150-300M',d:'Institutional capital. $20M+ ARR.',r:'15-30× return',c:'gn'},{p:'Phase 4',t:'2028+',v:'$500M-$1B+',d:'Acquisition or IPO.',r:'80-100×+ return',c:'gn'}];$('tl-i').innerHTML=phases.map((p,i)=>`<div class="tl-i" style="--c:var(--${p.c})"><div style="font-family:'JetBrains Mono';font-size:6px;letter-spacing:1px;color:var(--${p.c})">${p.t}</div><div style="font-family:'Archivo Black';font-size:18px;margin:4px 0">${p.p} <span style="font-size:11px;color:var(--${p.c})">(${p.v})</span></div><div style="font-size:12px;color:var(--gy);line-height:1.6">${p.d}</div><div style="font-family:'JetBrains Mono';font-size:13px;font-weight:700;color:var(--${p.c});margin-top:4px">${p.r}</div></div>`).join('');document.querySelectorAll('.tl-i').forEach((item,i)=>{item.style.cssText+=``;const s=document.createElement('style');s.textContent=`.tl-i:nth-child(${i+1})::before{background:var(--${phases[i].c});box-shadow:0 0 6px var(--${phases[i].c})}`;document.head.appendChild(s);TT.push(setTimeout(()=>item.classList.add('show'),i*500))})};
 
 /* ═══ PARTNERSHIP ═══ */
-W.partner=()=>`<div class="S"><div class="label">Partnership</div><div class="title">What We Build <span class="gd">Together</span></div></div>
-<div class="g2" style="max-width:600px;margin:0 auto"><div class="ex" style="margin:0"><div class="ex-t">SBA Brings</div><div class="ex-b">→ 12 patent-pending engines<br>→ 132K+ lines of code<br>→ Exclusive ESPN API<br>→ Zero marginal cost<br>→ Viral affiliate engine<br>→ $212B market</div></div><div class="ex" style="margin:0"><div class="ex-t">Superstar Brings</div><div class="ex-b">→ $2M capital<br>→ OTC listing (DWIS)<br>→ SEC Form 10 filing<br>→ Deal flow network<br>→ M&A expertise<br>→ The Farr legacy & network</div></div></div>
-<div class="ex"><div class="ex-t">The Crown Jewel Strategy</div><div class="ex-b">Superstar Platforms is building a <strong>national technology conglomerate</strong>. PawnTrust is fintech. Automotive is distribution. <strong>SBA is the crown jewel</strong> — the highest-growth, highest-margin, most defensible tech asset in the portfolio. SBA transforms Superstar from a holding company into a <strong>technology powerhouse</strong>.</div></div>
-<div class="nxt"><button class="sbtn gl" style="width:auto;margin:0 auto;padding:10px 20px" onclick="go('close')">THE LEGACY →</button></div>`;
+W.partner=()=>`<div style="min-height:90vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 20px 40px"><div class="S"><div class="label" style="font-size:11px">The Partnership</div><div class="title">What We Build <span class="gd">Together</span></div></div>
+<div class="g2" style="max-width:600px;margin:0 auto"><div class="ex" style="margin:0"><div class="ex-t">SBA Brings</div><div class="ex-b">→ 12 patent-pending engines<br>→ 132K+ lines of code<br>→ Exclusive ESPN API<br>→ Zero marginal cost<br>→ Viral affiliate engine<br>→ $212B market</div></div><div class="ex" style="margin:0;padding:24px"><div class="ex-t" style="font-size:20px">Superstar Brings</div><div class="ex-b">→ $2M capital<br>→ OTC listing (DWIS)<br>→ SEC Form 10 filing<br>→ Deal flow network<br>→ M&A expertise<br>→ The Farr legacy & network</div></div></div>
+<div class="ex" style="max-width:900px;padding:24px"><div class="ex-t" style="font-size:20px">The Crown Jewel Strategy</div><div class="ex-b">Superstar Platforms is building a <strong>national technology conglomerate</strong>. PawnTrust is fintech. Automotive is distribution. <strong>SBA is the crown jewel</strong> — the highest-growth, highest-margin, most defensible tech asset in the portfolio. SBA transforms Superstar from a holding company into a <strong>technology powerhouse</strong>.</div></div>
+<div class="nxt" style="margin-top:20px"><button class="sbtn gl" style="width:auto;margin:0 auto;padding:14px 28px;font-size:14px" onclick="go('close')">THE LEGACY →</button></div></div>`;
 
 /* ═══ FARR LEGACY CLOSER ═══ */
-W.close=()=>`<div style="text-align:center;padding-top:20px;margin-bottom:16px"><div class="label" style="font-size:12px">Two Dynasties. One Future.</div><div style="font-family:'Archivo Black';font-size:clamp(26px,4.5vw,44px);line-height:1.05">The <span class="gd">Farr</span> Legacy Continues</div></div>
-<div class="legacy-card" style="padding:24px"><div class="era" style="font-size:13px">🏈 1967 — THE BEGINNING</div><div class="name" style="font-size:24px">Mel Farr Sr.</div><div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:10px 0" id="cl-s1"></div><div class="detail" style="font-size:15px">From Beaumont, Texas to the <strong>NFL Hall of Honor</strong>. Rookie of the Year. Then built the <strong style="color:var(--gd)">largest African-American owned business in America.</strong></div></div>
+W.close=()=>`<div style="text-align:center;padding-top:24px;margin-bottom:20px"><div class="label" style="font-size:13px;letter-spacing:4px">Two Dynasties. One Future.</div><div style="font-family:'Archivo Black';font-size:clamp(28px,5vw,48px);line-height:1.05">The <span class="gd">Farr</span> Legacy Continues</div></div>
+<div class="legacy-card" style="padding:24px"><div class="era" style="font-size:13px">🏈 1967 — THE BEGINNING</div><div class="name" style="font-size:28px">Mel Farr Sr.</div><div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:10px 0" id="cl-s1"></div><div class="detail" style="font-size:16px">From Beaumont, Texas to the <strong>NFL Hall of Honor</strong>. Rookie of the Year. Then built the <strong style="color:var(--gd)">largest African-American owned business in America.</strong></div></div>
 <div class="legacy-line"></div>
-<div class="legacy-card" style="padding:24px"><div class="era" style="font-size:13px">🏈 1991 — THE NEXT CHAPTER</div><div class="name" style="font-size:24px">Mike Farr</div><div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:10px 0" id="cl-s2"></div><div class="detail" style="font-size:15px">UCLA record-breaker. Troy Aikman's go-to. Led the Lions' <strong>only playoff victory</strong>. Then <strong style="color:var(--gd)">doubled the family empire to $400M.</strong></div></div>
+<div class="legacy-card" style="padding:24px"><div class="era" style="font-size:13px">🏈 1991 — THE NEXT CHAPTER</div><div class="name" style="font-size:28px">Mike Farr</div><div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:10px 0" id="cl-s2"></div><div class="detail" style="font-size:15px">UCLA record-breaker. Troy Aikman's go-to. Led the Lions' <strong>only playoff victory</strong>. Then <strong style="color:var(--gd)">doubled the family empire to $400M.</strong></div></div>
 <div class="legacy-line"></div>
-<div class="legacy-card" style="padding:24px"><div class="era" style="font-size:13px">🏢 2025 — THE PLATFORM</div><div class="name" style="font-size:24px">Superstar Platforms</div><div class="detail" style="font-size:15px"><strong>OTC: DWIS · SEC Form 10 Filed</strong><br>PawnTrust · Automotive · Strategic Acquisitions<br>Building a <strong style="color:var(--gd)">national technology conglomerate</strong></div></div>
+<div class="legacy-card" style="padding:24px"><div class="era" style="font-size:13px">🏢 2025 — THE PLATFORM</div><div class="name" style="font-size:28px">Superstar Platforms</div><div class="detail" style="font-size:16px"><strong>OTC: DWIS · SEC Form 10 Filed</strong><br>PawnTrust · Automotive · Strategic Acquisitions<br>Building a <strong style="color:var(--gd)">national technology conglomerate</strong></div></div>
 <div class="legacy-line"></div>
-<div class="legacy-card" id="cl-final" style="border-color:rgba(0,230,118,.2);background:linear-gradient(135deg,rgba(0,230,118,.04),rgba(239,164,32,.03));padding:40px">
+<div class="legacy-card" id="cl-final" style="border-color:rgba(0,230,118,.2);background:linear-gradient(135deg,rgba(0,230,118,.04),rgba(239,164,32,.03));padding:44px;max-width:800px">
   <div class="era" style="color:var(--gn);font-size:14px">⚡ 2026 AND BEYOND</div>
   <div class="name" style="color:var(--gd);font-size:clamp(30px,5.5vw,48px)">Superstar × SBA</div>
   <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:16px 0" id="cl-s3"></div>
   <div id="cl-reveal" style="font-size:18px;margin-top:14px;line-height:1.8;min-height:280px"></div>
 </div>
+<div class="legacy-line"></div>
+<!-- THE MACHINE — Code Terminal -->
+<div class="legacy-card" id="cl-machine" style="border-color:rgba(239,164,32,.15);padding:36px">
+  <div class="era" style="font-size:14px;letter-spacing:4px">THE MACHINE</div>
+  <div class="name" style="font-size:22px;color:var(--gy);margin-bottom:12px">Two Dynasties. One Codebase.</div>
+  <div style="margin:16px auto;max-width:700px">
+    <div class="term" style="margin:0 auto"><div class="term-bar"><div class="dot dr"></div><div class="dot dy"></div><div class="dot dg"></div><span class="term-title">superstar-x-sba.js · The Future</span></div><div class="term-body" id="cl-code" style="min-height:120px;max-height:300px"></div></div>
+  </div>
+</div>
+
 <div class="nxt" style="padding:24px 0"><button class="sbtn gl" style="width:auto;margin:0 auto;padding:16px 36px;font-size:16px" onclick="go('ask')">THE ASK →</button></div>`;
 
 H.close=()=>{
@@ -530,9 +870,9 @@ H.close=()=>{
   cards.forEach((c,i)=>{TT.push(setTimeout(()=>c.classList.add('show'),i*450+100))});
   lines.forEach((l,i)=>{TT.push(setTimeout(()=>l.classList.add('show'),i*450+300))});
   // Mel Sr stats
-  const s1=$('cl-s1');if(s1){TT.push(setTimeout(()=>{s1.innerHTML=[['4,446','YARDS'],['36','TDs'],['$400M','REVENUE'],['#1','BUSINESS']].map(([v,l])=>`<div style="text-align:center;animation:fu .5s ease"><div style="font-family:'JetBrains Mono';font-size:20px;font-weight:700;color:var(--gd)">${v}</div><div style="font-family:'JetBrains Mono';font-size:8px;color:var(--gy);letter-spacing:1px">${l}</div></div>`).join('')},550))}
+  const s1=$('cl-s1');if(s1){TT.push(setTimeout(()=>{s1.innerHTML=[['4,446','YARDS'],['36','TDs'],['$400M','REVENUE'],['#1','BUSINESS']].map(([v,l])=>`<div style="text-align:center;min-width:80px;animation:fu .5s ease"><div style="font-family:'JetBrains Mono';font-size:26px;font-weight:700;color:var(--gd)">${v}</div><div style="font-family:'JetBrains Mono';font-size:10px;color:var(--gy);letter-spacing:1px">${l}</div></div>`).join('')},550))}
   // Mike stats
-  const s2=$('cl-s2');if(s2){TT.push(setTimeout(()=>{s2.innerHTML=[['69','CATCHES'],['UCLA','RECORD'],['$400M','DOUBLED'],['ONLY','PLAYOFF WIN']].map(([v,l])=>`<div style="text-align:center;animation:fu .5s ease"><div style="font-family:'JetBrains Mono';font-size:20px;font-weight:700;color:var(--gd)">${v}</div><div style="font-family:'JetBrains Mono';font-size:8px;color:var(--gy);letter-spacing:1px">${l}</div></div>`).join('')},1400))}
+  const s2=$('cl-s2');if(s2){TT.push(setTimeout(()=>{s2.innerHTML=[['69','CATCHES'],['UCLA','RECORD'],['$400M','DOUBLED'],['ONLY','PLAYOFF WIN']].map(([v,l])=>`<div style="text-align:center;min-width:80px;animation:fu .5s ease"><div style="font-family:'JetBrains Mono';font-size:26px;font-weight:700;color:var(--gd)">${v}</div><div style="font-family:'JetBrains Mono';font-size:10px;color:var(--gy);letter-spacing:1px">${l}</div></div>`).join('')},1400))}
   // SBA future stats — counting up
   const s3=$('cl-s3');if(s3){TT.push(setTimeout(()=>{
     s3.innerHTML=[['12','ENGINES'],['132K+','CODE LINES'],['$212B','MARKET'],['$1B+','TARGET']].map(([v,l])=>`<div style="text-align:center;animation:fu .6s ease"><div style="font-family:'JetBrains Mono';font-size:22px;font-weight:700;color:var(--gn)">${v}</div><div style="font-family:'JetBrains Mono';font-size:8px;color:var(--gy);letter-spacing:1.5px">${l}</div></div>`).join('');
@@ -577,6 +917,47 @@ H.close=()=>{
         card.style.animation='radialGlow 3s ease-in-out infinite';
       }
     },11000));
+
+    // Machine card animation
+    TT.push(setTimeout(()=>{
+      const mc=document.getElementById('cl-machine');if(mc)mc.classList.add('show');
+    },12500));
+
+    // Code terminal types line by line
+    TT.push(setTimeout(()=>{
+      const code=$('cl-code');if(!code)return;
+      const lines=[
+        '<span class="cc">// superstar-x-sba.js — initializing the future...</span>',
+        '<span style="color:#FF7B72">const</span> farr_legacy = <span style="color:#A5D6FF">\"60 years of winning\"</span>;',
+        '<span style="color:#FF7B72">const</span> sba_engines = <span style="color:#79C0FF">12</span>;',
+        '<span style="color:#FF7B72">const</span> market = <span style="color:#A5D6FF">\"$212,000,000,000\"</span>;',
+        '',
+        '<span style="color:#D2A8FF">buildEmpire</span>({',
+        '  capital: <span style="color:#A5D6FF">\"$2,000,000\"</span>,',
+        '  technology: <span style="color:#A5D6FF">\"132,000 lines\"</span>,',
+        '  moat: <span style="color:#A5D6FF">\"12 patents + ESPN exclusive\"</span>,',
+        '  team: <span style="color:#A5D6FF">\"Farr × Pratt\"</span>,',
+        '  target: <span style="color:#A5D6FF">\"100,000 users\"</span>,',
+        '});',
+        '',
+        '<span style="color:var(--gn);font-weight:700">⚡ EMPIRE INITIALIZED</span>',
+        '<span style="color:var(--gn)">→ Revenue: $340,000,000</span>',
+        '<span style="color:var(--gn)">→ Valuation: $1,000,000,000+</span>',
+        '<span style="color:var(--gn)">→ Status: READY TO DEPLOY</span>',
+      ];
+      let i=0;
+      function typeLine(){
+        if(i>=lines.length||!code)return;
+        const d=document.createElement('div');
+        d.innerHTML=lines[i]||'&nbsp;';
+        d.style.cssText='animation:slideR .3s ease';
+        code.appendChild(d);
+        code.scrollTop=code.scrollHeight;
+        i++;
+        TT.push(setTimeout(typeLine,450));
+      }
+      typeLine();
+    },13000));
   }
 };
 
