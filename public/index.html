@@ -11,80 +11,82 @@
 html{scroll-behavior:smooth}body{background:var(--bg);color:var(--wt);font-family:'DM Sans',sans-serif;overflow-x:hidden}
 body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.02'/%3E%3C/svg%3E");pointer-events:none;z-index:9999}
 ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-thumb{background:rgba(239,164,32,.12);border-radius:2px}
-nav{position:fixed;top:0;left:0;right:0;z-index:10000;background:rgba(4,6,10,.94);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.03);height:44px;display:flex;align-items:center;padding:0 12px;gap:6px}
-.nl{font-family:'Archivo Black';font-size:12px;color:var(--gd);white-space:nowrap}.nl small{font-family:'DM Sans';font-weight:300;font-size:7px;color:var(--gy);margin-left:4px}
-.nt{display:flex;gap:0;margin-left:auto;overflow-x:auto;scrollbar-width:none}.nt::-webkit-scrollbar{display:none}
-.tb{padding:3px 7px;font-family:'JetBrains Mono';font-size:6.5px;letter-spacing:.8px;text-transform:uppercase;color:var(--gy);background:0;border:0;cursor:pointer;border-radius:3px;transition:.2s;white-space:nowrap}.tb:hover{color:var(--wt)}.tb.on{color:var(--gd);background:rgba(239,164,32,.05)}
+nav{position:fixed;top:0;left:0;right:0;z-index:10000;background:rgba(4,6,10,.94);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.03);height:52px;display:flex;align-items:center;padding:0 16px;gap:8px}
+.nl{font-family:'Archivo Black';font-size:14px;color:var(--gd);white-space:nowrap}.nl small{font-family:'DM Sans';font-weight:300;font-size:9px;color:var(--gy);margin-left:5px}
+.nt{display:flex;gap:2px;margin-left:auto;overflow-x:auto;scrollbar-width:none}.nt::-webkit-scrollbar{display:none}
+.tb{padding:6px 12px;font-family:'JetBrains Mono';font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:var(--gy);background:0;border:0;cursor:pointer;border-radius:4px;transition:.2s;white-space:nowrap}.tb:hover{color:var(--wt)}.tb.on{color:var(--gd);background:rgba(239,164,32,.06)}
 .V{display:none;padding:52px 16px 32px;animation:fu .35s ease}.V.on{display:block}
 @keyframes fu{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 @keyframes bk{0%,100%{opacity:1}50%{opacity:.2}}
 @keyframes slideR{from{transform:translateX(-20px);opacity:0}to{transform:translateX(0);opacity:1}}
 @keyframes glow{0%,100%{box-shadow:0 0 6px var(--gd)}50%{box-shadow:0 0 20px var(--gd)}}
 @keyframes pulseGn{0%,100%{box-shadow:0 0 4px var(--gn)}50%{box-shadow:0 0 14px var(--gn)}}
+@keyframes radialGlow{0%{box-shadow:0 0 20px rgba(0,230,118,.05),0 0 60px rgba(239,164,32,.03)}50%{box-shadow:0 0 40px rgba(0,230,118,.12),0 0 100px rgba(239,164,32,.08)}100%{box-shadow:0 0 20px rgba(0,230,118,.05),0 0 60px rgba(239,164,32,.03)}}
 @media(max-width:768px){.V{padding:50px 10px 20px}.nt{display:none}}
-.tg{font-family:'JetBrains Mono';font-size:7px;letter-spacing:3px;text-transform:uppercase;color:var(--gd);opacity:.55;margin-bottom:4px}
-.H1{font-family:'Archivo Black';font-size:clamp(22px,3.5vw,38px);line-height:1.05;margin-bottom:8px}
-.H2{font-family:'Archivo Black';font-size:clamp(16px,2.2vw,24px);line-height:1.08;margin-bottom:6px}
-.sub{font-size:10px;color:var(--gy);max-width:500px;line-height:1.6}
+.tg{font-family:'JetBrains Mono';font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gd);opacity:.55;margin-bottom:5px}
+.H1{font-family:'Archivo Black';font-size:clamp(28px,4vw,46px);line-height:1.05;margin-bottom:10px}
+.H2{font-family:'Archivo Black';font-size:clamp(20px,2.8vw,30px);line-height:1.08;margin-bottom:8px}
+.sub{font-size:14px;color:var(--gy);max-width:540px;line-height:1.65}
 .gd{color:var(--gd)}.gn{color:var(--gn)}.pp{color:var(--pp)}.rd{color:var(--rd)}
 .S{display:flex;flex-direction:column;align-items:center;padding:14px 0;text-align:center}
-.S .label{font-family:'JetBrains Mono';font-size:6px;letter-spacing:3px;color:var(--gd);text-transform:uppercase;margin-bottom:2px}
-.S .title{font-family:'Archivo Black';font-size:clamp(15px,2.5vw,24px);line-height:1.05;margin-bottom:3px}
-.S .explain{max-width:420px;font-size:9px;color:var(--gy);line-height:1.55;margin-bottom:10px}
-.slip{width:min(680px,95vw);background:var(--sl);border:1px solid var(--slB);border-radius:14px;overflow:hidden;box-shadow:0 14px 40px rgba(0,0,0,.5);margin:8px auto;transition:all .8s}
-.slip.w{width:min(720px,95vw)}
-.slip-top{background:var(--slH);padding:6px 10px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--slB);font-size:7px}
+.S .label{font-family:'JetBrains Mono';font-size:9px;letter-spacing:3px;color:var(--gd);text-transform:uppercase;margin-bottom:3px}
+.S .title{font-family:'Archivo Black';font-size:clamp(18px,3vw,30px);line-height:1.05;margin-bottom:4px}
+.S .explain{max-width:480px;font-size:13px;color:var(--gy);line-height:1.6;margin-bottom:12px}
+.slip{width:min(800px,95vw);background:var(--sl);border:1px solid var(--slB);border-radius:14px;overflow:hidden;box-shadow:0 14px 40px rgba(0,0,0,.5);margin:12px auto;transition:all .8s}
+.slip.w{width:min(860px,95vw)}
+.slip-top{background:var(--slH);padding:8px 14px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--slB);font-size:10px}
 .slip-top .sp{font-family:'JetBrains Mono';color:var(--gd);letter-spacing:2px}
-.slip-top .lv{color:var(--gn);display:flex;align-items:center;gap:3px}.slip-top .lv::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--gn);animation:bk 1.5s infinite}
-.sim{padding:8px 10px;min-height:60px}
-.orow{display:flex;gap:5px;padding:6px 10px}
-.odd{flex:1;text-align:center;padding:8px 4px;border-radius:8px;border:1px solid var(--slB);transition:all .6s;position:relative}
+.slip-top .lv{color:var(--gn);display:flex;align-items:center;gap:3px}.slip-top .lv::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gn);animation:bk 1.5s infinite}
+.sim{padding:12px 14px;min-height:60px}
+.orow{display:flex;gap:6px;padding:8px 14px}
+.odd{flex:1;text-align:center;padding:10px 6px;border-radius:10px;border:1px solid var(--slB);transition:all .6s;position:relative}
 .odd.act{border-color:var(--gn);background:rgba(0,230,118,.03)}.odd.gact{border-color:var(--gd);background:rgba(239,164,32,.03)}
 .odd.scan{border-style:dashed;opacity:.4}.odd.scan::after{content:'';position:absolute;bottom:0;left:0;height:2px;background:var(--gd);animation:sc 1.8s infinite;border-radius:0 0 8px 8px;display:block}
 @keyframes sc{0%{width:0;left:0}50%{width:100%;left:0}100%{width:0;left:100%}}
-.odd .ov{font-family:'JetBrains Mono';font-size:18px;font-weight:700}.odd .ov.pl{color:var(--gn2)}.odd .ov.mn{color:var(--rd2)}
-.odd .ol{font-size:7px;color:var(--gy);margin-top:1px}.odd .ob{font-size:6px;color:var(--gy2);margin-top:1px;font-family:'JetBrains Mono';letter-spacing:1px}
-.odd .xtra{margin-top:4px;font-size:7px;color:var(--gy);line-height:1.4}.odd .xtra .sv{font-family:'JetBrains Mono';font-weight:600}.odd .xtra .pv{font-family:'JetBrains Mono';font-weight:700;color:var(--gn2)}
-.tot{padding:6px 10px;text-align:center;border-top:1px solid var(--slB)}.tot .big{font-family:'JetBrains Mono';font-size:18px;font-weight:700}.tot .ts{font-size:7px;color:var(--gy);margin-top:1px;font-family:'JetBrains Mono';letter-spacing:1px}
-.sbtn{display:block;width:calc(100% - 20px);margin:0 10px 8px;padding:9px;border-radius:8px;border:none;font-family:'DM Sans';font-weight:700;font-size:10px;letter-spacing:1px;cursor:pointer;transition:.3s;text-transform:uppercase;text-align:center}
+.odd .ov{font-family:'JetBrains Mono';font-size:24px;font-weight:700}.odd .ov.pl{color:var(--gn2)}.odd .ov.mn{color:var(--rd2)}
+.odd .ol{font-size:10px;color:var(--gy);margin-top:2px}.odd .ob{font-size:9px;color:var(--gy2);margin-top:2px;font-family:'JetBrains Mono';letter-spacing:1px}
+.odd .xtra{margin-top:5px;font-size:10px;color:var(--gy);line-height:1.5}.odd .xtra .sv{font-family:'JetBrains Mono';font-weight:600}.odd .xtra .pv{font-family:'JetBrains Mono';font-weight:700;color:var(--gn2)}
+.tot{padding:10px 14px;text-align:center;border-top:1px solid var(--slB)}.tot .big{font-family:'JetBrains Mono';font-size:24px;font-weight:700}.tot .ts{font-size:10px;color:var(--gy);margin-top:2px;font-family:'JetBrains Mono';letter-spacing:1px}
+.sbtn{display:block;width:calc(100% - 28px);margin:0 14px 10px;padding:12px;border-radius:10px;border:none;font-family:'DM Sans';font-weight:700;font-size:13px;letter-spacing:1px;cursor:pointer;transition:.3s;text-transform:uppercase;text-align:center}
 .sbtn.gl{background:linear-gradient(135deg,var(--gd),var(--gd2));color:var(--bg)}.sbtn.gn{background:linear-gradient(135deg,var(--gn),var(--gn2));color:var(--bg)}.sbtn.pp{background:linear-gradient(135deg,var(--pp),#D1A8FF);color:var(--bg)}.sbtn.dk{background:var(--b3);color:var(--gy);border:1px solid var(--slB)}
 .sbtn:hover{transform:translateY(-1px)}
 .rvl{max-height:0;overflow:hidden;transition:max-height 1s cubic-bezier(.22,1,.36,1)}.rvl.open{border-top:1px solid var(--slB)}.rvl-in{padding:8px 10px}
-.bdg{display:inline-flex;align-items:center;gap:3px;padding:3px 8px;border-radius:10px;font-family:'JetBrains Mono';font-size:7px;letter-spacing:1px}
+.bdg{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:12px;font-family:'JetBrains Mono';font-size:9px;letter-spacing:1px}
 .bdg.g{background:rgba(0,230,118,.04);border:1px solid rgba(0,230,118,.08);color:var(--gn)}.bdg.o{background:rgba(239,164,32,.04);border:1px solid rgba(239,164,32,.08);color:var(--gd)}.bdg.p{background:rgba(179,136,255,.04);border:1px solid rgba(179,136,255,.08);color:var(--pp)}
-.bdg .dt{width:3px;height:3px;border-radius:50%;background:currentColor;animation:bk 1s infinite}
-.bd{background:var(--b3);border-radius:6px;padding:6px;border:1px solid rgba(255,255,255,.02);margin-top:4px}
-.bd-r{display:flex;justify-content:space-between;padding:3px 0;border-bottom:1px solid rgba(255,255,255,.02);font-size:8px}.bd-r:last-child{border:none}.bd-r .l{color:var(--gy)}.bd-r .v{font-family:'JetBrains Mono';font-weight:600}
-.formula{background:#080C14;border:1px solid rgba(255,255,255,.03);border-radius:6px;padding:8px 10px;margin:4px 0;font-family:'JetBrains Mono';font-size:9px;line-height:1.7;color:#6B7894;overflow-x:auto}
+.bdg .dt{width:4px;height:4px;border-radius:50%;background:currentColor;animation:bk 1s infinite}
+.bd{background:var(--b3);border-radius:8px;padding:10px;border:1px solid rgba(255,255,255,.02);margin-top:6px}
+.bd-r{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.02);font-size:12px}.bd-r:last-child{border:none}.bd-r .l{color:var(--gy)}.bd-r .v{font-family:'JetBrains Mono';font-weight:600}
+.formula{background:#080C14;border:1px solid rgba(255,255,255,.03);border-radius:8px;padding:12px 14px;margin:6px 0;font-family:'JetBrains Mono';font-size:12px;line-height:1.8;color:#6B7894;overflow-x:auto}
 .formula .hl{color:var(--gn2);font-weight:600}.formula .gl{color:var(--gd2);font-weight:600}.formula .rl{color:var(--rd2)}.formula .pl{color:var(--pp);font-weight:600}
-.formula .label{color:var(--gy);font-size:7px;letter-spacing:1px;display:block;margin-bottom:1px}
-.plain{background:rgba(239,164,32,.02);border-left:2px solid var(--gd);padding:6px 10px;margin:4px 0;font-size:9px;color:var(--gy);line-height:1.6;border-radius:0 4px 4px 0}.plain strong{color:var(--gd2)}.plain .mint{color:var(--gn2)}
-.ex{background:var(--b2);border:1px solid rgba(255,255,255,.03);border-radius:10px;padding:14px;margin:10px auto;max-width:600px}
-.ex-t{font-family:'Archivo Black';font-size:13px;margin-bottom:4px}.ex-b{font-size:9px;color:var(--gy);line-height:1.65}.ex-b strong{color:var(--wt)}
-.ex-c{margin-top:6px;padding:8px 10px;background:rgba(239,164,32,.03);border:1px solid rgba(239,164,32,.05);border-radius:6px;font-size:9px;color:var(--gd2);line-height:1.5}
+.formula .label{color:var(--gy);font-size:10px;letter-spacing:1px;display:block;margin-bottom:2px}
+.plain{background:rgba(239,164,32,.02);border-left:3px solid var(--gd);padding:10px 14px;margin:6px 0;font-size:13px;color:var(--gy);line-height:1.65;border-radius:0 6px 6px 0}.plain strong{color:var(--gd2)}.plain .mint{color:var(--gn2)}
+.ex{background:var(--b2);border:1px solid rgba(255,255,255,.03);border-radius:12px;padding:18px;margin:12px auto;max-width:650px}
+.ex-t{font-family:'Archivo Black';font-size:17px;margin-bottom:6px}.ex-b{font-size:13px;color:var(--gy);line-height:1.7}.ex-b strong{color:var(--wt)}
+.ex-c{margin-top:8px;padding:10px 14px;background:rgba(239,164,32,.03);border:1px solid rgba(239,164,32,.05);border-radius:8px;font-size:13px;color:var(--gd2);line-height:1.55}
 .mv{display:flex;align-items:center;justify-content:center;gap:6px;margin:6px 0;flex-wrap:wrap}
-.mv-b{background:var(--b3);border:1px solid var(--slB);border-radius:6px;padding:6px 10px;text-align:center;min-width:70px;transition:all .6s}.mv-b .n{font-family:'JetBrains Mono';font-size:14px;font-weight:700}.mv-b .l{font-size:6px;color:var(--gy)}.mv-b.lit{border-color:var(--gn);box-shadow:0 0 10px rgba(0,230,118,.05)}.mv-b.glit{border-color:var(--gd);box-shadow:0 0 10px rgba(239,164,32,.05)}
+.mv-b{background:var(--b3);border:1px solid var(--slB);border-radius:8px;padding:10px 14px;text-align:center;min-width:90px;transition:all .6s}.mv-b .n{font-family:'JetBrains Mono';font-size:18px;font-weight:700}.mv-b .l{font-size:9px;color:var(--gy)}.mv-b.lit{border-color:var(--gn);box-shadow:0 0 10px rgba(0,230,118,.05)}.mv-b.glit{border-color:var(--gd);box-shadow:0 0 10px rgba(239,164,32,.05)}
 .mv-a{color:var(--gd);font-size:10px}
-.prob-bar{height:20px;border-radius:4px;overflow:hidden;display:flex;margin:4px 0;background:var(--b4)}.prob-seg{height:100%;transition:width 1.5s cubic-bezier(.25,1,.5,1);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono';font-size:7px;font-weight:600;color:#000;width:0}
-.fb{margin-bottom:4px}.fb-t{display:flex;justify-content:space-between;font-size:7px;margin-bottom:1px}.fb-tr{height:3px;background:var(--b4);border-radius:2px;overflow:hidden}.fb-fl{height:100%;border-radius:2px;width:0;transition:width .8s cubic-bezier(.25,1,.5,1)}
-.rng{position:relative;width:90px;height:90px;margin:0 auto}.rng svg{transform:rotate(-90deg)}.rng-c{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}.rng-n{font-family:'Archivo Black';font-size:22px}.rng-l{font-family:'JetBrains Mono';font-size:5px;letter-spacing:2px;color:var(--gy)}
-.mf{position:relative;height:50px;background:linear-gradient(90deg,rgba(0,230,118,.02) 0%,rgba(0,230,118,.02) 38%,rgba(239,164,32,.06) 38%,rgba(239,164,32,.06) 62%,rgba(0,230,118,.02) 62%);border-radius:5px;margin:6px 0;overflow:hidden;border:1px solid rgba(255,255,255,.02)}.mf .ball{position:absolute;top:50%;width:12px;height:12px;border-radius:50%;transform:translate(-50%,-50%);transition:left 3s cubic-bezier(.22,1,.36,1)}
-.og{display:grid;gap:0;border:1px solid var(--slB);border-radius:6px;overflow:hidden;margin:6px 0}.og-cell{padding:4px 6px;border-bottom:1px solid rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.02);font-size:8px}.og-cell:last-child{border-right:0}.og-cell.hdr{background:var(--slH);font-family:'JetBrains Mono';font-size:6px;letter-spacing:1px;color:var(--gy)}
+.prob-bar{height:26px;border-radius:5px;overflow:hidden;display:flex;margin:6px 0;background:var(--b4)}.prob-seg{height:100%;transition:width 1.5s cubic-bezier(.25,1,.5,1);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono';font-size:10px;font-weight:600;color:#000;width:0}
+.fb{margin-bottom:6px}.fb-t{display:flex;justify-content:space-between;font-size:11px;margin-bottom:2px}.fb-tr{height:5px;background:var(--b4);border-radius:3px;overflow:hidden}.fb-fl{height:100%;border-radius:3px;width:0;transition:width .8s cubic-bezier(.25,1,.5,1)}
+.rng{position:relative;width:130px;height:130px;margin:0 auto;overflow:visible;z-index:1}.rng svg{transform:rotate(-90deg);display:block}.rng-c{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2}.rng-n{font-family:'Archivo Black';font-size:36px;line-height:1}.rng-l{font-family:'JetBrains Mono';font-size:9px;letter-spacing:2px;color:var(--gy);margin-top:2px}
+.mf{position:relative;height:70px;background:linear-gradient(90deg,rgba(0,230,118,.02) 0%,rgba(0,230,118,.02) 38%,rgba(239,164,32,.06) 38%,rgba(239,164,32,.06) 62%,rgba(0,230,118,.02) 62%);border-radius:8px;margin:10px 0;overflow:hidden;border:1px solid rgba(255,255,255,.02)}.mf .ball{position:absolute;top:50%;width:16px;height:16px;border-radius:50%;transform:translate(-50%,-50%);transition:left 3s cubic-bezier(.22,1,.36,1)}
+.og{display:grid;gap:0;border:1px solid var(--slB);border-radius:8px;overflow:hidden;margin:8px 0}.og-cell{padding:8px 10px;border-bottom:1px solid rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.02);font-size:12px}.og-cell:last-child{border-right:0}.og-cell.hdr{background:var(--slH);font-family:'JetBrains Mono';font-size:9px;letter-spacing:1px;color:var(--gy)}
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
 @media(max-width:768px){.g2,.g3,.g4{grid-template-columns:1fr}}
 .nxt{text-align:center;margin-top:16px}
-.dt{width:100%;border-collapse:collapse;max-width:650px;margin:0 auto}.dt th,.dt td{padding:5px 6px;text-align:left;font-size:9px;border-bottom:1px solid rgba(255,255,255,.03)}.dt th{font-family:'JetBrains Mono';font-size:6px;letter-spacing:1.5px;color:var(--gy);text-transform:uppercase}.dt tr.hl td{color:var(--gd);font-weight:700}
+.dt{width:100%;border-collapse:collapse;max-width:700px;margin:0 auto}.dt th,.dt td{padding:8px 10px;text-align:left;font-size:13px;border-bottom:1px solid rgba(255,255,255,.03)}.dt th{font-family:'JetBrains Mono';font-size:9px;letter-spacing:1.5px;color:var(--gy);text-transform:uppercase}.dt tr.hl td{color:var(--gd);font-weight:700}
 /* FACTOR BUBBLE */
-.factor-bubble{display:inline-flex;align-items:center;gap:4px;padding:5px 10px;border-radius:20px;font-family:'JetBrains Mono';font-size:8px;font-weight:600;margin:2px;cursor:default;transition:all .5s;opacity:.4;transform:scale(.9);border:1px solid transparent}
+.factor-bubble{display:inline-flex;align-items:center;gap:5px;padding:7px 14px;border-radius:24px;font-family:'JetBrains Mono';font-size:11px;font-weight:600;margin:3px;cursor:default;transition:all .5s;opacity:.4;transform:scale(.9);border:1px solid transparent}
 .factor-bubble.lit{opacity:1;transform:scale(1);animation:pulseGn 2s ease-in-out infinite}
 .factor-bubble.lit.risk{animation:none;box-shadow:0 0 8px var(--rd)}
 /* LEGACY */
-.legacy-card{background:linear-gradient(135deg,rgba(239,164,32,.02),rgba(0,230,118,.01));border:1px solid rgba(239,164,32,.06);border-radius:12px;padding:16px;margin:8px auto;max-width:600px;text-align:center}
-.legacy-card .era{font-family:'JetBrains Mono';font-size:7px;letter-spacing:3px;color:var(--gd);margin-bottom:4px}
-.legacy-card .name{font-family:'Archivo Black';font-size:clamp(16px,2.5vw,24px);margin-bottom:4px}
-.legacy-card .detail{font-size:10px;color:var(--gy);line-height:1.6}
+.legacy-card{background:linear-gradient(135deg,rgba(239,164,32,.02),rgba(0,230,118,.01));border:1px solid rgba(239,164,32,.06);border-radius:14px;padding:24px;margin:10px auto;max-width:650px;text-align:center;opacity:0;transform:translateY(16px);transition:all .7s ease}
+.legacy-card.show{opacity:1;transform:translateY(0)}
+.legacy-card .era{font-family:'JetBrains Mono';font-size:10px;letter-spacing:3px;color:var(--gd);margin-bottom:6px}
+.legacy-card .name{font-family:'Archivo Black';font-size:clamp(20px,3vw,30px);margin-bottom:6px}
+.legacy-card .detail{font-size:14px;color:var(--gy);line-height:1.7}
 .legacy-card .detail strong{color:var(--wt)}
-.legacy-line{width:2px;height:30px;background:linear-gradient(to bottom,var(--gd),var(--gn));margin:0 auto}
+.legacy-line{width:2px;height:30px;background:linear-gradient(to bottom,var(--gd),var(--gn));margin:0 auto;opacity:0;transition:opacity .5s}.legacy-line.show{opacity:1}
 /* BAR CHART */
 .bar-wrap{display:flex;align-items:flex-end;gap:10px;height:140px;margin:12px auto;max-width:500px}
 .bar-col{flex:1;display:flex;flex-direction:column;align-items:center;height:100%;justify-content:flex-end}
@@ -132,43 +134,114 @@ W.cover=()=>`<div style="min-height:86vh;display:flex;flex-direction:column;just
 <div style="margin-bottom:16px"><span class="bdg o">Confidential · March 2026</span></div>
 <h1 style="font-family:'Archivo Black';font-size:clamp(34px,7vw,76px);line-height:.92">SPORTS BET<br><span class="gd">ARBITRAGE</span></h1>
 <div style="font-family:'Archivo Black';font-size:clamp(12px,2vw,20px);color:var(--gy);margin-top:8px;letter-spacing:1px">Let's Take SBA <span class="gd">Farr-ther</span> Together</div>
-<p style="font-size:10px;color:var(--gy);max-width:420px;margin:12px auto 0">Two dynasties. One billion-dollar future.<br>12 patent-pending engines. Zero user risk. $212B market.</p>
+<p style="font-size:14px;color:var(--gy);max-width:460px;margin:12px auto 0">Two dynasties. One billion-dollar future.<br>12 patent-pending engines. Zero user risk. $212B market.</p>
 <div style="display:flex;gap:24px;justify-content:center;margin-top:24px;flex-wrap:wrap">
-${[['$212B+','Market'],['12','Engines'],['60','Leagues'],['39','Books']].map(([v,l])=>`<div><div style="font-family:'JetBrains Mono';font-size:18px;font-weight:700;color:var(--gn)">${v}</div><div style="font-family:'JetBrains Mono';font-size:6px;letter-spacing:1.5px;color:var(--gy)">${l.toUpperCase()}</div></div>`).join('')}
+${[['$212B+','Market'],['12','Engines'],['60','Leagues'],['39','Books']].map(([v,l])=>`<div><div style="font-family:'JetBrains Mono';font-size:22px;font-weight:700;color:var(--gn)">${v}</div><div style="font-family:'JetBrains Mono';font-size:9px;letter-spacing:1.5px;color:var(--gy)">${l.toUpperCase()}</div></div>`).join('')}
 </div>
-<div style="margin-top:20px"><button class="sbtn gl" style="width:auto;padding:10px 24px;display:inline-block" onclick="go('legacy')">ENTER →</button></div>
-<div style="margin-top:24px;font-size:9px;color:var(--gy)">Prepared for <strong style="color:var(--wt)">The Farr Family / Superstar Platforms</strong><br>Introduced by <strong class="gd">Carlos</strong></div>
+<div style="margin-top:20px"><button class="sbtn gl" style="width:auto;padding:12px 28px;display:inline-block" onclick="go('legacy')">ENTER →</button></div>
+<div style="margin-top:24px;font-size:12px;color:var(--gy)">Prepared for <strong style="color:var(--wt)">The Farr Family / Superstar Platforms</strong><br>Introduced by <strong class="gd">Carlos</strong></div>
 </div></div>`;
 
 /* ═══ FARR LEGACY OPENER ═══ */
 W.legacy=()=>`<div class="S"><div class="label">Two Dynasties</div><div class="title">The Farr Legacy Meets <span class="gd">SBA</span></div><div class="explain">From the football field to the boardroom to the biggest technology play in sports betting. This is how dynasties are built.</div></div>
 
-<div class="legacy-card">
-  <div class="era">THE FOUNDATION · 1960s-1970s</div>
-  <div class="name">Mel Farr Sr.</div>
-  <div class="detail"><strong>NFL Rookie of the Year (1967)</strong> · Detroit Lions · 2× Pro Bowl<br>From Beaumont, Texas to the biggest stage in football.<br>After the NFL: Built <strong>Mel Farr Automotive Group</strong> — the <strong>largest African-American owned business in the United States</strong>. $400M+ in revenue. The "Superstar Dealer."<br><em style="color:var(--gd)">"Mel Farr, the Superstar, for a Farr Better Deal."</em></div>
+<!-- MEL FARR SR -->
+<div class="legacy-card" style="padding:28px">
+  <div class="era">🏈 THE FOUNDATION · 1967</div>
+  <div class="name" style="font-size:clamp(24px,4vw,36px)">Mel Farr Sr.</div>
+  <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:12px 0" id="leg-badges1"></div>
+  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:14px 0" id="leg-stats1"></div>
+  <div class="detail" style="margin-top:12px">From <strong>Beaumont, Texas</strong> — son of a truck driver and a domestic worker. Rose to become the <strong>7th overall pick</strong> in the NFL Draft. After football, built <strong>Mel Farr Automotive Group</strong> into the <strong style="color:var(--gd)">largest African-American owned business in the United States</strong>.<br><br><span style="font-family:'Archivo Black';font-size:clamp(14px,2vw,20px);color:var(--gd);display:block;margin-top:8px">"Mel Farr, the Superstar, for a Farr Better Deal."</span></div>
 </div>
 <div class="legacy-line"></div>
-<div class="legacy-card">
-  <div class="era">THE NEXT GENERATION · 1980s-1990s</div>
-  <div class="name">Mike Farr & Mel Farr Jr.</div>
-  <div class="detail"><strong>Both sons → UCLA → NFL.</strong><br>Mike: Broke UCLA's single-season reception record. Caught passes from <strong>Troy Aikman</strong>. Detroit Lions "Third Down Receiver" — led team in receptions during their <strong>only playoff victory</strong>. Then doubled Mel Farr Ford from <strong>$200M to $400M</strong>.<br>Mel Jr.: UCLA → NFL. The Farr name is synonymous with winning.</div>
+
+<!-- MIKE FARR -->
+<div class="legacy-card" style="padding:28px">
+  <div class="era">🏈 THE NEXT GENERATION · 1991</div>
+  <div class="name" style="font-size:clamp(24px,4vw,36px)">Mike Farr</div>
+  <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:12px 0" id="leg-badges2"></div>
+  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:14px 0" id="leg-stats2"></div>
+  <div class="detail" style="margin-top:12px">Followed his father to <strong>UCLA</strong>, where he caught passes from future Hall of Famer <strong>Troy Aikman</strong>. Graduated with <strong>first honors</strong> while breaking the school's single-season reception record. Led the Detroit Lions in receptions during their <strong style="color:var(--gd)">only playoff victory in franchise history</strong>.<br><br>After football: transformed Mel Farr Ford, <strong>doubling sales from $200M to $400M</strong>. Expanded into diverse ventures — dealerships, fintech, e-commerce. The same winning mentality, applied to business.</div>
 </div>
 <div class="legacy-line"></div>
-<div class="legacy-card">
-  <div class="era">TODAY · 2024-2026</div>
-  <div class="name">Superstar Platforms, Inc.</div>
-  <div class="detail">Mike Farr, CEO. Named in honor of his father — <strong>the Superstar Dealer</strong>.<br>OTC: DWIS · Filing Form 10 with SEC · Building a <strong>national technology conglomerate</strong>.<br>Portfolio: <strong>PawnTrust</strong> (fintech for 11,000+ pawn shops) · <strong>Automotive distribution</strong> · Strategic acquisitions.<br><br>Now they need a <strong>crown jewel tech asset</strong>. A technology so powerful, so proprietary, that it transforms the entire company's trajectory.</div>
+
+<!-- SUPERSTAR TODAY -->
+<div class="legacy-card" style="padding:28px">
+  <div class="era">🏢 TODAY · 2024-2026</div>
+  <div class="name" style="font-size:clamp(24px,4vw,36px)">Superstar Platforms, Inc.</div>
+  <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:12px 0" id="leg-badges3"></div>
+  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:14px 0" id="leg-stats3"></div>
+  <div class="detail" style="margin-top:12px">Mike Farr, <strong>CEO</strong>. Named in honor of his father — the Superstar Dealer. Building a <strong style="color:var(--gd)">national technology conglomerate</strong> through strategic acquisitions.<br><br><strong>PawnTrust</strong> — AI-powered fintech marketplace for 11,000+ pawn shops nationwide.<br><strong>Automotive Distribution</strong> — exclusive North American distributor deal.<br><strong>SEC Form 10</strong> — filed, moving toward fully reporting public company.<br><br>The platform is built. The subsidiaries are growing.<br>Now Superstar needs a <strong style="color:var(--gd)">crown jewel tech asset</strong>.</div>
 </div>
 <div class="legacy-line"></div>
-<div class="legacy-card" style="border-color:rgba(0,230,118,.12);background:linear-gradient(135deg,rgba(0,230,118,.02),rgba(239,164,32,.01))">
-  <div class="era" style="color:var(--gn)">THE CROWN JEWEL</div>
-  <div class="name" style="color:var(--gd)">Sports Bet Arbitrage</div>
-  <div class="detail"><strong>12 patent-pending engines.</strong> 132,000+ lines of code. Exclusive ESPN API.<br>The most advanced AI-powered sports arbitrage platform ever built.<br><strong>$212 billion market.</strong> Zero user risk. Infinite scalability.<br><br>The Farr family turned football into business empires.<br><strong style="color:var(--gd)">SBA turns sports into a money-printing machine.</strong><br><br>Same DNA. Different field. <span class="gn">Bigger opportunity.</span></div>
+
+<!-- SBA -->
+<div class="legacy-card" style="border-color:rgba(0,230,118,.15);background:linear-gradient(135deg,rgba(0,230,118,.03),rgba(239,164,32,.02));padding:28px">
+  <div class="era" style="color:var(--gn)">⚡ THE CROWN JEWEL · NOW</div>
+  <div class="name" style="color:var(--gd);font-size:clamp(24px,4vw,36px)">Sports Bet Arbitrage</div>
+  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:14px 0" id="leg-stats4"></div>
+  <div class="detail" style="margin-top:12px">The most advanced AI-powered sports arbitrage platform ever built.<br><strong>12 patent-pending engines. 132,000+ lines of code. Exclusive ESPN API.</strong><br><br>The Farr family turned football into business empires.<br><strong style="color:var(--gd);font-size:16px">SBA turns sports into a money-printing machine.</strong><br><br><span style="font-size:16px">Same DNA. Same drive. Different field. <span class="gn" style="font-family:'Archivo Black'">Bigger opportunity.</span></span></div>
 </div>
 
-<div class="nxt"><button class="sbtn gl" style="width:auto;margin:0 auto;padding:10px 24px" onclick="go('what')">DISCOVER SBA →</button></div>`;
+<div class="nxt"><button class="sbtn gl" style="width:auto;margin:0 auto;padding:12px 28px" onclick="go('what')">DISCOVER SBA →</button></div>`;
 
+H.legacy=async()=>{
+  // Animate cards in
+  const cards=document.querySelectorAll('.legacy-card');
+  const lines=document.querySelectorAll('.legacy-line');
+  cards.forEach((c,i)=>{TT.push(setTimeout(()=>c.classList.add('show'),i*700+300))});
+  lines.forEach((l,i)=>{TT.push(setTimeout(()=>l.classList.add('show'),i*700+700))});
+
+  // MEL SR badges
+  await dl(500);
+  const b1=$('leg-badges1');if(b1){
+    const badges=['🏆 NFL ROOKIE OF THE YEAR','⭐ 2× PRO BOWL','🏈 7TH OVERALL PICK','🎯 DETROIT LIONS'];
+    badges.forEach((b,i)=>TT.push(setTimeout(()=>{b1.innerHTML+=`<span class="bdg o" style="animation:fu .4s ease;font-size:9px;padding:5px 12px">${b}</span>`;},i*300+800)));
+  }
+  // MEL SR stats
+  const s1=$('leg-stats1');if(s1){
+    const stats=[{n:'leg1a',v:4446,l:'YARDS',p:'',d:1500},{n:'leg1b',v:36,l:'TOUCHDOWNS',p:'',d:1200},{n:'leg1c',v:400,l:'MILLION REVENUE',p:'$',d:2000},{n:'leg1d',v:11,l:'DEALERSHIPS',p:'',d:1000}];
+    stats.forEach((st,i)=>TT.push(setTimeout(()=>{
+      s1.innerHTML+=`<div style="text-align:center;min-width:70px;animation:fu .4s ease"><div style="font-family:'JetBrains Mono';font-size:22px;font-weight:700;color:var(--gd)" id="${st.n}">${st.p}0</div><div style="font-family:'JetBrains Mono';font-size:7px;letter-spacing:1.5px;color:var(--gy)">${st.l}</div></div>`;
+      setTimeout(()=>{const el=$(st.n);if(el){const t0=performance.now();!function f(now){const p=Math.min((now-t0)/st.d,1);el.textContent=st.p+Math.floor(st.v*(1-Math.pow(1-p,3))).toLocaleString();if(p<1)requestAnimationFrame(f)}(t0)}},100);
+    },i*400+1500)));
+  }
+
+  // MIKE badges
+  const b2=$('leg-badges2');if(b2){
+    const badges=['🎓 UCLA · FIRST HONORS','🏈 DETROIT LIONS','📺 "THIRD DOWN RECEIVER"','🏆 ONLY PLAYOFF VICTORY'];
+    badges.forEach((b,i)=>TT.push(setTimeout(()=>{b2.innerHTML+=`<span class="bdg o" style="animation:fu .4s ease;font-size:9px;padding:5px 12px">${b}</span>`;},i*300+3500)));
+  }
+  const s2=$('leg-stats2');if(s2){
+    const stats=[{n:'leg2a',v:69,l:'NFL RECEPTIONS',p:'',d:1200},{n:'leg2b',v:716,l:'NFL YARDS',p:'',d:1500},{n:'leg2c',v:400,l:'M SALES (DOUBLED)',p:'$',d:2000},{n:'leg2d',v:4,l:'BOWL GAMES',p:'',d:1000}];
+    stats.forEach((st,i)=>TT.push(setTimeout(()=>{
+      s2.innerHTML+=`<div style="text-align:center;min-width:70px;animation:fu .4s ease"><div style="font-family:'JetBrains Mono';font-size:22px;font-weight:700;color:var(--gd)" id="${st.n}">${st.p}0</div><div style="font-family:'JetBrains Mono';font-size:7px;letter-spacing:1.5px;color:var(--gy)">${st.l}</div></div>`;
+      setTimeout(()=>{const el=$(st.n);if(el){const t0=performance.now();!function f(now){const p=Math.min((now-t0)/st.d,1);el.textContent=st.p+Math.floor(st.v*(1-Math.pow(1-p,3))).toLocaleString();if(p<1)requestAnimationFrame(f)}(t0)}},100);
+    },i*400+5000)));
+  }
+
+  // SUPERSTAR badges
+  const b3=$('leg-badges3');if(b3){
+    const badges=['📊 OTC: DWIS','📋 SEC FORM 10','🏢 TECH CONGLOMERATE','🔧 PAWNTRUST'];
+    badges.forEach((b,i)=>TT.push(setTimeout(()=>{b3.innerHTML+=`<span class="bdg o" style="animation:fu .4s ease;font-size:9px;padding:5px 12px">${b}</span>`;},i*300+7000)));
+  }
+  const s3=$('leg-stats3');if(s3){
+    const stats=[{n:'leg3a',v:11000,l:'PAWN SHOPS',p:'',d:2000},{n:'leg3b',v:3,l:'SUBSIDIARIES',p:'',d:800}];
+    stats.forEach((st,i)=>TT.push(setTimeout(()=>{
+      s3.innerHTML+=`<div style="text-align:center;min-width:70px;animation:fu .4s ease"><div style="font-family:'JetBrains Mono';font-size:22px;font-weight:700;color:var(--gd)" id="${st.n}">${st.p}0</div><div style="font-family:'JetBrains Mono';font-size:7px;letter-spacing:1.5px;color:var(--gy)">${st.l}</div></div>`;
+      setTimeout(()=>{const el=$(st.n);if(el){const t0=performance.now();!function f(now){const p=Math.min((now-t0)/st.d,1);el.textContent=st.p+Math.floor(st.v*(1-Math.pow(1-p,3))).toLocaleString();if(p<1)requestAnimationFrame(f)}(t0)}},100);
+    },i*400+8500)));
+  }
+
+  // SBA stats
+  const s4=$('leg-stats4');if(s4){
+    const stats=[{n:'leg4a',v:12,l:'ENGINES',p:'',d:1000},{n:'leg4b',v:132000,l:'LINES OF CODE',p:'',d:2500},{n:'leg4c',v:212,l:'BILLION $ MARKET',p:'$',d:2000},{n:'leg4d',v:39,l:'SPORTSBOOKS',p:'',d:1200}];
+    stats.forEach((st,i)=>TT.push(setTimeout(()=>{
+      s4.innerHTML+=`<div style="text-align:center;min-width:70px;animation:fu .4s ease"><div style="font-family:'JetBrains Mono';font-size:22px;font-weight:700;color:var(--gn)" id="${st.n}">${st.p}0</div><div style="font-family:'JetBrains Mono';font-size:7px;letter-spacing:1.5px;color:var(--gy)">${st.l}</div></div>`;
+      setTimeout(()=>{const el=$(st.n);if(el){const t0=performance.now();!function f(now){const p=Math.min((now-t0)/st.d,1);el.textContent=st.p+Math.floor(st.v*(1-Math.pow(1-p,3))).toLocaleString();if(p<1)requestAnimationFrame(f)}(t0)}},100);
+    },i*400+10000)));
+  }
+};
 /* ═══ WHAT IS SBA ═══ */
 W.what=()=>`<div class="S"><div class="label">01 · The Basics</div><div class="title">What Is Sports Bet Arbitrage?</div></div>
 <div class="ex"><div class="ex-t">💡 30-Second Explainer</div><div class="ex-b">Store A sells sneakers for <strong>$80</strong>. Store B buys for <strong>$100</strong>. Buy from A → sell to B → <strong>$20 profit, zero risk</strong>.<br><br>Sports arbitrage: different sportsbooks price the same game differently. Bet <strong>both sides</strong> on different books → <strong>guaranteed profit no matter who wins</strong>. Not gambling — <strong>math</strong>.<br><br>SBA scans <strong>60 leagues, 39 sportsbooks, every 60 seconds</strong>.</div></div>
@@ -217,41 +290,72 @@ async function runJ7(){
 }
 
 /* ═══ 12 ENGINES ═══ */
-W.engines=()=>`<div class="S"><div class="label">03 · Patent-Pending</div><div class="title">12 Proprietary Engines</div><div class="explain">Each one auto-demonstrates below. Scroll to watch them work.</div></div>
-<!-- SURE BET -->
-<div class="S" id="en1" data-r="0"><div class="label">Engine 01</div><div class="title">⚡ Sure Bet</div><div class="slip"><div class="slip-top"><span class="sp">⚡ MATH PROOF</span><span class="lv">LIVE</span></div><div class="sim" id="en1-s"></div></div></div>
-<!-- VALUE BET -->
-<div class="S" id="en2" data-r="0"><div class="label">Engine 02</div><div class="title">📈 Value Bet</div><div class="slip"><div class="slip-top"><span class="sp">📈 AI DETECTION</span><span class="lv">ANALYZING</span></div><div class="sim" id="en2-s"></div></div></div>
-<!-- MIDDLE -->
-<div class="S" id="en3" data-r="0"><div class="label">Engine 03</div><div class="title">🎯 Middle Bet</div><div class="slip"><div class="slip-top"><span class="sp">🎯 PROBABILITY</span><span class="lv">LIVE</span></div><div class="sim" id="en3-s"></div></div></div>
-<!-- POWER PLAY -->
-<div class="S" id="en4" data-r="0"><div class="label">Engine 04</div><div class="title">🏆 Power Play</div><div class="slip" style="border-color:rgba(179,136,255,.08)"><div class="slip-top" style="background:rgba(179,136,255,.02)"><span class="sp" style="color:var(--pp)">🏆 COMPOUND MATH</span><span class="lv" style="color:var(--pp)">BUILDING</span></div><div class="sim" id="en4-s"></div></div></div>
-<!-- WAR ROOM -->
-<div class="S" id="en5" data-r="0"><div class="label">Engine 05</div><div class="title">🏟️ War Room</div><div class="slip"><div class="slip-top"><span class="sp">🏟️ WATCH SCORE</span><span class="lv">MONITORING</span></div><div class="sim" id="en5-s"></div></div></div>
-<!-- AI SYNTHESIS -->
-<div class="S" id="en6" data-r="0"><div class="label">Engine 06 · ESPN Exclusive</div><div class="title">🤖 AI Synthesis</div><div class="slip"><div class="slip-top"><span class="sp">🤖 FULL PIPELINE</span><span class="lv">PROCESSING</span></div><div class="sim" id="en6-s"></div></div></div>
-<!-- FACTORS -->
-<div class="S" id="en7" data-r="0"><div class="label">Engine 07</div><div class="title">🎛️ Factor System</div><div class="slip"><div class="slip-top"><span class="sp">🎛️ 14 SPORTS · LIVE BUBBLES</span><span class="lv">SCORING</span></div><div class="sim" id="en7-s"></div></div></div>
-<!-- COMPACT: HEDGE -->
-<div class="S" id="en8" data-r="0"><div class="label">Engine 08</div><div class="title">🧮 Hedge Calculator</div><div class="slip"><div class="slip-top"><span class="sp">🧮 3 STRATEGIES</span><span class="lv">ACTIVE</span></div><div class="sim" id="en8-s"></div></div></div>
-<!-- COMPACT: TRACKER -->
-<div class="S" id="en9" data-r="0"><div class="label">Engine 09</div><div class="title">📊 Bet Tracker</div><div class="slip"><div class="slip-top"><span class="sp">📊 15+ STATE VARS</span><span class="lv">TRACKING</span></div><div class="sim" id="en9-s"></div></div></div>
-<!-- COMPACT: PROMO -->
-<div class="S" id="en10" data-r="0"><div class="label">Engine 10</div><div class="title">🎁 Promo Stacker</div><div class="slip"><div class="slip-top"><span class="sp">🎁 ROI AMPLIFIER</span><span class="lv">STACKING</span></div><div class="sim" id="en10-s"></div></div></div>
-<!-- COMPACT: ESPN -->
-<div class="S" id="en11" data-r="0"><div class="label">Engine 11 · Exclusive</div><div class="title">📡 ESPN API</div><div class="slip"><div class="slip-top"><span class="sp" style="color:var(--rd)">📡 LIVE FEED</span><span class="lv">STREAMING</span></div><div class="sim" id="en11-s"></div></div></div>
-<!-- COMPACT: DOUBLE VALUE -->
-<div class="S" id="en12" data-r="0"><div class="label">Engine 12</div><div class="title">🔄 Double Value Bet</div><div class="slip"><div class="slip-top"><span class="sp">🔄 OUTCOME MATRIX</span><span class="lv">PROVING</span></div><div class="sim" id="en12-s"></div></div></div>
-<div class="nxt"><button class="sbtn gl" style="width:auto;margin:0 auto;padding:10px 20px" onclick="go('moat')">OUR MOAT →</button></div>`;
+let engView='hub';
+const ENG_LIST=[
+  {id:'en1',icon:'⚡',name:'Sure Bet Engine',desc:'Guaranteed profit from odds discrepancies. The foundation of everything.'},
+  {id:'en2',icon:'📈',name:'Value Bet Engine',desc:'AI detects when sportsbooks misprice odds. The gap is your edge.'},
+  {id:'en3',icon:'🎯',name:'Middle Bet Detector',desc:'Overlapping lines = profit both ways + bonus jackpot.'},
+  {id:'en4',icon:'🏆',name:'Power Play Engine',desc:'House money parlay builder. $350 → $35,938.'},
+  {id:'en5',icon:'🏟️',name:'War Room & Watch Score',desc:'Real-time position monitoring. 6-component composite score.'},
+  {id:'en6',icon:'🤖',name:'AI Synthesis Engine',desc:'11 LLMs + ESPN data → consensus → fair odds → your edge.'},
+  {id:'en7',icon:'🎛️',name:'Factor System',desc:'14 sports. Unique factors per market. Bubbles light up live.'},
+  {id:'en8',icon:'🧮',name:'Hedge Calculator',desc:'3 strategies. Same bet, 3 outcome profiles. Anti-detection.'},
+  {id:'en9',icon:'📊',name:'Bet Tracker',desc:'15+ state variables. OCR. Multi-currency. 12 refund scenarios.'},
+  {id:'en10',icon:'🎁',name:'Promo Stacker',desc:'Layer sportsbook bonuses on arbs. 3.4% → 27.9%.'},
+  {id:'en11',icon:'📡',name:'ESPN Player Props API',desc:'Exclusive live integration. No other platform has this.'},
+  {id:'en12',icon:'🔄',name:'Double Value Bet',desc:'4 bets, 2 pairs. Minimum always beats the sure bet.'},
+];
+
+W.engines=()=>{
+  if(engView==='hub') return renderEngHub();
+  const idx=ENG_LIST.findIndex(e=>e.id===engView);
+  const eng=ENG_LIST[idx];
+  const prevId=idx>0?ENG_LIST[idx-1].id:null;
+  const nextId=idx<ENG_LIST.length-1?ENG_LIST[idx+1].id:null;
+  return `<div style="min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:56px 20px 40px">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:6px">
+      <button class="sbtn dk" style="width:auto;padding:6px 14px;margin:0;font-size:10px" onclick="engView='hub';ren()">← ALL ENGINES</button>
+      <span style="font-family:'JetBrains Mono';font-size:10px;color:var(--gy);letter-spacing:2px">ENGINE ${String(idx+1).padStart(2,'0')} OF 12 · PATENT-PENDING</span>
+    </div>
+    <div style="font-size:40px;margin-bottom:4px">${eng.icon}</div>
+    <div style="font-family:'Archivo Black';font-size:clamp(24px,4vw,38px);text-align:center;margin-bottom:6px">${eng.name}</div>
+    <div style="font-size:15px;color:var(--gy);max-width:500px;text-align:center;margin-bottom:20px">${eng.desc}</div>
+    <div class="slip"><div class="slip-top"><span class="sp">${eng.icon} ${eng.name.toUpperCase()}</span><span class="lv">LIVE</span></div><div class="sim" id="${eng.id}-s"></div></div>
+    <div style="display:flex;gap:10px;margin-top:20px">
+      ${prevId?`<button class="sbtn dk" style="width:auto;padding:10px 20px;margin:0;font-size:12px" onclick="engView='${prevId}';ren()">← PREV</button>`:''}
+      ${nextId?`<button class="sbtn gl" style="width:auto;padding:10px 20px;margin:0;font-size:12px" onclick="engView='${nextId}';ren()">NEXT ENGINE →</button>`:`<button class="sbtn gl" style="width:auto;padding:10px 20px;margin:0;font-size:12px" onclick="go('moat')">OUR MOAT →</button>`}
+    </div>
+  </div>`;
+};
+
+function renderEngHub(){
+  return `<div style="min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:56px 20px 40px">
+    <div class="label" style="font-size:12px">03 · Patent-Pending Technology</div>
+    <div style="font-family:'Archivo Black';font-size:clamp(26px,4.5vw,44px);text-align:center;margin-bottom:6px">12 Proprietary Engines</div>
+    <div style="font-size:15px;color:var(--gy);max-width:520px;text-align:center;margin-bottom:24px">Click any engine to see it work live. Each one is a standalone patent-pending product.</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;max-width:800px;width:100%">
+      ${ENG_LIST.map((e,i)=>`<div style="background:var(--b2);border:1px solid var(--slB);border-radius:12px;padding:16px;cursor:pointer;transition:all .3s;text-align:center" onclick="engView='${e.id}';ren()" onmouseover="this.style.borderColor='rgba(239,164,32,.25)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.4)'" onmouseout="this.style.borderColor='var(--slB)';this.style.transform='none';this.style.boxShadow='none'">
+        <div style="font-size:28px;margin-bottom:6px">${e.icon}</div>
+        <div style="font-family:'JetBrains Mono';font-size:8px;color:var(--gd);letter-spacing:1.5px;margin-bottom:4px">ENGINE ${String(i+1).padStart(2,'0')}</div>
+        <div style="font-family:'Archivo Black';font-size:14px;margin-bottom:4px">${e.name}</div>
+        <div style="font-size:11px;color:var(--gy);line-height:1.5">${e.desc}</div>
+        <div style="margin-top:8px"><span class="bdg o" style="font-size:7px">PATENT-PENDING</span></div>
+      </div>`).join('')}
+    </div>
+    <div style="margin-top:24px"><button class="sbtn gl" style="width:auto;padding:12px 24px;margin:0;font-size:13px" onclick="go('moat')">SKIP TO MOAT →</button></div>
+  </div>`;
+}
 
 H.engines=()=>{
-  const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting&&e.target.dataset.r==='0'){e.target.dataset.r='1';const fn=EN[e.target.id];if(fn)fn()}})},{threshold:.2});
-  document.querySelectorAll('[id^=en]').forEach(el=>{if(el.dataset.r!==undefined)obs.observe(el)});
+  if(engView!=='hub'){
+    const fn=EN[engView];
+    if(fn)setTimeout(fn,200);
+  }
 };
 const EN={};
 
 // EN1: SURE BET
-EN.en1=async()=>{const s=$('en1-s');s.innerHTML=`<div class="formula"><span class="label">Implied Probability:</span>+125: 100÷225 = <span class="hl">44.4%</span> · -110: 110÷210 = <span class="hl">52.4%</span><br>Combined: 96.8% <span class="hl">< 100% = ARB</span></div><div class="prob-bar"><div id="p1a" class="prob-seg" style="background:var(--gn)">44.4%</div><div id="p1b" class="prob-seg" style="background:var(--gd)">52.4%</div><div id="p1c" class="prob-seg" style="background:rgba(255,255,255,.06)">3.2%</div></div><div style="display:flex;justify-content:space-between;font-family:'JetBrains Mono';font-size:6px;color:var(--gy)"><span>DK</span><span>FD</span><span style="color:var(--gn2)">PROFIT</span></div><div class="plain"><strong>The missing 3.2%</strong> is your guaranteed profit. <span class="mint">Mathematically impossible to lose.</span></div>`;await dl(300);$('p1a').style.width='44.4%';$('p1b').style.width='52.4%';$('p1c').style.width='3.2%'};
+EN.en1=async()=>{const s=$('en1-s');s.innerHTML=`<div class="formula"><span class="label">Implied Probability Formula:</span>+125: 100÷225 = <span class="hl">44.4%</span> · -110: 110÷210 = <span class="hl">52.4%</span><br>Combined: 96.8% <span class="hl">< 100% = ARBITRAGE DETECTED</span></div><div class="prob-bar"><div id="p1a" class="prob-seg" style="background:var(--gn)">44.4%</div><div id="p1b" class="prob-seg" style="background:var(--gd)">52.4%</div><div id="p1c" class="prob-seg" style="background:rgba(255,255,255,.08)">3.2%</div></div><div style="display:flex;justify-content:space-between;font-family:'JetBrains Mono';font-size:10px;color:var(--gy);margin-top:4px"><span>DraftKings</span><span>FanDuel</span><span style="color:var(--gn2)">YOUR PROFIT</span></div><div class="plain"><strong>The missing 3.2%</strong> is your guaranteed profit margin. The two sportsbooks' odds don't add up to 100% — and that gap is <span class="mint">mathematically impossible to lose</span>.</div>`;await dl(300);$('p1a').style.width='44.4%';$('p1b').style.width='52.4%';$('p1c').style.width='3.2%'};
 
 // EN2: VALUE BET
 EN.en2=async()=>{const s=$('en2-s');s.innerHTML=`<div class="mv"><div class="mv-b"><div class="n" style="color:var(--gn2)">+340</div><div class="l">BOOK (22.7%)</div></div><div class="mv-a">vs</div><div class="mv-b lit"><div class="n" style="color:var(--gd2)">+280</div><div class="l">AI TRUE (26.3%)</div></div></div><div class="formula">Edge = 26.3% − 22.7% = <span class="hl">+3.6% EV</span></div><div class="plain"><strong>Book is wrong.</strong> They think 22.7%. Our AI says 26.3%. That gap = <span class="mint">your edge on every bet</span>.</div>`};
@@ -266,13 +370,13 @@ EN.en4=async()=>{const s=$('en4-s');s.innerHTML=`<div id="e4l"></div><div id="e4
 let ws5=0;
 EN.en5=async()=>{ws5=0;const s=$('en5-s');
 const facts=[{n:'Exposure',v:15,m:20,c:'gn'},{n:'Position',v:18,m:20,c:'gn'},{n:'Volatility',v:12,m:15,c:'gd'},{n:'Time',v:10,m:15,c:'gd'},{n:'CLV',v:14,m:15,c:'gn'},{n:'Factors',v:12,m:15,c:'cy'}];
-s.innerHTML=`<div class="g2"><div><div style="font-family:'JetBrains Mono';font-size:6px;letter-spacing:1px;color:var(--gd);margin-bottom:3px">COMPOSITE FORMULA</div>${facts.map((f,i)=>`<div class="fb"><div class="fb-t"><span style="color:var(--wt)">${f.n}</span><span style="font-family:'JetBrains Mono';font-size:7px;color:var(--${f.c})">${f.v}/${f.m}</span></div><div class="fb-tr"><div class="fb-fl" id="w5f${i}" style="background:var(--${f.c})"></div></div></div>`).join('')}
-<div style="display:flex;gap:2px;flex-wrap:wrap;margin-top:4px" id="w5b"></div><div style="font-family:'JetBrains Mono';font-size:7px;color:var(--gy);margin-top:3px;min-height:10px" id="w5x"></div></div>
-<div style="text-align:center"><div class="rng"><svg width="90" height="90" viewBox="0 0 90 90"><circle cx="45" cy="45" r="38" fill="none" stroke="rgba(255,255,255,.02)" stroke-width="4"/><circle id="w5r" cx="45" cy="45" r="38" fill="none" stroke="url(#wg)" stroke-width="4" stroke-dasharray="239" stroke-dashoffset="239" stroke-linecap="round"/><defs><linearGradient id="wg"><stop offset="0%" stop-color="#28C840"/><stop offset="100%" stop-color="var(--gn)"/></linearGradient></defs></svg><div class="rng-c"><div class="rng-n gn" id="w5s">0</div><div class="rng-l">WATCH SCORE</div></div></div><div id="w5st" style="font-family:'JetBrains Mono';font-size:7px;color:var(--gn);margin-top:3px">CALCULATING...</div></div></div>`;
-facts.forEach((f,i)=>setTimeout(()=>{const e=$('w5f'+i);if(e)e.style.width=(f.v/f.m*100)+'%'},i*80));
-const iv=setInterval(()=>{ws5++;if($('w5s'))$('w5s').textContent=ws5;if($('w5r'))$('w5r').setAttribute('stroke-dashoffset',239-(ws5/100)*239);if(ws5>=81){clearInterval(iv);if($('w5st'))$('w5st').textContent='SECURE — HOLD'}},22);
-$('w5b').innerHTML=[{n:'Star Out',v:-15,t:'r'},{n:'Home',v:8,t:'g'},{n:'B2B',v:-10,t:'r'},{n:'Sharp$',v:12,t:'g'},{n:'Injury',v:-18,t:'r'},{n:'Line↑',v:10,t:'g'}].map(b=>`<button style="font-size:6px;padding:2px 4px;background:${b.t==='r'?'rgba(255,82,82,.04)':'rgba(0,230,118,.04)'};color:${b.t==='r'?'var(--rd)':'var(--gn)'};border:1px solid ${b.t==='r'?'rgba(255,82,82,.06)':'rgba(0,230,118,.06)'};border-radius:3px;cursor:pointer;font-family:'JetBrains Mono'" onclick="w5c(this,${b.v})">${b.n}(${b.v>0?'+':''}${b.v})</button>`).join('')};
-function w5c(el,v){ws5=Math.max(0,Math.min(100,ws5+v));$('w5s').textContent=ws5;$('w5r').setAttribute('stroke-dashoffset',239-(ws5/100)*239);$('w5x').innerHTML=`${v>0?'<span class="gn">+'+v+'</span>':'<span class="rd">'+v+'</span>'} → ${ws5}`;el.style.opacity='.2';el.disabled=true;const s=$('w5st');s.textContent=ws5>=70?'SECURE — HOLD':ws5>=40?'MONITOR — HEDGE':'CRITICAL';s.style.color=ws5>=70?'var(--gn)':ws5>=40?'var(--gd)':'var(--rd)'}
+s.innerHTML=`<div class="g2" style="gap:20px"><div><div style="font-family:'JetBrains Mono';font-size:10px;letter-spacing:2px;color:var(--gd);margin-bottom:8px">COMPOSITE FORMULA (0-100)</div>${facts.map((f,i)=>`<div class="fb"><div class="fb-t"><span style="color:var(--wt);font-size:13px">${f.n} <span style="color:var(--gy);font-size:11px">(0-${f.m})</span></span><span style="font-family:'JetBrains Mono';font-size:12px;color:var(--${f.c})">${f.v}/${f.m}</span></div><div class="fb-tr"><div class="fb-fl" id="w5f${i}" style="background:var(--${f.c})"></div></div></div>`).join('')}
+<div style="margin-top:14px"><div style="font-family:'JetBrains Mono';font-size:10px;letter-spacing:2px;color:var(--gd);margin-bottom:8px">CLICK FACTORS — WATCH SCORE CHANGES LIVE</div><div style="display:flex;gap:6px;flex-wrap:wrap" id="w5b"></div></div><div style="font-family:'JetBrains Mono';font-size:13px;color:var(--gy);margin-top:10px;min-height:20px" id="w5x"></div></div>
+<div style="text-align:center;padding-top:10px"><div class="rng" style="margin-bottom:16px"><svg width="130" height="130" viewBox="0 0 130 130"><circle cx="65" cy="65" r="54" fill="none" stroke="rgba(255,255,255,.03)" stroke-width="5"/><circle id="w5r" cx="65" cy="65" r="54" fill="none" stroke="url(#wg)" stroke-width="5" stroke-dasharray="339" stroke-dashoffset="339" stroke-linecap="round"/><defs><linearGradient id="wg"><stop offset="0%" stop-color="#28C840"/><stop offset="100%" stop-color="var(--gn)"/></linearGradient></defs></svg><div class="rng-c"><div class="rng-n gn" id="w5s">0</div><div class="rng-l">WATCH SCORE</div></div></div><div id="w5st" style="font-family:'JetBrains Mono';font-size:13px;color:var(--gn);letter-spacing:2px">CALCULATING...</div><div class="plain" style="margin-top:14px;text-align:left;font-size:12px"><strong>How it works:</strong> Each component scores a dimension of risk. They add up to 0-100. Above 70 = safe. 40-70 = hedge recommended. Below 40 = hedge immediately. <span class="mint">Updates in real-time as ESPN data changes.</span></div></div></div>`;
+facts.forEach((f,i)=>setTimeout(()=>{const e=$('w5f'+i);if(e)e.style.width=(f.v/f.m*100)+'%'},i*100));
+const iv=setInterval(()=>{ws5++;if($('w5s'))$('w5s').textContent=ws5;if($('w5r'))$('w5r').setAttribute('stroke-dashoffset',339-(ws5/100)*339);if(ws5>=81){clearInterval(iv);if($('w5st'))$('w5st').textContent='SECURE — HOLD POSITION'}},22);
+$('w5b').innerHTML=[{n:'Star Player Out',v:-15,t:'r'},{n:'Home Court',v:8,t:'g'},{n:'Back-to-Back',v:-10,t:'r'},{n:'Sharp Money',v:12,t:'g'},{n:'Key Injury News',v:-18,t:'r'},{n:'Line Moving ↑',v:10,t:'g'}].map(b=>`<button style="font-size:11px;padding:7px 12px;margin:3px;background:${b.t==='r'?'rgba(255,82,82,.06)':'rgba(0,230,118,.06)'};color:${b.t==='r'?'var(--rd)':'var(--gn)'};border:1px solid ${b.t==='r'?'rgba(255,82,82,.12)':'rgba(0,230,118,.12)'};border-radius:8px;cursor:pointer;font-family:'JetBrains Mono';transition:.3s" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" onclick="w5c(this,${b.v})">${b.n} (${b.v>0?'+':''}${b.v})</button>`).join('')};
+function w5c(el,v){ws5=Math.max(0,Math.min(100,ws5+v));$('w5s').textContent=ws5;$('w5r').setAttribute('stroke-dashoffset',339-(ws5/100)*339);$('w5x').innerHTML=`<span style="font-size:12px">${v>0?'<span class="gn">+'+v+'</span>':'<span class="rd">'+v+'</span>'} → <strong>${ws5}</strong></span>`;el.style.opacity='.2';el.disabled=true;const s=$('w5st');s.textContent=ws5>=70?'SECURE — HOLD':ws5>=40?'MONITOR — HEDGE':'CRITICAL — HEDGE NOW';s.style.color=ws5>=70?'var(--gn)':ws5>=40?'var(--gd)':'var(--rd)'}
 
 // EN6: AI SYNTHESIS
 EN.en6=async()=>{const s=$('en6-s');s.innerHTML=`<div style="font-family:'JetBrains Mono';font-size:6px;color:var(--gd);letter-spacing:1px;margin-bottom:3px">ESPN → 11 AIs → CONSENSUS → FAIR ODDS</div><div id="e6d"></div><div id="e6v"></div><div id="e6r" style="display:none"></div>`;
@@ -352,46 +456,275 @@ W.partner=()=>`<div class="S"><div class="label">Partnership</div><div class="ti
 <div class="nxt"><button class="sbtn gl" style="width:auto;margin:0 auto;padding:10px 20px" onclick="go('close')">THE LEGACY →</button></div>`;
 
 /* ═══ FARR LEGACY CLOSER ═══ */
-W.close=()=>`<div class="S"><div class="label">Two Dynasties. One Future.</div><div class="title">The <span class="gd">Farr</span> Legacy Continues</div></div>
-<div class="legacy-card">
-  <div class="era">1967</div>
-  <div class="detail">Mel Farr Sr. steps onto the field. <strong>NFL Rookie of the Year.</strong></div>
-</div>
+W.close=()=>`<div style="text-align:center;padding-top:20px;margin-bottom:16px"><div class="label" style="font-size:12px">Two Dynasties. One Future.</div><div style="font-family:'Archivo Black';font-size:clamp(26px,4.5vw,44px);line-height:1.05">The <span class="gd">Farr</span> Legacy Continues</div></div>
+<div class="legacy-card" style="padding:24px"><div class="era" style="font-size:13px">🏈 1967 — THE BEGINNING</div><div class="name" style="font-size:24px">Mel Farr Sr.</div><div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:10px 0" id="cl-s1"></div><div class="detail" style="font-size:15px">From Beaumont, Texas to the <strong>NFL Hall of Honor</strong>. Rookie of the Year. Then built the <strong style="color:var(--gd)">largest African-American owned business in America.</strong></div></div>
 <div class="legacy-line"></div>
-<div class="legacy-card">
-  <div class="era">1975-1998</div>
-  <div class="detail">Mel Farr Automotive Group becomes the <strong>largest African-American owned business in America.</strong> $400M+.</div>
-</div>
+<div class="legacy-card" style="padding:24px"><div class="era" style="font-size:13px">🏈 1991 — THE NEXT CHAPTER</div><div class="name" style="font-size:24px">Mike Farr</div><div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:10px 0" id="cl-s2"></div><div class="detail" style="font-size:15px">UCLA record-breaker. Troy Aikman's go-to. Led the Lions' <strong>only playoff victory</strong>. Then <strong style="color:var(--gd)">doubled the family empire to $400M.</strong></div></div>
 <div class="legacy-line"></div>
-<div class="legacy-card">
-  <div class="era">1991</div>
-  <div class="detail">Mike Farr leads the Detroit Lions to their <strong>only playoff victory.</strong> Catches passes from Troy Aikman at UCLA. Then doubles the family business from <strong>$200M to $400M.</strong></div>
-</div>
+<div class="legacy-card" style="padding:24px"><div class="era" style="font-size:13px">🏢 2025 — THE PLATFORM</div><div class="name" style="font-size:24px">Superstar Platforms</div><div class="detail" style="font-size:15px"><strong>OTC: DWIS · SEC Form 10 Filed</strong><br>PawnTrust · Automotive · Strategic Acquisitions<br>Building a <strong style="color:var(--gd)">national technology conglomerate</strong></div></div>
 <div class="legacy-line"></div>
-<div class="legacy-card">
-  <div class="era">2025-2026</div>
-  <div class="detail">Mike Farr launches <strong>Superstar Platforms</strong> — named for his father. Files Form 10 with the SEC. Builds PawnTrust. Closes automotive distribution. Acquires tech assets.</div>
+<div class="legacy-card" id="cl-final" style="border-color:rgba(0,230,118,.2);background:linear-gradient(135deg,rgba(0,230,118,.04),rgba(239,164,32,.03));padding:40px">
+  <div class="era" style="color:var(--gn);font-size:14px">⚡ 2026 AND BEYOND</div>
+  <div class="name" style="color:var(--gd);font-size:clamp(30px,5.5vw,48px)">Superstar × SBA</div>
+  <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:16px 0" id="cl-s3"></div>
+  <div id="cl-reveal" style="font-size:18px;margin-top:14px;line-height:1.8;min-height:280px"></div>
 </div>
-<div class="legacy-line"></div>
-<div class="legacy-card" style="border-color:rgba(0,230,118,.15);background:linear-gradient(135deg,rgba(0,230,118,.02),rgba(239,164,32,.02))">
-  <div class="era" style="color:var(--gn)">2026 AND BEYOND</div>
-  <div class="name" style="color:var(--gd)">Superstar × SBA</div>
-  <div class="detail">The Farr family turned football into a business empire.<br>Keith Pratt turned sports betting into a technology revolution.<br><br><strong>Together: $2M → $1 billion.</strong><br><br>Same winning mentality. Same relentless work ethic.<br>Different generation. <span style="color:var(--gn)">Bigger stage.</span><br><br><em style="color:var(--gd)">"If a man does not know to which port he sails, no wind is favorable."</em><br><span style="font-size:8px;color:var(--gy)">— Seneca, as quoted by Mel Farr Sr.</span></div>
-</div>
-<div class="nxt"><button class="sbtn gl" style="width:auto;margin:0 auto;padding:10px 24px" onclick="go('ask')">THE ASK →</button></div>`;
+<div class="nxt" style="padding:24px 0"><button class="sbtn gl" style="width:auto;margin:0 auto;padding:16px 36px;font-size:16px" onclick="go('ask')">THE ASK →</button></div>`;
 
-/* ═══ THE ASK ═══ */
-W.ask=()=>`<div style="min-height:82vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
-<div class="tg">The Investment</div>
-<div style="font-family:'Archivo Black';font-size:clamp(40px,7vw,80px);color:var(--gd);line-height:1" id="ask-n">$0</div>
-<div style="font-family:'JetBrains Mono';font-size:8px;letter-spacing:3px;color:var(--gy);margin-top:4px">SEED · SUBSIDIARY PARTNERSHIP</div>
-<div style="font-family:'Archivo Black';font-size:clamp(12px,2vw,20px);color:var(--gy);margin-top:10px">Let's Take SBA <span class="gd">Farr-ther</span> Together</div>
-<div style="max-width:500px;width:100%;margin-top:20px" id="ask-f"></div>
-<div style="max-width:500px;width:100%;margin-top:16px"><table class="dt"><thead><tr><th>Company</th><th>Value</th><th>Products</th></tr></thead><tbody><tr><td>OddsJam</td><td>$160M</td><td>2</td></tr><tr><td>Action Network</td><td>$240M</td><td>3</td></tr><tr><td>Better Collective</td><td>$1.2B</td><td>5</td></tr><tr class="hl"><td>★ SBA Target</td><td>$500M-$1B+</td><td>12</td></tr></tbody></table></div>
-<div style="margin-top:20px"><div style="font-family:'Archivo Black';font-size:13px">Keith Pratt</div><div style="font-size:9px;color:var(--gy)">CEO · Sports Bet Arbitrage LLC</div><div style="font-size:8px;color:var(--gy);margin-top:4px">Introduced by <strong class="gd">Carlos</strong> → The Farr Family / Superstar Platforms</div></div>
-<div style="margin-top:16px;font-family:'JetBrains Mono';font-size:5px;letter-spacing:3px;color:var(--gy);opacity:.25">CONFIDENTIAL · SUPERSTAR PLATFORMS ONLY</div>
-</div>`;
-H.ask=()=>{aV($('ask-n'),0,2000000,2500);const funds=[{p:'40%',l:'Engineering & Scale',c:'var(--gd)',w:'40%'},{p:'25%',l:'Marketing & Acquisition',c:'var(--gn)',w:'25%'},{p:'20%',l:'Legal & Compliance',c:'var(--cy)',w:'20%'},{p:'15%',l:'Operations',c:'var(--pp)',w:'15%'}];$('ask-f').innerHTML=funds.map(f=>`<div class="fund-r"><div class="fund-pct" style="color:${f.c}">${f.p}</div><div style="flex:1"><div style="font-size:9px;color:var(--gy)">${f.l}</div><div class="fund-bar" style="background:${f.c}" data-w="${f.w}"></div></div></div>`).join('');document.querySelectorAll('.fund-r').forEach((r,i)=>{TT.push(setTimeout(()=>{r.classList.add('show');const b=r.querySelector('.fund-bar');if(b)TT.push(setTimeout(()=>b.style.width=b.dataset.w,80))},i*300+600))})};
+H.close=()=>{
+  const cards=document.querySelectorAll('.legacy-card');
+  const lines=document.querySelectorAll('.legacy-line');
+  cards.forEach((c,i)=>{TT.push(setTimeout(()=>c.classList.add('show'),i*450+100))});
+  lines.forEach((l,i)=>{TT.push(setTimeout(()=>l.classList.add('show'),i*450+300))});
+  // Mel Sr stats
+  const s1=$('cl-s1');if(s1){TT.push(setTimeout(()=>{s1.innerHTML=[['4,446','YARDS'],['36','TDs'],['$400M','REVENUE'],['#1','BUSINESS']].map(([v,l])=>`<div style="text-align:center;animation:fu .5s ease"><div style="font-family:'JetBrains Mono';font-size:20px;font-weight:700;color:var(--gd)">${v}</div><div style="font-family:'JetBrains Mono';font-size:8px;color:var(--gy);letter-spacing:1px">${l}</div></div>`).join('')},550))}
+  // Mike stats
+  const s2=$('cl-s2');if(s2){TT.push(setTimeout(()=>{s2.innerHTML=[['69','CATCHES'],['UCLA','RECORD'],['$400M','DOUBLED'],['ONLY','PLAYOFF WIN']].map(([v,l])=>`<div style="text-align:center;animation:fu .5s ease"><div style="font-family:'JetBrains Mono';font-size:20px;font-weight:700;color:var(--gd)">${v}</div><div style="font-family:'JetBrains Mono';font-size:8px;color:var(--gy);letter-spacing:1px">${l}</div></div>`).join('')},1400))}
+  // SBA future stats — counting up
+  const s3=$('cl-s3');if(s3){TT.push(setTimeout(()=>{
+    s3.innerHTML=[['12','ENGINES'],['132K+','CODE LINES'],['$212B','MARKET'],['$1B+','TARGET']].map(([v,l])=>`<div style="text-align:center;animation:fu .6s ease"><div style="font-family:'JetBrains Mono';font-size:22px;font-weight:700;color:var(--gn)">${v}</div><div style="font-family:'JetBrains Mono';font-size:8px;color:var(--gy);letter-spacing:1.5px">${l}</div></div>`).join('');
+  },2800))}
+  // CINEMATIC LINE-BY-LINE REVEAL
+  const reveal=$('cl-reveal');if(reveal){
+    const seq=[
+      {t:3400, html:'<div style="color:var(--gy);animation:fu .8s ease">The Farr family turned football into a business empire.</div>'},
+      {t:4400, html:'<div style="color:var(--gy);animation:fu .8s ease">Keith Pratt turned sports betting into a technology revolution.</div>'},
+      {t:5600, html:'<div style="height:20px"></div>'},
+      {t:5800, html:'<div style="animation:fu 1s ease" id="cl-together"></div>'},
+      {t:8200, html:'<div style="height:12px"></div>'},
+      {t:8400, html:'<div style="color:var(--gy);animation:fu .8s ease">Same winning mentality. Same relentless work ethic.</div>'},
+      {t:9400, html:'<div style="animation:fu .8s ease">Different generation. <span style="color:var(--gn);font-family:\'Archivo Black\';font-size:22px">Bigger stage.</span></div>'},
+      {t:10800, html:'<div style="height:20px"></div>'},
+      {t:11000, html:'<div style="animation:fu 1.2s ease"><em style="color:var(--gd);font-size:20px;line-height:1.4;display:block">"If a man does not know to which port he sails,<br>no wind is favorable."</em><span style="font-size:13px;color:var(--gy);display:block;margin-top:8px">— Seneca, as quoted by Mel Farr Sr.</span></div>'},
+    ];
+    seq.forEach(s=>{
+      TT.push(setTimeout(()=>{reveal.innerHTML+=s.html},s.t));
+    });
+    // The big "$2M → $1 Billion" counter moment
+    TT.push(setTimeout(()=>{
+      const el=$('cl-together');if(el){
+        el.style.cssText='font-family:Archivo Black;font-size:clamp(28px,5vw,46px);color:var(--gd);letter-spacing:-1px;text-shadow:0 0 40px rgba(239,164,32,.2)';
+        el.textContent='Together: $0 → $0';
+        // Count $2M
+        const t0=performance.now();
+        !function f(n){
+          const p=Math.min((n-t0)/2000,1);
+          const invest=Math.floor(2000000*(1-Math.pow(1-p,3)));
+          const target=Math.floor(1000000000*(1-Math.pow(1-p,3)));
+          el.textContent='Together: $'+invest.toLocaleString()+' → $'+(target>=1000000000?'1 Billion':Math.floor(target/1000000).toLocaleString()+'M');
+          if(p<1)requestAnimationFrame(f);
+          else el.textContent='Together: $2,000,000 → $1 Billion.';
+        }(t0);
+      }
+    },5800));
+    // Glow the final card border with radial pulse
+    TT.push(setTimeout(()=>{
+      const card=$('cl-final');if(card){
+        card.style.borderColor='rgba(0,230,118,.35)';
+        card.style.animation='radialGlow 3s ease-in-out infinite';
+      }
+    },11000));
+  }
+};
+
+/* ═══ THE ASK — WORLD CLASS ═══ */
+W.ask=()=>`<div style="min-height:90vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative">
+<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,rgba(239,164,32,.04),transparent 60%);pointer-events:none"></div>
+<div style="position:relative;z-index:1">
+<div class="tg" style="font-size:12px">The Investment</div>
+<div style="font-family:'Archivo Black';font-size:clamp(52px,9vw,100px);color:var(--gd);line-height:1;text-shadow:0 0 60px rgba(239,164,32,.15)" id="ask-n">$0</div>
+<div style="font-family:'JetBrains Mono';font-size:11px;letter-spacing:4px;color:var(--gy);margin-top:8px">SEED INVESTMENT · SUBSIDIARY PARTNERSHIP</div>
+<div style="font-family:'Archivo Black';font-size:clamp(16px,2.5vw,26px);color:var(--gy);margin-top:14px;letter-spacing:1px">Let's Take SBA <span class="gd">Farr-ther</span> Together</div>
+
+<div style="max-width:560px;width:100%;margin-top:28px" id="ask-f"></div>
+
+<div style="max-width:560px;width:100%;margin-top:24px">
+<div style="font-family:'Archivo Black';font-size:16px;margin-bottom:10px">Exit Comparables</div>
+<table class="dt"><thead><tr><th>Company</th><th>Valuation</th><th>Products</th><th>AI</th></tr></thead><tbody>
+<tr><td>OddsJam</td><td>$160M</td><td>2</td><td>No</td></tr>
+<tr><td>Action Network</td><td>$240M</td><td>3</td><td>No</td></tr>
+<tr><td>Better Collective</td><td>$1.2B</td><td>5</td><td>Basic</td></tr>
+<tr class="hl"><td>★ SBA Genius</td><td>$500M-$1B+</td><td>12</td><td>11 LLMs</td></tr>
+</tbody></table></div>
+
+<div style="margin-top:28px">
+<div style="font-family:'Archivo Black';font-size:18px">Keith Pratt</div>
+<div style="font-size:13px;color:var(--gy)">CEO & Founder · Sports Bet Arbitrage LLC</div>
+<div style="font-size:12px;color:var(--gy);margin-top:6px">Introduced by <strong class="gd">Carlos</strong> → The Farr Family / Superstar Platforms</div>
+</div>
+
+<div style="margin-top:28px;padding:16px 24px;background:rgba(239,164,32,.03);border:1px solid rgba(239,164,32,.06);border-radius:10px;max-width:500px">
+<div style="font-family:'Archivo Black';font-size:15px;color:var(--gd);margin-bottom:6px">Two Dynasties. One Future.</div>
+<div style="font-size:13px;color:var(--gy);line-height:1.6">The Farr family built a $400M empire from the football field.<br>SBA built the most advanced sports tech platform in the world.<br><strong style="color:var(--gd)">Together, there is no ceiling.</strong></div>
+</div>
+
+<div style="margin-top:20px;font-family:'JetBrains Mono';font-size:7px;letter-spacing:3px;color:var(--gy);opacity:.2">CONFIDENTIAL · SUPERSTAR PLATFORMS ONLY</div>
+</div></div>`;
+
+H.ask=()=>{
+  aV($('ask-n'),0,2000000,2500);
+  const funds=[
+    {p:'40%',l:'Engineering & Scale to 100K Users',c:'var(--gd)',w:'40%'},
+    {p:'25%',l:'Marketing & User Acquisition',c:'var(--gn)',w:'25%'},
+    {p:'20%',l:'Legal, Licensing & Compliance',c:'var(--cy)',w:'20%'},
+    {p:'15%',l:'Operations & Team',c:'var(--pp)',w:'15%'},
+  ];
+  $('ask-f').innerHTML=funds.map(f=>`
+    <div class="fund-r">
+      <div class="fund-pct" style="color:${f.c}">${f.p}</div>
+      <div style="flex:1">
+        <div style="font-size:12px;color:var(--gy)">${f.l}</div>
+        <div class="fund-bar" style="background:${f.c}" data-w="${f.w}"></div>
+      </div>
+    </div>
+  `).join('');
+  document.querySelectorAll('.fund-r').forEach((r,i)=>{
+    TT.push(setTimeout(()=>{
+      r.classList.add('show');
+      const b=r.querySelector('.fund-bar');
+      if(b)TT.push(setTimeout(()=>b.style.width=b.dataset.w,80));
+    },i*300+600));
+  });
+};
+
+/* ═══ COACH K AI — POWERED BY CLAUDE ═══ */
+const CK_OPEN=`<div id="ck-overlay" style="position:fixed;bottom:70px;right:20px;width:360px;max-height:520px;background:rgba(11,16,24,.97);backdrop-filter:blur(20px);border:1px solid rgba(239,164,32,.12);border-radius:16px;box-shadow:0 16px 48px rgba(0,0,0,.6);z-index:10001;display:flex;flex-direction:column;animation:fu .3s ease">
+<div style="padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.04);display:flex;align-items:center;gap:8px">
+<div style="width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--gd),var(--gd2));display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:var(--bg)">K</div>
+<div><div style="font-family:'Archivo Black';font-size:13px;color:var(--gd)">Coach K</div><div style="font-family:'JetBrains Mono';font-size:8px;color:var(--gy);letter-spacing:1px">SBA AI ASSISTANT · POWERED BY AI</div></div>
+<button onclick="toggleCK()" style="margin-left:auto;background:0;border:0;color:var(--gy);cursor:pointer;font-size:18px">✕</button>
+</div>
+<div id="ck-msgs" style="flex:1;overflow-y:auto;padding:12px;max-height:360px;font-size:13px;line-height:1.65;color:var(--gy)">
+<div style="background:rgba(239,164,32,.04);border-radius:12px 12px 12px 0;padding:12px 14px;margin-bottom:8px;color:var(--gd2);font-size:13px">Hey! I'm Coach K — SBA's AI-powered assistant. I know everything about SBA's 12 engines, the Farr family legacy, the investment opportunity, and how every piece of technology works. Ask me anything!</div>
+</div>
+<div style="padding:10px 12px;border-top:1px solid rgba(255,255,255,.04);display:flex;gap:6px">
+<input id="ck-input" style="flex:1;background:var(--b3);border:1px solid var(--slB);border-radius:8px;padding:10px 12px;color:var(--wt);font-family:'DM Sans';font-size:13px;outline:0" placeholder="Ask Coach K anything..." onkeydown="if(event.key==='Enter')ckSend()">
+<button onclick="ckSend()" style="background:linear-gradient(135deg,var(--gd),var(--gd2));border:0;border-radius:8px;padding:10px 16px;color:var(--bg);font-weight:700;font-size:12px;cursor:pointer">ASK</button>
+</div></div>`;
+
+function toggleCK(){const o=$('ck-overlay');if(o){o.remove()}else{document.body.insertAdjacentHTML('beforeend',CK_OPEN)}}
+
+const CK_SYSTEM=`You are Coach K, the AI assistant built into SBA's investor deck for Superstar Platforms / Mike Farr. You are friendly, confident, and knowledgeable. Answer concisely (2-4 sentences max) in a warm, professional tone. You know EVERYTHING about SBA's technology and opportunity.
+
+CRITICAL GUARDRAILS — YOU MUST NEVER ANSWER THESE TOPICS:
+- Equity percentages, deal terms, cap table, ownership splits, dilution — say: "That's a conversation best had directly with Keith and the team. I can tell you about the technology if you're curious!"
+- Current revenue, current member count, current paying users, current financials — say: "The revenue projections are in the deck. For current figures, Keith can walk you through those directly."
+- Source code details, API keys, database schemas, specific technical architecture — say: "I can explain what each engine does and why it matters. The engineering specifics are proprietary — Keith's team can discuss those in detail."
+- Valuation negotiation, why it's worth X, is it overpriced — say: "The comparables are in the deck — OddsJam at $160M with 2 products, SBA with 12. Keith is the one to talk valuations with."
+- Team salaries, compensation, personal finances of anyone — say: "That's a private matter. Happy to tell you about the technology instead!"
+- Legal status, gaming licenses, whether arbitrage is legal — say: "SBA's legal team handles all compliance matters. I'd recommend discussing specifics with Keith."
+- Risks, weaknesses, what could go wrong, sportsbook bans — say: "Every investment has considerations. Keith can discuss risk factors directly during your conversation."
+- Other investors, funding status, runway, other offers — say: "Investment conversations are confidential. I'm here to help you understand the technology!"
+- Personal questions about Keith, his character, his background beyond what's in the deck, opinions about any person — say: "I'm here to talk about SBA's technology and opportunity. Keith would love to connect with you directly!"
+- Ethical questions, moral judgments, opinions about people — say: "That's outside my scope. Let me tell you about something exciting — like how the AI Synthesis Engine works!"
+- Anything sexual, violent, political, or inappropriate — politely decline and redirect to the technology.
+- Questions about competitors' people, internal workings, or gossip — say: "I only know SBA's technology. And it's pretty incredible — want to hear about it?"
+
+WHEN DEFLECTING: Always be warm, never defensive. Redirect toward the technology or suggest they connect with Keith directly. Make them MORE excited to have that conversation.
+
+YOUR JOB: Explain the technology, generate excitement about the opportunity, and drive them to want a meeting with Keith. Every answer should leave them thinking "I need to learn more."
+
+COMPANY: Sports Bet Arbitrage LLC (SBA). CEO: Keith Pratt. Website: sportsbetarbitrage.com. Seeking $2M seed from Superstar Platforms (OTC: DWIS, CEO Mike Farr) as a subsidiary/portfolio company.
+
+WHAT SBA DOES: AI-powered sports arbitrage platform. Scans 60 leagues, 39 sportsbooks, 432 market types every 60 seconds. Finds guaranteed-profit arbitrage opportunities where combined implied probability < 100%. Users bet both sides on different books and profit no matter who wins. This is math, not gambling.
+
+12 PATENT-PENDING ENGINES:
+1. Sure Bet Engine - Finds 2-way arbs. Guaranteed profit. Combined implied prob < 100%.
+2. Value Bet Engine - Detects +EV when book odds imply lower probability than AI-calculated reality.
+3. Middle Bet Detector - Overlapping lines (Over 8.5 + Under 9.0). Profit both ways, jackpot if score lands in middle. Hit rates: MLB 28%, NHL 40%, Soccer 35%.
+4. Power Play Engine - House money parlay builder. +4900 anchor + heavy favorites. Example: $350 → $35,938.
+5. War Room - Real-time position monitoring with Watch Score, hedge triggers, factor buttons.
+6. AI Synthesis Engine - 11 LLMs (GPT-4o, Claude, Gemini, DeepSeek, Qwen3, Llama, Mistral, Grok, Cohere, Yi, Phi-3) reach consensus using ESPN data. Weighted voting → fair odds → edge calculation.
+7. Factor System - 14 sports, unique factors per market. Color-coded: green=favorable, gold=neutral, red=risk. Feeds into Watch Score.
+8. Hedge Calculator - 3 strategies: Eliminate Risk, Minimize Loss, Profit All Outcomes. Anti-detection stake rounding.
+9. Bet Tracker - 15+ state variables per position. OCR from screenshots. Multi-currency. 12 refund/push scenarios.
+10. Promo Stacker - Layers sportsbook bonuses on arbs. Normal 3.4% arb → 27.9% with promos.
+11. ESPN Player Props API - EXCLUSIVE to SBA. Live injuries, props, weather, refs feeding Watch Score in real-time.
+12. Double Value Bet - Both value bets simultaneously. 4 bets, 2 pairs. Minimum always beats sure bet.
+
+WATCH SCORE: 0-100 composite. Components: Exposure(0-20) + Position(0-20) + Volatility(0-15) + Time(0-15) + CLV(0-15) + Factors(0-15). Above 70=SECURE, 40-70=MONITOR, Below 40=CRITICAL.
+
+TECH: 132,000+ lines of code. Railway backend. Vercel frontend. Supabase database. One scan serves 1,000+ users at same cost as 1 (zero marginal cost).
+
+REVENUE: 4 tiers ($1K/$2K/$5K/$10K) in 40-day cycles. VPN add-on $1K. 7-level affiliate. Data licensing future.
+
+FARR FAMILY: Mel Farr Sr — NFL Rookie of Year 1967, 2x Pro Bowl, largest African-American owned business ($400M+). Mike Farr — UCLA/Troy Aikman, Detroit Lions playoff hero, doubled business to $400M. Now CEO of Superstar Platforms (OTC: DWIS), SEC Form 10, PawnTrust, automotive distribution.
+
+COMPS: OddsJam $160M (2 products), Action Network $240M, Better Collective $1.2B. SBA target: $500M-$1B+ with 12 engines.
+
+INVESTMENT: $2M seed. 40% engineering, 25% marketing, 20% legal, 15% ops. Path: $10-15M → $50-80M → $150-300M → $500M-$1B+.
+
+REAL EXAMPLE: Steph Curry Over 30.5 → Sure Bet +$151 → Value Fav +$250 → Value Dog +$380 → Double Value +$724 → Power Play +$35,938 = $55,938 from one bet.
+
+Remember: Be concise. Be exciting. Drive them to Keith for anything sensitive. You are the hype man and explainer — not the dealmaker.`;
+
+const CK_FALLBACK={
+  'sure bet':'A Sure Bet is when you bet both sides of the same event on different sportsbooks, and the combined implied probability is less than 100%. This guarantees profit no matter the outcome. SBA finds these automatically across 39 sportsbooks every 60 seconds.',
+  'value bet':'A Value Bet is when the sportsbook\'s odds imply a lower win probability than reality. SBA\'s 11 AI models calculate the true probability using ESPN data. The gap between what the book thinks and what\'s true — that\'s your mathematical edge.',
+  'watch score':'Watch Score is a 0-100 composite monitoring your position across 6 dimensions: Exposure, Position Type, Volatility, Time Pressure, CLV, and Factor Adjustments. Above 70 = safe (hold). 40-70 = monitor (consider hedging). Below 40 = critical (hedge immediately).',
+  'power play':'Power Play takes house money from a previous arb and builds a parlay. Anchor leg is a high-odds pick (like +4900), stacked with heavy favorites (-500 each). Example: $350 house money → $35,938 potential payout. Zero of your original capital at risk.',
+  'middle':'A Middle Bet: you bet Over 8.5 on one book and Under 9.0 on another. Profit either way ($34). If the score lands on exactly 9, BOTH bets win → $380 jackpot. SBA detects these automatically with sport-specific hit rate data.',
+  'espn':'SBA is the ONLY arbitrage platform with live ESPN player props data. Injuries, player status, weather, referee assignments — all feeding into the Watch Score in real-time. When LeBron goes from Probable to Questionable, the Watch Score adjusts instantly.',
+  'farr':'The Farr family is an NFL dynasty. Mel Farr Sr. — NFL Rookie of the Year (1967), 2× Pro Bowl, then built the largest African-American owned business in America ($400M+). Mike Farr — UCLA record-breaker with Troy Aikman, Detroit Lions playoff hero, doubled the family business to $400M. Now CEO of Superstar Platforms.',
+  'invest':'SBA is seeking $2M from Superstar Platforms. Use of funds: 40% Engineering, 25% Marketing, 20% Legal, 15% Operations. Comparable OddsJam is valued at $160M with 2 products. SBA has 12 patent-pending engines. Target exit: $500M-$1B+.',
+  'hedge':'The Hedge Calculator offers 3 strategies: Eliminate Risk (lock in guaranteed profit), Minimize Loss (max upside $67.90, max loss $4.12), and Profit All Outcomes ($22-$46 balanced range). All outputs use anti-detection stake rounding so sportsbooks don\'t flag your account.',
+  'factor':'SBA covers 14 sports with unique factors per market type. NBA Moneyline factors differ from NBA Player Props. Each is scored 0-100 and color-coded: green (favorable), gold (neutral), red (risk). They feed directly into the Watch Score composite.',
+  'promo':'The Promo Stacker layers sportsbook sign-up bonuses on top of arbitrage opportunities. A normal 3.4% arb ROI becomes 27.9% when you stack DraftKings\' $200 free bet offer on top. No other platform identifies and overlays promos on live arbs.',
+  'double value':'Double Value Bet runs both value bets (favorite-heavy and underdog-heavy) simultaneously as 4 bets in 2 pairs. The math proves the minimum outcome ($724) always beats the Sure Bet ($151). You took zero additional risk — just restructured the same odds.',
+  'scanner':'The scanner (arb-engine-v3.js) runs on Railway 24/7. Tiered scanning: T1 leagues every 60 seconds, T2 every 90 seconds, T3 every 3 minutes. Live events scan at 2x speed. One API call serves all connected users — zero marginal cost.',
+  'oddsjam':'OddsJam is valued at $160M with 2 basic products (an odds screen and a calculator). SBA has 12 patent-pending engines including AI synthesis, ESPN integration, War Room, Power Play, and more. SBA at $10-15M pre-money is a massive value opportunity.',
+  'billion':'The path to $1B: Phase 1 ($10-15M) → Phase 2 Series A ($50-80M, Superstar 5-8× return) → Phase 3 Institutional ($150-300M, 15-30× return) → Phase 4 Exit/IPO ($500M-$1B+, 80×+ return). Better Collective is already at $1.2B with only 5 products.',
+  'keith':'Keith Pratt is the CEO and Founder of SBA. He started with manual arbitrage — one bet at a time, screenshots in Discord. Turned $12K into $1.8M in 9 months using only the Sure Bet strategy. Then built the entire 12-engine platform with a core team of 6.',
+  'superstar':'Superstar Platforms (OTC: DWIS) is a tech conglomerate led by CEO Mike Farr. Named after his father Mel Farr Sr. — the "Superstar Dealer." Portfolio includes PawnTrust (fintech), automotive distribution, and strategic acquisitions. SBA would be the crown jewel tech asset.',
+};
+
+let ckHistory=[];
+
+async function ckSend(){
+  const input=$('ck-input');const msg=input.value.trim();if(!msg)return;
+  const msgs=$('ck-msgs');
+  msgs.innerHTML+=`<div style="background:var(--b3);border-radius:12px 12px 0 12px;padding:10px 12px;margin-bottom:8px;margin-left:40px;color:var(--wt);font-size:12px">${msg}</div>`;
+  input.value='';input.disabled=true;
+  
+  // Show typing indicator
+  msgs.innerHTML+=`<div id="ck-typing" style="background:rgba(239,164,32,.04);border-radius:12px 12px 12px 0;padding:10px 12px;margin-bottom:8px;color:var(--gd);font-size:11px;font-style:italic">Coach K is thinking...</div>`;
+  msgs.scrollTop=msgs.scrollHeight;
+
+  ckHistory.push({role:'user',content:msg});
+  
+  let answer='';
+  try{
+    // Try Claude API first
+    const resp=await fetch('/api/coach-k',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        system:CK_SYSTEM,
+        messages:ckHistory.slice(-6)
+      })
+    });
+    const data=await resp.json();
+    answer=data.content?data.content.map(c=>c.text||'').join(''):'';
+    if(!answer)throw new Error('empty');
+  }catch(e){
+    // Fallback to keyword dictionary
+    const key=Object.keys(CK_FALLBACK).find(k=>msg.toLowerCase().includes(k));
+    answer=key?CK_FALLBACK[key]:"That's a great question! I'd recommend exploring the 12 Engines section of this deck to see each technology demonstrated live. You can also check the Revenue tab for the business model or the $1B Path for the growth roadmap. If you want specifics, try asking me about any engine by name — like 'what is a sure bet?' or 'how does the watch score work?'";
+  }
+  
+  ckHistory.push({role:'assistant',content:answer});
+  
+  // Remove typing indicator and show answer
+  const typing=$('ck-typing');if(typing)typing.remove();
+  msgs.innerHTML+=`<div style="background:rgba(239,164,32,.04);border-radius:12px 12px 12px 0;padding:12px 14px;margin-bottom:8px;color:var(--gd2);font-size:12px;line-height:1.6;animation:fu .3s ease">${answer}</div>`;
+  msgs.scrollTop=msgs.scrollHeight;
+  input.disabled=false;input.focus();
+}
+
+// Add Coach K button to page
+document.addEventListener('DOMContentLoaded',()=>{
+  document.body.insertAdjacentHTML('beforeend',`<button onclick="toggleCK()" style="position:fixed;bottom:20px;right:20px;z-index:10000;width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--gd),var(--gd2));border:none;cursor:pointer;box-shadow:0 4px 24px rgba(239,164,32,.35);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;color:var(--bg);transition:.3s" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><span style="line-height:1">K</span></button>`);
+});
 
 nav();ren();
 </script>
