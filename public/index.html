@@ -158,6 +158,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:10000;background:rgba(4,6,10,.94
 @keyframes tickScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 /* ENGINE FULL */
 .eng-full{min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 24px 40px}
+
+/* COACH K PULSE */
+@keyframes ckPulse{0%{box-shadow:0 4px 24px rgba(239,164,32,.35),0 0 0 0 rgba(239,164,32,.4)}70%{box-shadow:0 4px 24px rgba(239,164,32,.35),0 0 0 12px rgba(239,164,32,0)}100%{box-shadow:0 4px 24px rgba(239,164,32,.35),0 0 0 0 rgba(239,164,32,0)}}
 </style>
 </head>
 <body>
@@ -484,14 +487,15 @@ function renderEngHub(){
   return `<div style="min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 20px 40px">
     <div class="label" style="font-size:12px">03 · Patent-Pending Technology</div>
     <div style="font-family:'Archivo Black';font-size:clamp(28px,5vw,46px);text-align:center;margin-bottom:8px">12 Proprietary Engines</div>
-    <div style="font-size:15px;color:var(--gy);max-width:520px;text-align:center;margin-bottom:24px">Click any engine to see it work live. Each one is a standalone patent-pending product.</div>
+    <div style="font-size:15px;color:var(--gy);max-width:520px;text-align:center;margin-bottom:8px">Each one is a standalone patent-pending product.</div>
+<div style="font-family:'JetBrains Mono';font-size:12px;color:var(--gd);letter-spacing:1px;text-align:center;margin-bottom:20px;animation:bk 2s infinite">👆 TAP ANY ENGINE TO SEE IT WORK LIVE 👆</div>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;max-width:960px;width:100%">
       ${ENG_LIST.map((e,i)=>`<div style="background:var(--b2);border:1px solid var(--slB);border-radius:12px;padding:16px;cursor:pointer;transition:all .3s;text-align:center" onclick="engView='${e.id}';ren()" onmouseover="this.style.borderColor='rgba(239,164,32,.25)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.4)'" onmouseout="this.style.borderColor='var(--slB)';this.style.transform='none';this.style.boxShadow='none'">
         <div style="font-size:28px;margin-bottom:6px">${e.icon}</div>
         <div style="font-family:'JetBrains Mono';font-size:8px;color:var(--gd);letter-spacing:1.5px;margin-bottom:4px">ENGINE ${String(i+1).padStart(2,'0')}</div>
         <div style="font-family:'Archivo Black';font-size:14px;margin-bottom:4px">${e.name}</div>
         <div style="font-size:11px;color:var(--gy);line-height:1.5">${e.desc}</div>
-        <div style="margin-top:8px"><span class="bdg o" style="font-size:7px">PATENT-PENDING</span></div>
+        <div style="margin-top:8px"><span class="bdg o" style="font-size:8px;padding:3px 8px;cursor:pointer">→ CLICK TO DEMO</span></div>
       </div>`).join('')}
     </div>
     <div style="margin-top:24px"><button class="sbtn gl" style="width:auto;padding:12px 24px;margin:0;font-size:13px" onclick="go('moat')">SKIP TO MOAT →</button></div>
@@ -596,7 +600,7 @@ TT.push(setTimeout(function(){var vr=document.createElement('div');vr.style.cssT
 W.rev=()=>`<div style="min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 20px 40px"><div class="S"><div class="label" style="font-size:11px">Revenue Model</div><div class="title" style="font-size:clamp(24px,4vw,38px)">How SBA Makes Money</div><div class="explain">Four subscription tiers. 40-day cycles. Watch the revenue build quarter by quarter.</div></div>
 <div class="g4" style="max-width:600px;margin:0 auto">${[{t:'BASIC',p:'$1K'},{t:'PLUS',p:'$2K'},{t:'ELITE',p:'$5K',g:1},{t:'PRO',p:'$10K'}].map(c=>`<div style="background:var(--b2);border:1px solid ${c.g?'rgba(239,164,32,.1)':'var(--slB)'};border-radius:8px;padding:8px;text-align:center"><div style="font-family:'JetBrains Mono';font-size:6px;letter-spacing:1px;color:${c.g?'var(--gn)':'var(--gd)'}">${c.t}</div><div style="font-family:'Archivo Black';font-size:26px;margin:4px 0">${c.p}</div><div style="font-size:7px;color:var(--gy)">40-day</div></div>`).join('')}</div>
 <div style="max-width:600px;margin:12px auto"><div class="bar-wrap" id="rv-b" style="height:220px;max-width:800px"></div></div>
-<div class="nxt" style="margin-top:20px"><button class="sbtn gl" style="width:auto;margin:0 auto;padding:14px 28px;font-size:14px" onclick="go('users')">USER EARNINGS →</button></div></div>`;
+<div class="nxt" style="margin-top:20px"><button class="sbtn gl" style="width:auto;margin:0 auto;padding:14px 28px;font-size:14px" onclick="go('growth_eng')">GROWTH ENGINE →</button></div></div>`;
 H.rev=()=>{const bars=[{q:'Q2 26',a:'$420K',h:12,c:'var(--gd)'},{q:'Q3 26',a:'$1.2M',h:25,c:'var(--gd)'},{q:'Q4 26',a:'$3.4M',h:42,c:'var(--gd)'},{q:'Q1 27',a:'$8.1M',h:65,c:'var(--gn)'},{q:'Q2 27',a:'$18.6M',h:100,c:'var(--gn)'}];$('rv-b').innerHTML=bars.map(b=>`<div class="bar-col"><div class="bar-val" id="bv${b.q.replace(/\s/g,'')}" style="color:${b.c}">${b.a}</div><div class="bar" id="bb${b.q.replace(/\s/g,'')}" style="background:linear-gradient(to top,var(--b4),${b.c})"></div><div class="bar-lbl">${b.q}</div></div>`).join('');bars.forEach((b,i)=>{const k=b.q.replace(/\s/g,'');TT.push(setTimeout(()=>{const bar=$('bb'+k);if(bar)bar.style.height=b.h+'%';const v=$('bv'+k);if(v)v.classList.add('show')},i*300+200))})};
 
 /* ═══ GROWTH ENGINE — AFFILIATE MODEL ═══ */
@@ -1259,7 +1263,16 @@ async function ckSend(){
 
 // Add Coach K button to page
 document.addEventListener('DOMContentLoaded',()=>{
-  document.body.insertAdjacentHTML('beforeend',`<button onclick="toggleCK()" style="position:fixed;bottom:20px;right:20px;z-index:10000;width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--gd),var(--gd2));border:none;cursor:pointer;box-shadow:0 4px 24px rgba(239,164,32,.35);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;color:var(--bg);transition:.3s" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><span style="line-height:1">K</span></button>`);
+  document.body.insertAdjacentHTML('beforeend',`
+<div id="ck-hint" style="position:fixed;bottom:80px;right:20px;z-index:10000;background:rgba(11,16,24,.95);backdrop-filter:blur(12px);border:1px solid rgba(239,164,32,.15);border-radius:12px;padding:10px 16px;max-width:220px;animation:fu .5s ease;box-shadow:0 8px 24px rgba(0,0,0,.4)">
+<div style="font-family:'Archivo Black';font-size:12px;color:var(--gd);margin-bottom:3px">Ask Coach K Anything</div>
+<div style="font-size:11px;color:var(--gy);line-height:1.5">AI-powered assistant. Ask about engines, investment, or the Farr legacy.</div>
+<div style="position:absolute;bottom:-6px;right:24px;width:12px;height:12px;background:rgba(11,16,24,.95);border-right:1px solid rgba(239,164,32,.15);border-bottom:1px solid rgba(239,164,32,.15);transform:rotate(45deg)"></div>
+</div>
+<button onclick="toggleCK();var h=document.getElementById('ck-hint');if(h)h.style.display='none'" style="position:fixed;bottom:20px;right:20px;z-index:10000;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--gd),var(--gd2));border:none;cursor:pointer;box-shadow:0 4px 24px rgba(239,164,32,.35),0 0 0 0 rgba(239,164,32,.4);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;color:var(--bg);transition:.3s;animation:ckPulse 2s ease-in-out infinite" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><span style="line-height:1">K</span></button>
+`);
+// Auto-hide hint after 8 seconds
+setTimeout(function(){var h=document.getElementById('ck-hint');if(h)h.style.opacity='0';setTimeout(function(){if(h)h.style.display='none'},500)},8000);
 });
 
 nav();ren();
